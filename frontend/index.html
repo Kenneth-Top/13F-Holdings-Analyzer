@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13F 机构持仓分析系统</title>
+    <meta name="description" content="追踪全球顶级对冲基金的 13F 持仓数据，包括伯克希尔、桥水、文艺复兴科技等。">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- ECharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">📊</span>
+                <h1>13F 机构持仓分析</h1>
+            </div>
+            <div class="header-controls">
+                <select id="fundSelector" class="select-fund">
+                    <option value="">加载中...</option>
+                </select>
+                <button id="refreshBtn" class="btn-refresh" title="刷新数据">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6M1 20v-6h6"/>
+                        <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 基金名称横幅 -->
+        <section class="fund-banner" id="fundBanner">
+            <div class="fund-name-row">
+                <h2 id="fundNameCn">请选择基金</h2>
+                <span id="fundNameEn" class="fund-name-en"></span>
+            </div>
+        </section>
+
+        <!-- 主体内容区 -->
+        <div class="dashboard-grid">
+            <!-- 左侧: 堆叠柱状图 -->
+            <section class="card chart-section">
+                <div class="card-header">
+                    <h3>持仓组合分布 <span class="info-badge" title="按资产类别分布的历史持仓比例">ⓘ</span></h3>
+                </div>
+                <div id="compositionChart" class="chart-container"></div>
+                <div id="chartLegend" class="chart-legend"></div>
+            </section>
+
+            <!-- 右侧: Top20 持仓表格 -->
+            <section class="card table-section">
+                <div class="card-header">
+                    <h3>Top 20 持仓部位 <span class="info-badge" title="按市值排序的前20大持仓">ⓘ</span></h3>
+                    <div class="table-controls">
+                        <select id="periodSelector" class="select-period">
+                            <option value="">选择季度</option>
+                        </select>
+                        <select id="viewMode" class="select-view">
+                            <option value="change">季变化</option>
+                            <option value="absolute">绝对值</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="holdingsTable" class="holdings-table">
+                        <thead>
+                            <tr>
+                                <th class="col-rank">#</th>
+                                <th class="col-name">资产全名</th>
+                                <th class="col-ticker">股号</th>
+                                <th class="col-class">资产子类别</th>
+                                <th class="col-pct">投组占比</th>
+                                <th class="col-change">持仓量变化</th>
+                            </tr>
+                        </thead>
+                        <tbody id="holdingsBody">
+                            <tr><td colspan="6" class="empty-state">请选择基金查看持仓数据</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="filing-total" id="filingTotal"></div>
+            </section>
+        </div>
+
+        <!-- 加码/减码区域 -->
+        <div class="changes-grid">
+            <section class="card changes-section">
+                <div class="card-header">
+                    <h3 class="increase-title">Top5 加码 · 新建 <span class="info-badge" title="持仓量增加最多的前5个标的">ⓘ</span></h3>
+                </div>
+                <table class="changes-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">#</th>
+                            <th class="col-name">资产全名</th>
+                            <th class="col-ticker">股号</th>
+                            <th class="col-class">资产子类别</th>
+                            <th class="col-pct">投组占比</th>
+                            <th class="col-change">持仓量变化</th>
+                        </tr>
+                    </thead>
+                    <tbody id="increasesBody">
+                        <tr><td colspan="6" class="empty-state">暂无数据</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="card changes-section">
+                <div class="card-header">
+                    <h3 class="decrease-title">Top5 减码 · 出清 <span class="info-badge" title="持仓量减少最多的前5个标的">ⓘ</span></h3>
+                </div>
+                <table class="changes-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">#</th>
+                            <th class="col-name">资产全名</th>
+                            <th class="col-ticker">股号</th>
+                            <th class="col-class">资产子类别</th>
+                            <th class="col-pct">投组占比</th>
+                            <th class="col-change">持仓量变化</th>
+                        </tr>
+                    </thead>
+                    <tbody id="decreasesBody">
+                        <tr><td colspan="6" class="empty-state">暂无数据</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- 说明区 -->
+        <section class="card info-section">
+            <p class="info-text">
+                <strong>13F 持仓报告（Form 13F）</strong>是机构投资经理提交的季度报告。根据美国证券交易委员会
+                （Securities and Exchange Commission, SEC）规定，资产管理规模超过 1 亿美元的机构，需要在每季结束后的
+                45 天内揭露所有管理的股权资产（股票、ETF）多头部位（不包含期货 & 固定收益等其他资产）。透过观察大型避险基金、
+                共同基金、养老基金的 13F 持仓变化，投资人能够窥探专业投资经理对于市场动向的看法。
+            </p>
+        </section>
+    </main>
+
+    <!-- 加载遮罩 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <p>数据加载中...</p>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
