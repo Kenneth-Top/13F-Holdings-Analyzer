@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "d:\Coding_project\python_work\Intern\13F report update\mass_scrape.py", line 7, in <module>
-    from backend.scraper import scrape_fund
-  File "d:\Coding_project\python_work\Intern\13F report update\backend\scraper.py", line 17, in <module>
-    from config import (
-ModuleNotFoundError: No module named 'config'
