@@ -216,15 +216,23 @@ def find_infotable_url(cik, accession):
         all_data = re.findall(r'href="([^"]+\.(?:xml|htm|html))"', html, re.IGNORECASE)
         for data_file in all_data:
             name_lower = data_file.lower()
-            # 排除通用页面和非数据文件
-            skip_keywords = ["primary", "submission", "index.htm", "index.html", "/index"]
+            # 排除所有 SEC 通用页面和非数据文件
+            skip_keywords = [
+                "primary", "submission",
+                "index.htm", "index.html", "/index",
+                "search.htm", "search/search", "/search",
+                "cgi-bin", "browse-edgar",
+            ]
             if any(kw in name_lower for kw in skip_keywords):
                 continue
-            if data_file.startswith("/"):
+            # 只接受明确来自 EDGAR archives 的数据文件
+            if data_file.startswith("/Archives/edgar/data/"):
                 return f"https://www.sec.gov{data_file}"
-            if data_file.startswith("http"):
+            if data_file.startswith("http") and "Archives/edgar/data/" in data_file:
                 return data_file
-            return f"{filing_index_url}{data_file}"
+            # 相对路径（同目录下的文件，最安全）
+            if not data_file.startswith("/") and not data_file.startswith("http"):
+                return f"{filing_index_url}{data_file}"
 
     except Exception as e:
         logger.warning(f"无法获取 filing index HTML: {e}")

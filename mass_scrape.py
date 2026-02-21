@@ -1,12 +1,18 @@
-"""触发所有无数据基金的首次采集（跳过已有数据的）"""
+"""批量采集所有无数据或数据过旧的基金"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# 确保工作目录和路径正确
+PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(PROJ_DIR)
+sys.path.insert(0, PROJ_DIR)
+# 让 scraper 内部的 'from config import ...' 也能找到 backend/config.py
+sys.path.insert(0, os.path.join(PROJ_DIR, "backend"))
 
 import sqlite3
 from backend.config import DB_PATH, FUNDS
 from backend.scraper import scrape_fund
 
-def get_funds_needing_scrape():
+def get_fund_status():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute("""
@@ -17,27 +23,28 @@ def get_funds_needing_scrape():
     """)
     rows = cursor.fetchall()
     conn.close()
-    return rows
+    return {row[0]: row for row in rows}
 
 if __name__ == "__main__":
-    fund_rows = get_funds_needing_scrape()
+    status = get_fund_status()
     
-    # 优先采集无数据或数据很旧的基金
+    # 选出需要采集的基金
     to_scrape = []
-    for cik, name, name_cn, latest in fund_rows:
-        if latest is None:
-            to_scrape.append((cik, name, name_cn, "无数据"))
-        elif latest < "2024-Q1":
-            to_scrape.append((cik, name, name_cn, latest))
+    for fund in FUNDS:
+        cik = fund["cik"]
+        row = status.get(cik)
+        latest = row[3] if row else None
+        if latest is None or latest < "2024-Q1":
+            to_scrape.append((cik, fund["name"], fund["name_cn"], latest or "无数据"))
     
     print(f"需要采集的基金: {len(to_scrape)} 家")
-    for cik, name, name_cn, status in to_scrape:
+    for i, (cik, name, name_cn, status_str) in enumerate(to_scrape, 1):
         print(f"\n{'='*55}")
-        print(f"采集: {name_cn} ({cik}) | 当前: {status}")
+        print(f"[{i}/{len(to_scrape)}] {name_cn} ({cik}) | 当前: {status_str}")
         print(f"{'='*55}")
         try:
             scrape_fund(cik, name, name_cn, max_quarters=8, latest_only=False)
         except Exception as e:
             print(f"  [错误] {e}")
     
-    print("\n\n所有采集任务完成!")
+    print("\n\n✅ 所有采集任务完成!")
