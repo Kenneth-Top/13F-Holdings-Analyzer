@@ -517,9 +517,75 @@ def main():
 
     changes_df = get_changes(selected_cik, selected_period)
     if not changes_df.empty:
-        tab_inc, tab_dec, tab_new, tab_exit = st.tabs([
-            "📈 增持", "📉 减持", "🆕 新买入", "🚪 清仓"
+        tab_top_inc, tab_top_dec, tab_inc, tab_dec, tab_new, tab_exit = st.tabs([
+            "⬆️ Top 增仓", "⬇️ Top 减仓", "📈 增持(QoQ)", "📉 减持(QoQ)", "🆕 新买入", "🚪 清仓"
         ])
+
+        # ---- Top 增仓（按投组占比变化 pct_change 排序）----
+        with tab_top_inc:
+            top_inc = changes_df[changes_df["pct_change"] > 0].copy()
+            top_inc = top_inc[top_inc["prev_pct"] > 0]  # 排除新买入
+            top_inc = top_inc.sort_values("pct_change", ascending=False).head(top_n)
+            if not top_inc.empty:
+                fig_top_inc = px.bar(
+                    top_inc, x="issuer", y="pct_change",
+                    color_discrete_sequence=["#00b894"],
+                    labels={"pct_change": "占比变化 (百分点)", "issuer": ""},
+                    height=380,
+                )
+                fig_top_inc.update_layout(
+                    showlegend=False,
+                    margin=dict(l=40, r=20, t=20, b=120),
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    yaxis=dict(ticksuffix=" pp"),
+                )
+                fig_top_inc.update_xaxes(tickangle=45)
+                st.plotly_chart(fig_top_inc, use_container_width=True)
+                # 辅助表格
+                ti_display = top_inc[["issuer", "asset_class", "portfolio_pct", "prev_pct", "pct_change", "value"]].copy()
+                ti_display.index = range(1, len(ti_display) + 1)
+                ti_display["value"] = ti_display["value"].apply(format_value)
+                ti_display["portfolio_pct"] = ti_display["portfolio_pct"].apply(lambda x: f"{x:.2f}%")
+                ti_display["prev_pct"] = ti_display["prev_pct"].apply(lambda x: f"{x:.2f}%")
+                ti_display["pct_change"] = ti_display["pct_change"].apply(lambda x: f"+{x:.2f} pp")
+                ti_display.columns = ["资产名称", "行业", "当期占比", "上期占比", "变化(pp)", "市值"]
+                st.dataframe(ti_display, use_container_width=True)
+            else:
+                st.info("该季度无占比增加记录")
+
+        # ---- Top 减仓（按投组占比变化 pct_change 排序）----
+        with tab_top_dec:
+            top_dec = changes_df[changes_df["pct_change"] < 0].copy()
+            top_dec = top_dec[top_dec["prev_pct"] > 0]  # 排除清仓
+            top_dec = top_dec.sort_values("pct_change", ascending=True).head(top_n)
+            if not top_dec.empty:
+                fig_top_dec = px.bar(
+                    top_dec, x="issuer", y="pct_change",
+                    color_discrete_sequence=["#e17055"],
+                    labels={"pct_change": "占比变化 (百分点)", "issuer": ""},
+                    height=380,
+                )
+                fig_top_dec.update_layout(
+                    showlegend=False,
+                    margin=dict(l=40, r=20, t=20, b=120),
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    yaxis=dict(ticksuffix=" pp"),
+                )
+                fig_top_dec.update_xaxes(tickangle=45)
+                st.plotly_chart(fig_top_dec, use_container_width=True)
+                # 辅助表格
+                td_display = top_dec[["issuer", "asset_class", "portfolio_pct", "prev_pct", "pct_change", "value"]].copy()
+                td_display.index = range(1, len(td_display) + 1)
+                td_display["value"] = td_display["value"].apply(format_value)
+                td_display["portfolio_pct"] = td_display["portfolio_pct"].apply(lambda x: f"{x:.2f}%")
+                td_display["prev_pct"] = td_display["prev_pct"].apply(lambda x: f"{x:.2f}%")
+                td_display["pct_change"] = td_display["pct_change"].apply(lambda x: f"{x:.2f} pp")
+                td_display.columns = ["资产名称", "行业", "当期占比", "上期占比", "变化(pp)", "市值"]
+                st.dataframe(td_display, use_container_width=True)
+            else:
+                st.info("该季度无占比减少记录")
 
         with tab_inc:
             inc = changes_df[changes_df["shares_change_pct"] > 0].copy()
