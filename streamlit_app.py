@@ -390,9 +390,12 @@ def main():
         st.markdown("### 📊 持仓组合历史分布")
         comp_df = get_composition_history(selected_cik)
         if not comp_df.empty:
+            # 确保 period 按时间顺序排列
+            sorted_periods = sorted(comp_df["period"].unique())
             fig = px.bar(
                 comp_df, x="period", y="pct", color="asset_class",
                 color_discrete_map=SECTOR_COLORS,
+                category_orders={"period": sorted_periods},
                 labels={"pct": "占比 (%)", "period": "季度", "asset_class": "资产类别"},
                 height=420,
             )
@@ -499,7 +502,7 @@ def main():
                 return "color: #e17055; font-weight: 700"  # 红色-减持
             return ""
 
-        styled = result_df.style.map(_color_change_cell, subset=["持仓变化"])
+        styled = result_df.style.applymap(_color_change_cell, subset=["持仓变化"])
         st.dataframe(
             styled,
             use_container_width=True,
