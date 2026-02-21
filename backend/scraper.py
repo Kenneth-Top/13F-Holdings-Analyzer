@@ -18,7 +18,7 @@ from config import (
     SEC_USER_AGENT, SEC_BASE_URL, SEC_ARCHIVES_URL,
     SEC_REQUEST_DELAY, FUNDS, INITIAL_QUARTERS
 )
-from sector_mapper import get_sector
+from sector_mapper_yf import get_sector_yf as get_sector, prefetch_sectors, _init_cache
 from database import (
     init_db, upsert_fund, get_filing, upsert_filing,
     insert_holdings, get_all_holdings
@@ -337,9 +337,20 @@ def parse_infotable_xml(xml_text):
             "put_call": put_call,
             "discretion": _find_text("investmentDiscretion"),
             "ticker": "",
-            "asset_class": get_sector("", issuer, title_of_class, put_call),
+            "asset_class": "",  # 先置空，ticker 匹配后再填
         }
         holdings.append(holding)
+
+    # ---- 按 CUSIP + put_call 合并同一证券的多行（如伯克希尔按账户拆分上报）----
+    merged = {}
+    for h in holdings:
+        key = (h["cusip"] or h["issuer"], h.get("put_call") or "")
+        if key in merged:
+            merged[key]["value"] += h["value"]
+            merged[key]["shares"] += h["shares"]
+        else:
+            merged[key] = dict(h)
+    holdings = list(merged.values())
 
     return holdings
 
@@ -362,11 +373,15 @@ def _try_match_ticker(holdings, ticker_map):
                     break
         if matched_ticker:
             h["ticker"] = matched_ticker
-            # 有 ticker 后重新更精确地映射行业
-            sector = get_sector(matched_ticker, h["issuer"],
-                                h.get("title_of_class", ""),
-                                h.get("put_call"))
-            h["asset_class"] = sector
+
+    # 统一在 ticker 匹配后，通过 get_sector 赋行业分类
+    for h in holdings:
+        h["asset_class"] = get_sector(
+            h.get("ticker", ""),
+            h["issuer"],
+            h.get("title_of_class", ""),
+            h.get("put_call")
+        )
 
 
 def compute_changes(current_holdings, prev_holdings):
@@ -451,6 +466,9 @@ def scrape_fund(cik, name, name_cn, max_quarters=None, latest_only=False):
     # 加载 ticker 映射表
     ticker_map = _build_cusip_ticker_map()
 
+    # 初始化行业缓存（确保表存在）
+    _init_cache()
+
     # 逐个处理 filing（从旧到新，使每个季度能找到上一季度数据计算变化）
     filings_ordered = list(reversed(filings))
     for i, filing in enumerate(filings_ordered):
@@ -488,8 +506,13 @@ def scrape_fund(cik, name, name_cn, max_quarters=None, latest_only=False):
 
         logger.info(f"    解析到 {len(holdings)} 条持仓记录")
 
-        # 尝试匹配 ticker
+        # 尝试匹配 ticker（并更新 asset_class）
         _try_match_ticker(holdings, ticker_map)
+
+        # 批量预热行业缓存（有 ticker 的）
+        tickers = [h["ticker"] for h in holdings if h.get("ticker")]
+        if tickers:
+            prefetch_sectors(tickers)
 
         # 计算总市值
         total_value = sum(h.get("value", 0) for h in holdings)
