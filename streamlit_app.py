@@ -123,7 +123,7 @@ def get_periods(fund_cik):
     """获取某基金可用的季度"""
     conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql_query(
-        "SELECT period, total_value FROM filings WHERE fund_cik = ? ORDER BY period_date DESC",
+        "SELECT period, total_value FROM filings WHERE fund_cik = ? ORDER BY period DESC",
         conn, params=(fund_cik,)
     )
     conn.close()
@@ -177,7 +177,7 @@ def get_composition_history(fund_cik):
            JOIN filings f ON h.filing_id = f.id
            WHERE f.fund_cik = ?
            GROUP BY f.period, h.asset_class
-           ORDER BY f.period_date ASC""",
+           ORDER BY f.period ASC""",
         conn, params=(fund_cik,)
     )
     conn.close()
@@ -208,14 +208,16 @@ def get_changes(fund_cik, period):
 # 工具函数
 # ============================================================
 def format_value(val):
-    """格式化市值 (千美元 -> 可读格式)"""
+    """格式化市值（单位: USD）"""
     if pd.isna(val) or val == 0:
         return "$0"
-    billion = val / 1_000_000
+    billion = val / 1_000_000_000
     if billion >= 1:
         return f"${billion:,.2f}B"
-    million = val / 1_000
-    return f"${million:,.2f}M"
+    million = val / 1_000_000
+    if million >= 1:
+        return f"${million:,.2f}M"
+    return f"${val:,.0f}"
 
 
 def format_pct(val):
@@ -484,9 +486,22 @@ def main():
             "asset_class": "行业类别",
         })
 
-        # 使用 st.dataframe 显示（支持排序和搜索）
+        # 持仓变化列颜色标记
+        def _color_change_cell(val):
+            v = str(val)
+            if "New" in v:
+                return "color: #0984e3; font-weight: 700"  # 蓝色-新买入
+            if "Exit" in v:
+                return "color: #636e72; font-weight: 700"  # 灰色-清仓
+            if v.startswith("+"):
+                return "color: #00b894; font-weight: 700"  # 绿色-增持
+            if v.startswith("-"):
+                return "color: #e17055; font-weight: 700"  # 红色-减持
+            return ""
+
+        styled = result_df.style.map(_color_change_cell, subset=["持仓变化"])
         st.dataframe(
-            result_df,
+            styled,
             use_container_width=True,
             height=min(len(result_df) * 38 + 40, 700),
         )
@@ -510,7 +525,7 @@ def main():
             if not inc.empty:
                 fig_inc = px.bar(
                     inc, x="issuer", y="shares_change_pct",
-                    color="asset_class", color_discrete_map=SECTOR_COLORS,
+                    color_discrete_sequence=["#00b894"],  # 统一绿色
                     labels={"shares_change_pct": "持仓增幅 (%)", "issuer": ""},
                     height=350,
                 )
@@ -532,7 +547,7 @@ def main():
             if not dec.empty:
                 fig_dec = px.bar(
                     dec, x="issuer", y="shares_change_pct",
-                    color="asset_class", color_discrete_map=SECTOR_COLORS,
+                    color_discrete_sequence=["#e17055"],  # 统一红色
                     labels={"shares_change_pct": "持仓减幅 (%)", "issuer": ""},
                     height=350,
                 )
