@@ -268,7 +268,17 @@ def get_global_changes(period):
         on=['ticker', 'fund_cik'], 
         how='outer'
     )
-    merged.fillna(0, inplace=True)
+    
+    merged['curr_shares'] = merged['curr_shares'].fillna(0)
+    merged['prev_shares'] = merged['prev_shares'].fillna(0)
+    merged['curr_val'] = merged['curr_val'].fillna(0)
+    merged['prev_val'] = merged['prev_val'].fillna(0)
+    
+    merged['issuer'] = merged.groupby('ticker')['issuer'].transform(lambda x: x.ffill().bfill())
+    merged['asset_class'] = merged.groupby('ticker')['asset_class'].transform(lambda x: x.ffill().bfill())
+    
+    merged['issuer'] = merged['issuer'].fillna('Unknown')
+    merged['asset_class'] = merged['asset_class'].fillna('Unknown')
     
     merged['is_new'] = (merged['prev_shares'] == 0) & (merged['curr_shares'] > 0)
     merged['is_inc'] = (merged['prev_shares'] > 0) & (merged['curr_shares'] > merged['prev_shares'])
@@ -284,10 +294,6 @@ def get_global_changes(period):
         exit_count=('is_exit', 'sum'),
         val_change=('curr_val', lambda x: x.sum() - merged.loc[x.index, 'prev_val'].sum())
     ).reset_index()
-    
-    # 填充缺失的名字和行业
-    agg_df['issuer'] = agg_df.groupby('ticker')['issuer'].transform('first')
-    agg_df['asset_class'] = agg_df.groupby('ticker')['asset_class'].transform('first')
     
     return agg_df
 

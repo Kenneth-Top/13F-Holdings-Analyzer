@@ -219,13 +219,17 @@ def format_value(val):
     """格式化市值（单位: USD）"""
     if pd.isna(val) or val == 0:
         return "$0"
-    billion = val / 1_000_000_000
+    
+    sign = "-" if val < 0 else ""
+    abs_val = abs(val)
+
+    billion = abs_val / 1_000_000_000
     if billion >= 1:
-        return f"${billion:,.2f}B"
-    million = val / 1_000_000
+        return f"{sign}${billion:,.2f}B"
+    million = abs_val / 1_000_000
     if million >= 1:
-        return f"${million:,.2f}M"
-    return f"${val:,.0f}"
+        return f"{sign}${million:,.2f}M"
+    return f"{sign}${abs_val:,.0f}"
 
 
 def format_pct(val):
