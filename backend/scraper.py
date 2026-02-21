@@ -212,16 +212,19 @@ def find_infotable_url(cik, accession):
                     return xml_file
                 return f"{filing_index_url}{xml_file}"
 
-        # 最后尝试：找所有 .xml/.htm 文件，排除 primary 文档
+        # 最后尝试：找所有 .xml/.htm 文件，排除 primary/submission/index 文档
         all_data = re.findall(r'href="([^"]+\.(?:xml|htm|html))"', html, re.IGNORECASE)
         for data_file in all_data:
             name_lower = data_file.lower()
-            if "primary" not in name_lower and "submission" not in name_lower:
-                if data_file.startswith("/"):
-                    return f"https://www.sec.gov{data_file}"
-                if data_file.startswith("http"):
-                    return data_file
-                return f"{filing_index_url}{data_file}"
+            # 排除通用页面和非数据文件
+            skip_keywords = ["primary", "submission", "index.htm", "index.html", "/index"]
+            if any(kw in name_lower for kw in skip_keywords):
+                continue
+            if data_file.startswith("/"):
+                return f"https://www.sec.gov{data_file}"
+            if data_file.startswith("http"):
+                return data_file
+            return f"{filing_index_url}{data_file}"
 
     except Exception as e:
         logger.warning(f"无法获取 filing index HTML: {e}")
