@@ -1,19 +1,22 @@
-import sys
-import os
+"""强制补采高盛和贝莱德最新数据"""
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
-backend_dir = os.path.join(base_dir, "backend")
-sys.path.insert(0, backend_dir)
-sys.path.insert(0, base_dir)
+# 须从 backend 目录运行
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "backend"))
 
 from backend.scraper import scrape_fund
 
-ciks_to_scrape = [
-    ('0000886982', 'Goldman Sachs Group Inc', '高盛集团'),
-    ('0001086364', 'BlackRock Inc.', '贝莱德'),
+targets = [
+    {"cik": "0000886982", "name": "Goldman Sachs Group Inc", "name_cn": "高盛集团"},
+    {"cik": "0001086364", "name": "BlackRock Fund Advisors", "name_cn": "贝莱德"},
 ]
 
-for cik, name, name_cn in ciks_to_scrape:
-    print(f"Scraping CIK: {cik}")
-    scrape_fund(cik, name, name_cn, latest_only=True)
-print("Scraping completed.")
+for t in targets:
+    print(f"\n{'='*50}")
+    print(f"Scraping: {t['name_cn']} ({t['cik']})")
+    print(f"{'='*50}")
+    scrape_fund(t["cik"], t["name"], t["name_cn"], max_quarters=8, latest_only=False)
+
+print("\nDone!")

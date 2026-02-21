@@ -143,34 +143,36 @@ def get_13f_filings(submissions, max_count=None):
 
 def find_infotable_url(cik, accession):
     """
-    在 filing 的文件列表中找到 XML infotable 文件的 URL
+    在 filing 的文件列表中找到 XML/HTML infotable 文件的 URL
     策略：
     1. 首先使用 SEC 的 JSON index API ({accession}-index.json) 精确查找 INFORMATION TABLE 类型
     2. 如果失败，回退到 HTML 目录页面正则匹配
+    支持: .xml / .htm / .html 格式
     """
     cik_clean = cik.lstrip("0")
     acc_clean = accession.replace("-", "")
     base_url = f"{SEC_ARCHIVES_URL}/{cik_clean}/{acc_clean}"
 
     # === 策略 1: 使用 SEC JSON index API ===
-    json_index_url = f"{SEC_BASE_URL}/submissions/{accession}-index.json"
-    # 注：SEC 的 JSON index URL 格式是 /Archives/edgar/data/{cik}/{acc}/{acc}-index.json
     json_index_url2 = f"{base_url}/{accession}-index.json"
     for json_url in [json_index_url2]:
         try:
             index_data = _get_json(json_url)
-            # JSON 结构: { "directory": { "item": [ { "name": "50240.xml", "type": "INFORMATION TABLE" } ] } }
             items = index_data.get("directory", {}).get("item", [])
+            # 优先找 INFORMATION TABLE 类型 (.xml 或 .htm/.html)
             for item in items:
                 item_type = item.get("type", "").upper()
                 item_name = item.get("name", "")
-                if "INFORMATION TABLE" in item_type and item_name.endswith(".xml"):
+                name_lower = item_name.lower()
+                is_data_file = name_lower.endswith((".xml", ".htm", ".html"))
+                if "INFORMATION TABLE" in item_type and is_data_file:
                     return f"{base_url}/{item_name}"
-            # 如果没有找到，尝试找任何 xml 文件（13F 单文件提交）
+            # 回退：找含关键词的 xml/htm 文件
             for item in items:
                 item_name = item.get("name", "")
-                if item_name.endswith(".xml") and item.get("type", "") != "COMPLETE SUBMISSION TEXT FILE":
-                    name_lower = item_name.lower()
+                name_lower = item_name.lower()
+                is_data_file = name_lower.endswith((".xml", ".htm", ".html"))
+                if is_data_file and item.get("type", "") != "COMPLETE SUBMISSION TEXT FILE":
                     if any(kw in name_lower for kw in ["table", "13f", "info", "holding"]):
                         return f"{base_url}/{item_name}"
         except Exception:
@@ -180,10 +182,9 @@ def find_infotable_url(cik, accession):
     filing_index_url = f"{base_url}/"
     try:
         html = _get_text(filing_index_url)
-        # 先找 INFORMATION TABLE 类型的行
-        # SEC HTML 格式: <td>INFORMATION TABLE</td>...<a href="50240.xml">
+        # 先找 INFORMATION TABLE 类型的行（支持 .xml 和 .htm）
         info_table_block = re.search(
-            r'INFORMATION TABLE.*?href="([^"]+\.xml)"',
+            r'INFORMATION TABLE.*?href="([^"]+\.(?:xml|htm|html))"',
             html, re.IGNORECASE | re.DOTALL
         )
         if info_table_block:
@@ -194,12 +195,12 @@ def find_infotable_url(cik, accession):
                 return xml_file
             return f"{filing_index_url}{xml_file}"
 
-        # 再按文件名关键字匹配
+        # 再按文件名关键字匹配（支持 .xml 和 .htm）
         xml_patterns = [
-            r'href="([^"]*infotable[^"]*\.xml)"',
-            r'href="([^"]*information[^"]*table[^"]*\.xml)"',
-            r'href="([^"]*13[fF][^"]*\.xml)"',
-            r'href="([^"]*holding[^"]*\.xml)"',
+            r'href="([^"]*infotable[^"]*\.(?:xml|htm|html))"',
+            r'href="([^"]*information[^"]*table[^"]*\.(?:xml|htm|html))"',
+            r'href="([^"]*13[fF][^"]*\.(?:xml|htm|html))"',
+            r'href="([^"]*holding[^"]*\.(?:xml|htm|html))"',
         ]
         for pattern in xml_patterns:
             matches = re.findall(pattern, html, re.IGNORECASE)
@@ -211,16 +212,16 @@ def find_infotable_url(cik, accession):
                     return xml_file
                 return f"{filing_index_url}{xml_file}"
 
-        # 最后尝试：找所有 .xml 文件，排除 primary 文档
-        all_xml = re.findall(r'href="([^"]+\.xml)"', html, re.IGNORECASE)
-        for xml_file in all_xml:
-            name_lower = xml_file.lower()
+        # 最后尝试：找所有 .xml/.htm 文件，排除 primary 文档
+        all_data = re.findall(r'href="([^"]+\.(?:xml|htm|html))"', html, re.IGNORECASE)
+        for data_file in all_data:
+            name_lower = data_file.lower()
             if "primary" not in name_lower and "submission" not in name_lower:
-                if xml_file.startswith("/"):
-                    return f"https://www.sec.gov{xml_file}"
-                if xml_file.startswith("http"):
-                    return xml_file
-                return f"{filing_index_url}{xml_file}"
+                if data_file.startswith("/"):
+                    return f"https://www.sec.gov{data_file}"
+                if data_file.startswith("http"):
+                    return data_file
+                return f"{filing_index_url}{data_file}"
 
     except Exception as e:
         logger.warning(f"无法获取 filing index HTML: {e}")

@@ -351,14 +351,28 @@ def main():
             latest_period = get_global_latest_period()
             selected_period = latest_period
             
-            st.info("💡 提示：按住 Ctrl/Cmd 键可多选您关注的顶级机构。")
+            # URL 持久化: 从 query_params 恢复自选列表
             fund_options = {row["name_cn"]: row["cik"] for _, row in funds_df.iterrows()}
+            cik_to_name = {row["cik"]: row["name_cn"] for _, row in funds_df.iterrows()}
+            
+            # 读取 URL 参数中的已保存自选
+            saved_wl = st.query_params.get("wl", "")
+            saved_ciks = [c.strip() for c in saved_wl.split(",") if c.strip()] if saved_wl else []
+            default_names = [cik_to_name[c] for c in saved_ciks if c in cik_to_name]
+            
+            st.info("💡 您的选择会自动保存到网址中，刷新或分享链接均可恢复。")
             selected_fund_names = st.multiselect(
                 "⭐ 选择关注的基金",
                 options=list(fund_options.keys()),
-                default=[]
+                default=default_names
             )
             selected_ciks = [fund_options[name] for name in selected_fund_names]
+            
+            # 写回 URL 参数
+            if selected_ciks:
+                st.query_params["wl"] = ",".join(selected_ciks)
+            elif "wl" in st.query_params:
+                del st.query_params["wl"]
 
         st.markdown("---")
         if analysis_mode not in ["🔍 个股分析 (Cross-Fund)", "⭐ 自选基金追踪 (Watchlist)"]:
@@ -544,7 +558,7 @@ def main():
         return
 
     # ============================================================
-    # 模式: 自选基金追踪 (Watchlist)
+    # 模式: 自选基金追踪 (Watchlist) — 增强版
     # ============================================================
     if analysis_mode == "⭐ 自选基金追踪 (Watchlist)":
         st.title("⭐ 自选基金追踪与对比 (Watchlist)")
@@ -555,12 +569,26 @@ def main():
             
         st.markdown(f"**分析范围**: 选中的 {len(selected_ciks)} 家机构在 **{selected_period}** 季度的重叠持仓与调仓动态汇总。")
         
+        # ---- 收集所有选中基金的持仓变化数据 ----
         watchlist_changes_list = []
+        fund_summaries = []
         for cik, name in zip(selected_ciks, selected_fund_names):
             df_changes = get_changes(cik, selected_period)
             if not df_changes.empty:
                 df_changes['fund_name'] = name
                 watchlist_changes_list.append(df_changes)
+                total_val = df_changes['value'].sum()
+                num_holdings = len(df_changes[df_changes['value'] > 0])
+                top10_val = df_changes.nlargest(10, 'value')['value'].sum()
+                top10_pct = (top10_val / total_val * 100) if total_val > 0 else 0
+                fund_summaries.append({
+                    '机构': name,
+                    '持仓总市值': format_value(total_val),
+                    '持仓数量': num_holdings,
+                    'Top10集中度': f"{top10_pct:.1f}%",
+                    '新买入': len(df_changes[df_changes['prev_pct'] == 0]),
+                    '清仓数': len(df_changes[(df_changes['portfolio_pct'] == 0) & (df_changes['prev_pct'] > 0)]),
+                })
                 
         if not watchlist_changes_list:
             st.warning(f"由于选中基金在 {selected_period} 季度暂未披露数据，无法分析。")
@@ -568,33 +596,119 @@ def main():
             
         wl_df = pd.concat(watchlist_changes_list, ignore_index=True)
         
-        # 1. Top overlap (共识持仓)
-        st.subheader("🤝 自选名单内部共识极高的持仓排行")
-        overlap_df = wl_df.groupby(['ticker', 'issuer', 'asset_class']).agg(
-            held_by=('fund_name', 'count'),
-            total_value=('value', 'sum')
-        ).reset_index().sort_values(by=['held_by', 'total_value'], ascending=[False, False])
+        # ========== 板块 1: KPI 仪表盘 ==========
+        st.subheader("📊 自选基金 KPI 仪表盘")
+        summary_df = pd.DataFrame(fund_summaries)
+        st.dataframe(summary_df, use_container_width=True, hide_index=True)
+        
+        st.markdown("")
+        
+        # ========== 板块 2: 共识持仓交叉分析 ==========
+        st.subheader("🤝 共识持仓交叉分析")
+        
+        min_overlap = st.slider("至少被 N 家机构共同持有", 1, max(len(selected_ciks), 2), min(2, len(selected_ciks)))
+        
+        overlap_df = wl_df[wl_df['value'] > 0].groupby(['ticker', 'issuer', 'asset_class']).agg(
+            held_by=('fund_name', lambda x: list(set(x))),
+            held_count=('fund_name', 'nunique'),
+            total_value=('value', 'sum'),
+            avg_pct=('portfolio_pct', 'mean'),
+        ).reset_index()
+        overlap_df = overlap_df[overlap_df['held_count'] >= min_overlap].sort_values(
+            by=['held_count', 'total_value'], ascending=[False, False]
+        )
         
         if not overlap_df.empty:
             co_df = overlap_df.head(20).copy()
-            co_df.columns = ["代码", "公司名", "行业", "覆盖持有机构数", "合计持有总市值(USD)"]
-            co_df["合计持有总市值(USD)"] = co_df["合计持有总市值(USD)"].apply(format_value)
-            st.dataframe(co_df, use_container_width=True)
-            
-        # 2. Recent big moves (按持仓占比暴动幅度)
-        st.subheader("🌋 关注名单近期大动作追踪 (调仓排行)")
+            co_df['held_by_str'] = co_df['held_by'].apply(lambda x: ', '.join(x))
+            display_co = co_df[['ticker', 'issuer', 'asset_class', 'held_count', 'total_value', 'avg_pct', 'held_by_str']].copy()
+            display_co.columns = ["代码", "公司名", "行业", "共同持有数", "合计市值(USD)", "平均仓位(%)", "持有机构"]
+            display_co["合计市值(USD)"] = display_co["合计市值(USD)"].apply(format_value)
+            display_co["平均仓位(%)"] = display_co["平均仓位(%)"].apply(lambda x: f"{x:.2f}%")
+            st.dataframe(display_co, use_container_width=True, hide_index=True)
+        else:
+            st.info(f"当前没有被 {min_overlap} 家以上机构共同持有的标的。")
         
-        wl_df['abs_pct_change'] = wl_df['pct_change'].abs()
-        big_moves = wl_df[wl_df['prev_pct'] >= 0].sort_values('abs_pct_change', ascending=False).head(20)
+        st.markdown("")
         
-        if not big_moves.empty:
-            bm_df = big_moves[['fund_name', 'ticker', 'issuer', 'asset_class', 'pct_change', 'prev_pct', 'portfolio_pct']].copy()
-            bm_df.columns = ["机构名", "标的代码", "公司名称", "所属行业", "相对组合占比变动(pp)", "上期配比(%)", "本期配比(%)"]
-            bm_df["相对组合占比变动(pp)"] = bm_df["相对组合占比变动(pp)"].apply(lambda x: f"{x:+.2f} pp")
-            bm_df["上期配比(%)"] = bm_df["上期配比(%)"].apply(lambda x: f"{x:.2f}%")
-            bm_df["本期配比(%)"] = bm_df["本期配比(%)"].apply(lambda x: f"{x:.2f}%")
-            st.dataframe(bm_df, use_container_width=True)
-            
+        # ========== 板块 3: 重大调仓异动追踪 ==========
+        st.subheader("🌋 重大调仓异动追踪")
+        
+        move_tab1, move_tab2, move_tab3, move_tab4 = st.tabs(["📈 加仓 Top", "📉 减仓 Top", "🆕 新买入", "🚪 清仓"])
+        
+        with move_tab1:
+            increases = wl_df[(wl_df['pct_change'] > 0) & (wl_df['prev_pct'] > 0)].sort_values('pct_change', ascending=False).head(15)
+            if not increases.empty:
+                inc_df = increases[['fund_name', 'ticker', 'issuer', 'pct_change', 'prev_pct', 'portfolio_pct', 'value']].copy()
+                inc_df.columns = ["机构", "代码", "公司", "占比变动(pp)", "上期(%)", "本期(%)", "市值(USD)"]
+                inc_df["占比变动(pp)"] = inc_df["占比变动(pp)"].apply(lambda x: f"+{x:.2f} pp")
+                inc_df["上期(%)"] = inc_df["上期(%)"].apply(lambda x: f"{x:.2f}%")
+                inc_df["本期(%)"] = inc_df["本期(%)"].apply(lambda x: f"{x:.2f}%")
+                inc_df["市值(USD)"] = inc_df["市值(USD)"].apply(format_value)
+                st.dataframe(inc_df, use_container_width=True, hide_index=True)
+            else:
+                st.info("本期无显著加仓操作。")
+                
+        with move_tab2:
+            decreases = wl_df[(wl_df['pct_change'] < 0) & (wl_df['portfolio_pct'] > 0)].sort_values('pct_change').head(15)
+            if not decreases.empty:
+                dec_df = decreases[['fund_name', 'ticker', 'issuer', 'pct_change', 'prev_pct', 'portfolio_pct', 'value']].copy()
+                dec_df.columns = ["机构", "代码", "公司", "占比变动(pp)", "上期(%)", "本期(%)", "市值(USD)"]
+                dec_df["占比变动(pp)"] = dec_df["占比变动(pp)"].apply(lambda x: f"{x:.2f} pp")
+                dec_df["上期(%)"] = dec_df["上期(%)"].apply(lambda x: f"{x:.2f}%")
+                dec_df["本期(%)"] = dec_df["本期(%)"].apply(lambda x: f"{x:.2f}%")
+                dec_df["市值(USD)"] = dec_df["市值(USD)"].apply(format_value)
+                st.dataframe(dec_df, use_container_width=True, hide_index=True)
+            else:
+                st.info("本期无显著减仓操作。")
+        
+        with move_tab3:
+            new_buys = wl_df[(wl_df['prev_pct'] == 0) & (wl_df['portfolio_pct'] > 0)].sort_values('value', ascending=False).head(15)
+            if not new_buys.empty:
+                nb_df = new_buys[['fund_name', 'ticker', 'issuer', 'asset_class', 'portfolio_pct', 'value']].copy()
+                nb_df.columns = ["机构", "代码", "公司", "行业", "仓位(%)", "市值(USD)"]
+                nb_df["仓位(%)"] = nb_df["仓位(%)"].apply(lambda x: f"{x:.2f}%")
+                nb_df["市值(USD)"] = nb_df["市值(USD)"].apply(format_value)
+                st.dataframe(nb_df, use_container_width=True, hide_index=True)
+            else:
+                st.info("本期无新买入标的。")
+                
+        with move_tab4:
+            exits = wl_df[(wl_df['portfolio_pct'] == 0) & (wl_df['prev_pct'] > 0)]
+            if not exits.empty:
+                ex_df = exits[['fund_name', 'ticker', 'issuer', 'asset_class', 'prev_pct']].sort_values('prev_pct', ascending=False).head(15).copy()
+                ex_df.columns = ["机构", "代码", "公司", "行业", "上期仓位(%)"]
+                ex_df["上期仓位(%)"] = ex_df["上期仓位(%)"].apply(lambda x: f"{x:.2f}%")
+                st.dataframe(ex_df, use_container_width=True, hide_index=True)
+            else:
+                st.info("本期无清仓操作。")
+        
+        st.markdown("")
+        
+        # ========== 板块 4: 行业配置对比 ==========
+        st.subheader("📈 行业配置对比")
+        
+        sector_data = []
+        for fund_name in selected_fund_names:
+            fund_df = wl_df[(wl_df['fund_name'] == fund_name) & (wl_df['value'] > 0)]
+            if not fund_df.empty:
+                sector_alloc = fund_df.groupby('asset_class')['value'].sum().reset_index()
+                sector_alloc['fund'] = fund_name
+                sector_alloc['pct'] = sector_alloc['value'] / sector_alloc['value'].sum() * 100
+                sector_data.append(sector_alloc)
+        
+        if sector_data:
+            sector_all = pd.concat(sector_data, ignore_index=True)
+            fig_sector = px.bar(
+                sector_all, x='fund', y='pct', color='asset_class',
+                title="各机构行业配置占比对比",
+                labels={'pct': '配置占比 (%)', 'fund': '机构', 'asset_class': '行业'},
+                barmode='stack',
+                color_discrete_sequence=px.colors.qualitative.Set3
+            )
+            fig_sector.update_layout(xaxis_tickangle=-30, height=450)
+            st.plotly_chart(fig_sector, use_container_width=True)
+        
         st.markdown("---")
         return
 
