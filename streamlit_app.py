@@ -301,7 +301,7 @@ def main():
 
         analysis_mode = st.radio(
             "🔎 选择分析模式",
-            options=["单只基金分析", "🌍 全局宏观动态", "🔍 个股分析 (Cross-Fund)"],
+            options=["单只基金分析", "🌍 全局宏观动态", "🔍 个股分析 (Cross-Fund)", "⭐ 自选基金追踪 (Watchlist)"],
             index=0
         )
         st.markdown("---")
@@ -347,8 +347,21 @@ def main():
             search_ticker = st.text_input("🔍 输入股票代码 (例如: AAPL, TSLA)", value="AAPL").upper().strip()
             st.info(f"查询季度: **{latest_period}**")
 
+        elif analysis_mode == "⭐ 自选基金追踪 (Watchlist)":
+            latest_period = get_global_latest_period()
+            selected_period = latest_period
+            
+            st.info("💡 提示：按住 Ctrl/Cmd 键可多选您关注的顶级机构。")
+            fund_options = {row["name_cn"]: row["cik"] for _, row in funds_df.iterrows()}
+            selected_fund_names = st.multiselect(
+                "⭐ 选择关注的基金",
+                options=list(fund_options.keys()),
+                default=[]
+            )
+            selected_ciks = [fund_options[name] for name in selected_fund_names]
+
         st.markdown("---")
-        if analysis_mode != "🔍 个股分析 (Cross-Fund)":
+        if analysis_mode not in ["🔍 个股分析 (Cross-Fund)", "⭐ 自选基金追踪 (Watchlist)"]:
             top_n = st.slider("📋 显示 Top N", 5, 50, 20)
             st.markdown("---")
         st.markdown(
@@ -528,6 +541,61 @@ def main():
             "</div>",
             unsafe_allow_html=True
         )
+        return
+
+    # ============================================================
+    # 模式: 自选基金追踪 (Watchlist)
+    # ============================================================
+    if analysis_mode == "⭐ 自选基金追踪 (Watchlist)":
+        st.title("⭐ 自选基金追踪与对比 (Watchlist)")
+        
+        if not selected_ciks:
+            st.info("👈 请在左侧边栏选择您想要合并比对的机构。")
+            return
+            
+        st.markdown(f"**分析范围**: 选中的 {len(selected_ciks)} 家机构在 **{selected_period}** 季度的重叠持仓与调仓动态汇总。")
+        
+        watchlist_changes_list = []
+        for cik, name in zip(selected_ciks, selected_fund_names):
+            df_changes = get_changes(cik, selected_period)
+            if not df_changes.empty:
+                df_changes['fund_name'] = name
+                watchlist_changes_list.append(df_changes)
+                
+        if not watchlist_changes_list:
+            st.warning(f"由于选中基金在 {selected_period} 季度暂未披露数据，无法分析。")
+            return
+            
+        wl_df = pd.concat(watchlist_changes_list, ignore_index=True)
+        
+        # 1. Top overlap (共识持仓)
+        st.subheader("🤝 自选名单内部共识极高的持仓排行")
+        overlap_df = wl_df.groupby(['ticker', 'issuer', 'asset_class']).agg(
+            held_by=('fund_name', 'count'),
+            total_value=('value', 'sum')
+        ).reset_index().sort_values(by=['held_by', 'total_value'], ascending=[False, False])
+        
+        if not overlap_df.empty:
+            co_df = overlap_df.head(20).copy()
+            co_df.columns = ["代码", "公司名", "行业", "覆盖持有机构数", "合计持有总市值(USD)"]
+            co_df["合计持有总市值(USD)"] = co_df["合计持有总市值(USD)"].apply(format_value)
+            st.dataframe(co_df, use_container_width=True)
+            
+        # 2. Recent big moves (按持仓占比暴动幅度)
+        st.subheader("🌋 关注名单近期大动作追踪 (调仓排行)")
+        
+        wl_df['abs_pct_change'] = wl_df['pct_change'].abs()
+        big_moves = wl_df[wl_df['prev_pct'] >= 0].sort_values('abs_pct_change', ascending=False).head(20)
+        
+        if not big_moves.empty:
+            bm_df = big_moves[['fund_name', 'ticker', 'issuer', 'asset_class', 'pct_change', 'prev_pct', 'portfolio_pct']].copy()
+            bm_df.columns = ["机构名", "标的代码", "公司名称", "所属行业", "相对组合占比变动(pp)", "上期配比(%)", "本期配比(%)"]
+            bm_df["相对组合占比变动(pp)"] = bm_df["相对组合占比变动(pp)"].apply(lambda x: f"{x:+.2f} pp")
+            bm_df["上期配比(%)"] = bm_df["上期配比(%)"].apply(lambda x: f"{x:.2f}%")
+            bm_df["本期配比(%)"] = bm_df["本期配比(%)"].apply(lambda x: f"{x:.2f}%")
+            st.dataframe(bm_df, use_container_width=True)
+            
+        st.markdown("---")
         return
 
     # ============================================================

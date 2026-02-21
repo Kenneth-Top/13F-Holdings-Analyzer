@@ -18,7 +18,7 @@ SEC_REQUEST_DELAY = 0.15
 # ============================================================
 FUNDS = [
     # === 综合投行与资管巨头 ===
-    {"cik": "0001364742", "name": "BlackRock Inc.",                    "name_cn": "贝莱德"},
+    {"cik": "0001086364", "name": "BlackRock Inc.",                    "name_cn": "贝莱德"},
     {"cik": "0000102909", "name": "Vanguard Group Inc",               "name_cn": "先锋集团"},
     {"cik": "0000093751", "name": "State Street Corp",                  "name_cn": "道富集团"},
     {"cik": "0000019617", "name": "JPMorgan Chase & Co",                "name_cn": "摩根大通"},
