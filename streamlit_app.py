@@ -12,11 +12,19 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-# ============================================================
-# 路径设置
-# ============================================================
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "data", "holdings.db")
+from backend.config import DB_PATH
+from backend.database import (
+    get_all_holdings,
+    get_changes,
+    get_history_composition,
+    get_filing_total,
+    get_fund_list,
+    get_holdings,
+    get_periods,
+    get_global_latest_period,
+    get_global_changes,
+    get_stock_holders
+)
 
 # ============================================================
 # 页面配置
@@ -287,41 +295,241 @@ def main():
         st.markdown("## 📊 13F 持仓分析")
         st.markdown("---")
 
-        # 基金选择
-        fund_options = {
-            row["name_cn"]: row["cik"]
-            for _, row in funds_df.iterrows()
-        }
-        selected_fund_name = st.selectbox(
-            "🏛️ 选择基金",
-            options=list(fund_options.keys()),
-            index=0,
+        analysis_mode = st.radio(
+            "🔎 选择分析模式",
+            options=["单只基金分析", "🌍 全局宏观动态", "🔍 个股分析 (Cross-Fund)"],
+            index=0
         )
-        selected_cik = fund_options[selected_fund_name]
+        st.markdown("---")
 
-        # 获取可用季度
-        periods_df = get_periods(selected_cik)
-        if periods_df.empty:
-            st.warning("该基金暂无数据")
-            return
+        if analysis_mode == "单只基金分析":
+            # 基金选择
+            fund_options = {
+                row["name_cn"]: row["cik"]
+                for _, row in funds_df.iterrows()
+            }
+            selected_fund_name = st.selectbox(
+                "🏛️ 选择基金",
+                options=list(fund_options.keys()),
+                index=0,
+            )
+            selected_cik = fund_options[selected_fund_name]
 
-        period_list = periods_df["period"].tolist()
-        selected_period = st.selectbox(
-            "📅 选择季度",
-            options=period_list,
-            index=0,
-        )
+            # 获取可用季度
+            periods_df = get_periods(selected_cik)
+            if periods_df.empty:
+                st.warning("该基金暂无数据")
+                return
+
+            period_list = periods_df["period"].tolist()
+            selected_period = st.selectbox(
+                "📅 选择季度",
+                options=period_list,
+                index=0,
+            )
+
+        elif analysis_mode == "🌍 全局宏观动态":
+            # 全局模式，只选最新季度 (或其他有数据的季度)
+            # 这里简化为系统内最新的可用季度
+            latest_period = get_global_latest_period()
+            selected_period = latest_period
+            
+            st.info(f"当前全局统计基于最新可用季度: **{latest_period}**")
+
+        elif analysis_mode == "🔍 个股分析 (Cross-Fund)":
+            latest_period = get_global_latest_period()
+            selected_period = latest_period
+            
+            search_ticker = st.text_input("🔍 输入股票代码 (例如: AAPL, TSLA)", value="AAPL").upper().strip()
+            st.info(f"查询季度: **{latest_period}**")
 
         st.markdown("---")
-        top_n = st.slider("📋 显示前 N 个持仓", 5, 50, 20)
-
-        st.markdown("---")
+        if analysis_mode != "🔍 个股分析 (Cross-Fund)":
+            top_n = st.slider("📋 显示 Top N", 5, 50, 20)
+            st.markdown("---")
         st.markdown(
             "<div style='color:#9ca3af;font-size:0.75rem;text-align:center'>"
             "数据来源: SEC EDGAR<br>13F 季度报告</div>",
             unsafe_allow_html=True
         )
 
+    # ============================================================
+    # 模式: 全局宏观动态
+    # ============================================================
+    if analysis_mode == "🌍 全局宏观动态":
+        st.title("🌍 13F 全局宏观动态")
+        st.markdown(f"**统计范围**: 数据库中 {len(funds_df)} 家顶级机构在 {selected_period} 会计季度的统一调仓动作。")
+        
+        with st.spinner("正在计算全市场数据..."):
+            global_df = get_global_changes(selected_period)
+            
+        if global_df.empty:
+            st.warning(f"无法获取 {selected_period} 的全局变化数据 (可能仍在采集中)。")
+            return
+            
+        # 核心指标
+        total_stocks = len(global_df)
+        total_value_change = global_df['val_change'].sum()
+        
+        c1, c2, c3 = st.columns(3)
+        with c1:
+            st.markdown(f'<div class="metric-card"><h3>🏢 覆盖总标的数</h3><div class="value">{total_stocks}</div></div>', unsafe_allow_html=True)
+        with c2:
+            st.markdown(f'<div class="metric-card"><h3>💰 持仓总市值净变动</h3><div class="value">{format_value(total_value_change)}</div></div>', unsafe_allow_html=True)
+        with c3:
+            top_sector = global_df.groupby('asset_class')['val_change'].sum().idxmax()
+            st.markdown(f'<div class="metric-card"><h3>🔥 最受追捧行业</h3><div class="value">{top_sector}</div></div>', unsafe_allow_html=True)
+            
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # 排行榜 Tabs
+        tab_buy, tab_sell, tab_new, tab_exit = st.tabs([
+            "🫂 最多机构加仓", "🏃 最多机构减仓", "🌟 最热新面孔(首次建仓)", "🚪 遭遇共识清仓"
+        ])
+        
+        with tab_buy:
+            top_buys = global_df.sort_values('inc_count', ascending=False).head(top_n)
+            fig_buy = px.bar(
+                top_buys, x="ticker", y="inc_count", color="asset_class",
+                title=f"Top {top_n} 被最多机构加仓的标的",
+                labels={"inc_count": "加仓机构数", "ticker": "股票代码", "asset_class": "行业"},
+                color_discrete_map=SECTOR_COLORS
+            )
+            st.plotly_chart(fig_buy, use_container_width=True)
+            
+            tb_df = top_buys[['ticker', 'issuer', 'asset_class', 'inc_count', 'funds_holding', 'val_change']].copy()
+            tb_df.columns = ["代码", "公司名", "行业", "加仓机构(家)", "目前总持仓机构(家)", "市值净变动(USD)"]
+            tb_df["市值净变动(USD)"] = tb_df["市值净变动(USD)"].apply(format_value)
+            st.dataframe(tb_df, use_container_width=True)
+
+        with tab_sell:
+            top_sells = global_df.sort_values('dec_count', ascending=False).head(top_n)
+            fig_sell = px.bar(
+                top_sells, x="ticker", y="dec_count", color="asset_class",
+                title=f"Top {top_n} 被最多机构减仓的标的",
+                labels={"dec_count": "减仓机构数", "ticker": "股票代码", "asset_class": "行业"},
+                color_discrete_map=SECTOR_COLORS
+            )
+            st.plotly_chart(fig_sell, use_container_width=True)
+            
+            ts_df = top_sells[['ticker', 'issuer', 'asset_class', 'dec_count', 'funds_holding', 'val_change']].copy()
+            ts_df.columns = ["代码", "公司名", "行业", "减仓机构(家)", "目前总持仓机构(家)", "市值净变动(USD)"]
+            ts_df["市值净变动(USD)"] = ts_df["市值净变动(USD)"].apply(format_value)
+            st.dataframe(ts_df, use_container_width=True)
+
+        with tab_new:
+            # 排除由于代码变更导致的伪“新建仓” (如需严谨需要更复杂的 CUSIP 追踪，这里基于简单 ticker)
+            new_buys = global_df[global_df['funds_holding'] == global_df['new_count']].sort_values('new_count', ascending=False).head(top_n)
+            if not new_buys.empty:
+                tn_df = new_buys[['ticker', 'issuer', 'asset_class', 'new_count', 'total_curr_val']].copy()
+                tn_df.columns = ["代码", "公司名", "行业", "建仓机构数(本季首次)", "建仓总市值估算"]
+                tn_df['建仓总市值估算'] = tn_df['建仓总市值估算'].apply(format_value)
+                st.dataframe(tn_df, use_container_width=True)
+            else:
+                st.info("本季度无纯新增的共识标的")
+
+        with tab_exit:
+            top_exits = global_df[global_df['funds_holding'] == 0].sort_values('exit_count', ascending=False).head(top_n)
+            if not top_exits.empty:
+                te_df = top_exits[['ticker', 'issuer', 'asset_class', 'exit_count']].copy()
+                te_df.columns = ["代码", "原公司名", "原行业", "清仓机构数(彻底退出)"]
+                st.dataframe(te_df, use_container_width=True)
+            else:
+                st.info("本季度无被集体清仓的标的")
+
+        st.markdown("---")
+        st.markdown(
+            "<div style='text-align:center;color:#9ca3af;font-size:0.8rem;padding:1rem'>"
+            "📊 13F 机构持仓分析系统 | 数据来源: SEC EDGAR | 仅供研究参考，不构成投资建议"
+            "</div>",
+            unsafe_allow_html=True
+        )
+        return
+
+    # ============================================================
+    # 模式: 个股分析 (Cross-Fund)
+    # ============================================================
+    if analysis_mode == "🔍 个股分析 (Cross-Fund)":
+        st.title(f"🔍 个股被持有分析: {search_ticker}")
+        st.markdown(f"**统计范围**: 数据库中 {len(funds_df)} 家顶级机构在 **{selected_period}** 会计季度对 `{search_ticker}` 的持仓情况。")
+        
+        if not search_ticker:
+            st.warning("请输入有效的股票代码。")
+            return
+            
+        with st.spinner(f"正在查询 {search_ticker} 的持仓数据..."):
+            holders_df = get_stock_holders(search_ticker, selected_period)
+            
+        if holders_df.empty:
+            st.warning(f"由于 {search_ticker} 在 {selected_period} 未被库中任何机构持有，或代码错误。")
+            return
+            
+        # 核心指标
+        total_holding_value = holders_df['curr_val'].sum()
+        total_holding_shares = holders_df['curr_shares'].sum()
+        num_holders = len(holders_df[holders_df['curr_shares'] > 0])
+        
+        c1, c2, c3 = st.columns(3)
+        with c1:
+            st.markdown(f'<div class="metric-card"><h3>🏢 持有机构数 (家)</h3><div class="value">{num_holders}</div></div>', unsafe_allow_html=True)
+        with c2:
+            st.markdown(f'<div class="metric-card"><h3>💰 名义总持有市值</h3><div class="value">{format_value(total_holding_value)}</div></div>', unsafe_allow_html=True)
+        with c3:
+            st.markdown(f'<div class="metric-card"><h3>📈 名义总持有股数</h3><div class="value">{total_holding_shares:,.0f}</div></div>', unsafe_allow_html=True)
+            
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # 机构明细表格
+        st.subheader("🏦 详细持仓机构列表")
+        display_df = holders_df[holders_df['curr_shares'] > 0].copy()
+        
+        if not display_df.empty:
+            # 格式化
+            d_df = display_df[['fund_name_cn', 'fund_name', 'curr_val', 'curr_shares', 'curr_pct', 'pct_change', 'shares_change_pct']].copy()
+            d_df.columns = ["机构名(中)", "机构名(英)", "持有市值(USD)", "持有股数", "占其组合(%)", "占比比上期同比(pp)", "股数变化(%)"]
+            d_df["持有市值(USD)"] = d_df["持有市值(USD)"].apply(format_value)
+            d_df["占其组合(%)"] = d_df["占其组合(%)"].apply(lambda x: f"{x:.2f}%")
+            d_df["占比比上期同比(pp)"] = d_df["占比比上期同比(pp)"].apply(lambda x: f"{x:+.2f} pp")
+            d_df["股数变化(%)"] = d_df["股数变化(%)"].apply(format_pct)
+            
+            # 使用 st.dataframe 渲染
+            st.dataframe(d_df, use_container_width=True)
+            
+            # 柱状图：谁持仓最多
+            st.subheader("📊 持有市值前十名机构")
+            fig_bar = px.bar(
+                display_df.head(10), x="fund_name_cn", y="curr_val",
+                title=f"{search_ticker} 持有市值 Top10 机构",
+                labels={"curr_val": "市值 (USD)", "fund_name_cn": "机构名称"},
+                color_discrete_sequence=["#3498db"]
+            )
+            fig_bar.update_layout(xaxis_tickangle=-45)
+            st.plotly_chart(fig_bar, use_container_width=True)
+        else:
+            st.info(f"所有上期持有 {search_ticker} 的机构都在本期清仓了。")
+            
+        # 清仓记录
+        exits = holders_df[(holders_df['prev_shares'] > 0) & (holders_df['curr_shares'] == 0)]
+        if not exits.empty:
+            st.subheader("🚪 本期清仓机构")
+            e_df = exits[['fund_name_cn', 'fund_name', 'prev_val']].copy()
+            e_df.columns = ["机构名(中)", "机构名(英)", "上期持有市值(USD)"]
+            e_df["上期持有市值(USD)"] = e_df["上期持有市值(USD)"].apply(format_value)
+            st.dataframe(e_df, use_container_width=True)
+
+        st.markdown("---")
+        st.markdown(
+            "<div style='text-align:center;color:#9ca3af;font-size:0.8rem;padding:1rem'>"
+            "📊 13F 机构持仓分析系统 | 数据来源: SEC EDGAR | 仅供研究参考，不构成投资建议"
+            "</div>",
+            unsafe_allow_html=True
+        )
+        return
+
+    # ============================================================
+    # 模式: 单只基金分析 (原逻辑保留)
+    # ============================================================
+    
     # ---- 获取基金英文名 ----
     fund_row = funds_df[funds_df["cik"] == selected_cik].iloc[0]
     fund_name_en = fund_row["name"]

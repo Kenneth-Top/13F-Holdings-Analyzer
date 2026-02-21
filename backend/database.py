@@ -4,7 +4,7 @@
 import os
 import sqlite3
 from contextlib import contextmanager
-from config import DB_PATH, DATA_DIR
+from backend.config import DB_PATH, DATA_DIR
 
 
 def init_db():
@@ -179,6 +179,21 @@ def get_all_holdings(fund_cik, period):
         ).fetchall()
         return [dict(r) for r in rows]
 
+def get_changes(fund_cik, period):
+    """获取持仓变化"""
+    with get_conn() as conn:
+        rows = conn.execute(
+            """SELECT h.issuer, h.cusip, h.ticker, h.asset_class,
+                      h.value, h.shares, h.portfolio_pct, h.prev_pct,
+                      h.pct_change, h.shares_change_pct
+               FROM holdings h
+               JOIN filings f ON h.filing_id = f.id
+               WHERE f.fund_cik = ? AND f.period = ?
+               ORDER BY h.value DESC""",
+            (fund_cik, period)
+        ).fetchall()
+        return [dict(r) for r in rows]
+
 
 def get_history_composition(fund_cik):
     """获取某基金全部季度的资产类别构成 (用于堆叠柱状图)"""
@@ -203,3 +218,137 @@ def get_filing_total(fund_cik, period):
             (fund_cik, period)
         ).fetchone()
         return row["total_value"] if row else 0
+
+# ============================================================
+# 全局分析查询 (跨基金)
+# ============================================================
+
+def get_global_latest_period():
+    """获取数据库中最新存在记录的季度"""
+    with get_conn() as conn:
+        res = conn.execute('''
+            SELECT period FROM filings 
+            ORDER BY period DESC LIMIT 1
+        ''').fetchone()
+        return res[0] if res else None
+
+
+def get_global_changes(period):
+    """
+    计算特定季度下所有机构的汇总变化，返回 DataFrame
+    包含：被多少机构加仓/减仓/新建仓/清仓，以及总市值变化估算
+    """
+    import pandas as pd
+    year, q = period.split("-Q")
+    year = int(year)
+    q = int(q)
+    prev_period = f"{year-1}-Q4" if q == 1 else f"{year}-Q{q-1}"
+    
+    with get_conn() as conn:
+        curr_df = pd.read_sql_query('''
+            SELECT h.ticker, h.issuer, h.asset_class, f.fund_cik, 
+                   h.shares as curr_shares, h.value as curr_val
+            FROM holdings h
+            JOIN filings f ON h.filing_id = f.id
+            WHERE f.period = ? AND h.put_call IS NULL AND h.ticker != ''
+        ''', conn, params=(period,))
+        
+        prev_df = pd.read_sql_query('''
+            SELECT h.ticker, f.fund_cik, h.shares as prev_shares, h.value as prev_val
+            FROM holdings h
+            JOIN filings f ON h.filing_id = f.id
+            WHERE f.period = ? AND h.put_call IS NULL AND h.ticker != ''
+        ''', conn, params=(prev_period,))
+    
+    if curr_df.empty:
+        return pd.DataFrame()
+        
+    merged = pd.merge(
+        curr_df, prev_df, 
+        on=['ticker', 'fund_cik'], 
+        how='outer'
+    )
+    merged.fillna(0, inplace=True)
+    
+    merged['is_new'] = (merged['prev_shares'] == 0) & (merged['curr_shares'] > 0)
+    merged['is_inc'] = (merged['prev_shares'] > 0) & (merged['curr_shares'] > merged['prev_shares'])
+    merged['is_dec'] = (merged['curr_shares'] > 0) & (merged['curr_shares'] < merged['prev_shares'])
+    merged['is_exit'] = (merged['prev_shares'] > 0) & (merged['curr_shares'] == 0)
+    
+    agg_df = merged.groupby(['ticker', 'issuer', 'asset_class']).agg(
+        total_curr_val=('curr_val', 'sum'),
+        funds_holding=('curr_shares', lambda x: (x > 0).sum()),
+        inc_count=('is_inc', 'sum'),
+        dec_count=('is_dec', 'sum'),
+        new_count=('is_new', 'sum'),
+        exit_count=('is_exit', 'sum'),
+        val_change=('curr_val', lambda x: x.sum() - merged.loc[x.index, 'prev_val'].sum())
+    ).reset_index()
+    
+    # 填充缺失的名字和行业
+    agg_df['issuer'] = agg_df.groupby('ticker')['issuer'].transform('first')
+    agg_df['asset_class'] = agg_df.groupby('ticker')['asset_class'].transform('first')
+    
+    return agg_df
+
+# ============================================================
+# 个股分析查询
+# ============================================================
+
+def get_stock_holders(ticker, period):
+    """
+    查询特定季度持有某只股票的所有机构及持仓详情
+    返回 DataFrame，按持有市值降序
+    """
+    import pandas as pd
+    year, q = period.split("-Q")
+    year = int(year)
+    q = int(q)
+    prev_period = f"{year-1}-Q4" if q == 1 else f"{year}-Q{q-1}"
+    
+    with get_conn() as conn:
+        # 当前季度的持有情况
+        curr_df = pd.read_sql_query('''
+            SELECT f.fund_cik, fd.name as fund_name, fd.name_cn as fund_name_cn,
+                   h.issuer, h.asset_class,
+                   h.shares as curr_shares, h.value as curr_val,
+                   h.portfolio_pct as curr_pct
+            FROM holdings h
+            JOIN filings f ON h.filing_id = f.id
+            JOIN funds fd ON f.fund_cik = fd.cik
+            WHERE f.period = ? AND h.ticker = ? AND h.put_call IS NULL
+        ''', conn, params=(period, ticker))
+        
+        # 上一季度的持有情况
+        prev_df = pd.read_sql_query('''
+            SELECT f.fund_cik, h.shares as prev_shares, 
+                   h.value as prev_val, h.portfolio_pct as prev_pct
+            FROM holdings h
+            JOIN filings f ON h.filing_id = f.id
+            WHERE f.period = ? AND h.ticker = ? AND h.put_call IS NULL
+        ''', conn, params=(prev_period, ticker))
+        
+    if curr_df.empty:
+        return pd.DataFrame()
+        
+    merged = pd.merge(
+        curr_df, prev_df,
+        on=['fund_cik'],
+        how='left'
+    )
+    merged.fillna({'prev_shares': 0, 'prev_val': 0, 'prev_pct': 0}, inplace=True)
+    
+    # 计算变化
+    merged['pct_change'] = merged['curr_pct'] - merged['prev_pct']
+    merged['shares_change'] = merged['curr_shares'] - merged['prev_shares']
+    # 避免除以 0
+    merged['shares_change_pct'] = merged.apply(
+        lambda row: (row['shares_change'] / row['prev_shares'] * 100) if row['prev_shares'] > 0 
+        else (100.0 if row['curr_shares'] > 0 else 0.0), 
+        axis=1
+    )
+    
+    # 排序
+    merged.sort_values('curr_val', ascending=False, inplace=True)
+    
+    return merged
