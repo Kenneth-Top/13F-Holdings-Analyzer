@@ -12,6 +12,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
+from backend.analysis import calc_hhi, get_fund_style_tags
 from backend.config import DB_PATH
 from backend.database import (
     get_all_holdings,
@@ -581,8 +582,15 @@ def main():
                 num_holdings = len(df_changes[df_changes['value'] > 0])
                 top10_val = df_changes.nlargest(10, 'value')['value'].sum()
                 top10_pct = (top10_val / total_val * 100) if total_val > 0 else 0
+                # 获取风格标签
+                comp_df = get_composition_history(cik)
+                all_hd = get_all_holdings(cik, selected_period)
+                tags = get_fund_style_tags(cik, all_hd, comp_df)
+                tags_str = " | ".join(tags) if tags else "-"
+
                 fund_summaries.append({
                     '机构': name,
+                    '风格特色': tags_str,
                     '持仓总市值': format_value(total_val),
                     '持仓数量': num_holdings,
                     'Top10集中度': f"{top10_pct:.1f}%",
@@ -720,19 +728,29 @@ def main():
     fund_row = funds_df[funds_df["cik"] == selected_cik].iloc[0]
     fund_name_en = fund_row["name"]
 
+    all_holdings = get_all_holdings(selected_cik, selected_period)
+    comp_df = get_composition_history(selected_cik)
+
     # ---- 标题 ----
     st.markdown(f"# {selected_fund_name}")
     st.markdown(f"*{fund_name_en}*")
+    
+    # ---- 风格标签 ----
+    style_tags = get_fund_style_tags(selected_cik, all_holdings, comp_df)
+    if style_tags:
+        tags_html = " ".join([f"<span style='background-color:#4b6584;color:white;padding:3px 10px;border-radius:12px;font-size:0.85rem;margin-right:8px;'>{tag}</span>" for tag in style_tags])
+        st.markdown(tags_html, unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- 指标卡片 ----
     total_value = periods_df[periods_df["period"] == selected_period]["total_value"].values
     total_val = total_value[0] if len(total_value) > 0 else 0
 
-    all_holdings = get_all_holdings(selected_cik, selected_period)
     num_holdings = len(all_holdings)
     num_sectors = all_holdings["asset_class"].nunique() if not all_holdings.empty else 0
+    current_hhi = calc_hhi(all_holdings)
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.markdown(
             f'<div class="metric-card">'
@@ -759,6 +777,13 @@ def main():
             f'<div class="metric-card metric-card-blue">'
             f'<h3>🏷️ 行业类别</h3>'
             f'<div class="value">{num_sectors}</div></div>',
+            unsafe_allow_html=True
+        )
+    with col5:
+        st.markdown(
+            f'<div class="metric-card" style="background: linear-gradient(135deg, #FF6B6B 0%, #C44569 100%);">'
+            f'<h3>🎯 集中度(HHI)</h3>'
+            f'<div class="value">{current_hhi:,.0f}</div></div>',
             unsafe_allow_html=True
         )
 
@@ -807,6 +832,28 @@ def main():
             fig.update_xaxes(showgrid=False)
             fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="#f0f0f0")
             st.plotly_chart(fig, use_container_width=True)
+            
+            # --- 追加集中度曲线 ---
+            st.markdown("### 🏹 HHI 集中度历史曲线")
+            hhi_history = []
+            for p in sorted_periods:
+                p_hd = get_all_holdings(selected_cik, p)
+                hhi_history.append({"period": p, "hhi": calc_hhi(p_hd)})
+                
+            fig_hhi = px.line(
+                pd.DataFrame(hhi_history), x="period", y="hhi", 
+                markers=True, height=250,
+                labels={"hhi": "HHI 指数", "period": "季度"},
+                color_discrete_sequence=["#C44569"]
+            )
+            fig_hhi.update_layout(
+                margin=dict(l=40, r=20, t=20, b=30),
+                plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)"
+            )
+            fig_hhi.update_xaxes(showgrid=False)
+            fig_hhi.update_yaxes(showgrid=True, gridwidth=1, gridcolor="#f0f0f0")
+            st.plotly_chart(fig_hhi, use_container_width=True)
+            
         else:
             st.info("暂无历史数据")
 
