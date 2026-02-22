@@ -71,21 +71,49 @@ def _period_to_quarter(date_str):
 
 
 
+def normalize_name(name):
+    """移除标点符号及常见公司后缀，用于提升名称匹配率"""
+    name = name.upper()
+    name = re.sub(r'[^\w\s]', '', name)
+    name = " " + name + " "
+    
+    # 常用 13F 报表内部短语展开
+    name = name.replace(" FINL ", " FINANCIAL ")
+    name = name.replace(" PETE ", " PETROLEUM ")
+    name = name.replace(" HLDG ", " HOLDING ")
+    name = name.replace(" HLDGS ", " HOLDINGS ")
+    name = name.replace(" GRP ", " GROUP ")
+    name = name.replace(" NATL ", " NATIONAL ")
+    
+    for suffix in [" INC ", " CORP ", " CORPORATION ", " CO ", " LTD ", " PLC ", " LLC ", " LP ", " COMPANY ", " DE ", " OF ", " THE "]:
+        name = name.replace(suffix, " ")
+    # 清理末尾特殊标记
+    name = name.replace(" NEW ", " ")
+    return " ".join(name.split())
+
+
 def _build_cusip_ticker_map():
     """
-    尝试构建 CUSIP -> ticker 的映射。
-    使用 SEC 提供的 company_tickers.json 作为辅助来源。
+    尝试构建公司名称 -> ticker 的映射体系。
+    使用 SEC 提供的 company_tickers.json 作为来源。
+    返回包含 exact_map (原生大写) 和 norm_map (归一化名字) 的字典。
     """
-    ticker_map = {}
+    maps = {"exact": {}, "norm": {}}
     try:
         data = _get_json("https://www.sec.gov/files/company_tickers.json")
         for _, item in data.items():
-            # company_tickers.json 有 cik_str, ticker, title 字段
-            # 无法直接得到 CUSIP，但可以根据名称做模糊匹配
-            ticker_map[item.get("title", "").upper()] = item.get("ticker", "")
+            title = item.get("title", "").upper()
+            ticker = item.get("ticker", "")
+            if not ticker or not title:
+                continue
+            if title not in maps["exact"]:
+                maps["exact"][title] = ticker
+            norm_title = normalize_name(title)
+            if norm_title not in maps["norm"]:
+                maps["norm"][norm_title] = ticker
     except Exception as e:
         logger.warning(f"无法加载 ticker 映射表: {e}")
-    return ticker_map
+    return maps
 
 
 def get_fund_submissions(cik):
@@ -367,33 +395,53 @@ def parse_infotable_xml(xml_text):
     return holdings
 
 
-def _try_match_ticker(holdings, ticker_map):
-    """尝试通过公司名匹配 ticker，并更新行业分类"""
+def _try_match_ticker(holdings, maps, update_sector=True):
+    """尝试通过公司确切原名或归一化名匹配 ticker"""
+    exact_map = maps.get("exact", {})
+    norm_map = maps.get("norm", {})
+
     for h in holdings:
         issuer_upper = h["issuer"].upper()
+        norm_iss = normalize_name(issuer_upper)
         matched_ticker = ""
-        # 精确匹配
-        if issuer_upper in ticker_map:
-            matched_ticker = ticker_map[issuer_upper]
+
+        # 1. 尝试完全精确匹配 (Exact map)
+        if issuer_upper in exact_map:
+            matched_ticker = exact_map[issuer_upper]
+        # 2. 尝试归一化全匹配 (Norm map)
+        elif norm_iss in norm_map:
+            matched_ticker = norm_map[norm_iss]
         else:
-            # 模糊匹配 - 取前几个词
-            words = issuer_upper.split()
+            # 3. 模糊匹配 - 依次截断末尾单词 (Norm map)
+            words = norm_iss.split()
             for length in range(len(words), 0, -1):
                 partial = " ".join(words[:length])
-                if partial in ticker_map:
-                    matched_ticker = ticker_map[partial]
+                if partial and partial in norm_map:
+                    matched_ticker = norm_map[partial]
                     break
+        
+        # 4. 特例硬编码 Fallbacks (针对 ADR 和特殊缩写)
+        if not matched_ticker:
+            if "ALIBABA GROUP" in issuer_upper: matched_ticker = "BABA"
+            elif "TAIWAN SEMICONDUCTOR" in issuer_upper: matched_ticker = "TSM"
+            elif "ASML HOLDING" in issuer_upper: matched_ticker = "ASML"
+            elif "BK OF AMERICA" in issuer_upper: matched_ticker = "BAC"
+            elif "VERISIGN" in issuer_upper: matched_ticker = "VRSN"
+            elif "BERKSHIRE HATHAWAY" in issuer_upper: matched_ticker = "BRK-B"
+
         if matched_ticker:
             h["ticker"] = matched_ticker
 
     # 统一在 ticker 匹配后，通过 get_sector 赋行业分类
-    for h in holdings:
-        h["asset_class"] = get_sector(
-            h.get("ticker", ""),
-            h["issuer"],
-            h.get("title_of_class", ""),
-            h.get("put_call")
-        )
+    if update_sector:
+        from backend.sector_mapper import get_sector
+        for h in holdings:
+            h["asset_class"] = get_sector(
+                h.get("ticker", ""),
+                h["issuer"],
+                h.get("title_of_class", ""),
+                h.get("put_call")
+            )
 
 
 def compute_changes(current_holdings, prev_holdings):
@@ -440,37 +488,103 @@ def compute_changes(current_holdings, prev_holdings):
     return current_holdings
 
 
-def scrape_fund(cik, name, name_cn, max_quarters=None, latest_only=False):
+def _fallback_dataroma(dataroma_id, fund_cik, name_cn):
+    """当 SEC 数据缺失时，从 Dataroma 直接抓取持仓的补充逻辑"""
+    from backend.dataroma_scraper import scrape_dataroma_fund
+    from backend.database import get_filing, upsert_filing, insert_holdings
+
+    holdings, period = scrape_dataroma_fund(dataroma_id)
+    if not holdings or not period:
+        logger.warning(f"  [Dataroma] 未抓取到 {name_cn} 的数据或季报标识")
+        return
+
+    logger.info(f"  [Dataroma] 成功提取 {period} 的 {len(holdings)} 条持仓记录")
+
+    # 检查是否已存在
+    existing = get_filing(fund_cik, period)
+    if existing:
+        logger.info(f"    {period} 数据已存在于数据库，跳过")
+        return
+
+    # 通过 get_sector 添加资产类别
+    from backend.sector_mapper import get_sector
+    for h in holdings:
+        h["asset_class"] = get_sector(
+            h.get("ticker", ""),
+            h["issuer"],
+            h.get("title_of_class", ""),
+            h.get("put_call")
+        )
+
+    # 获取上期对比变化
+    prev_quarter = _get_prev_quarter(period)
+    prev_holdings = get_all_holdings(fund_cik, prev_quarter)
+    if prev_holdings:
+        holdings = compute_changes(holdings, prev_holdings)
+
+    # 计算预估最新总市值
+    total_value = sum(h.get("value", 0) for h in holdings)
+    
+    # 模拟 filing 日期 (估算截止日)
+    period_year, period_q = period.split('-')
+    q_month_end = {"Q1": "03-31", "Q2": "06-30", "Q3": "09-30", "Q4": "12-31"}
+    period_date = f"{period_year}-{q_month_end[period_q]}"
+    filing_date = f"{period_year}-{(int(q_month_end[period_q].split('-')[0])+2)%12 or 12:02d}-15"
+
+    filing_id = upsert_filing(
+        fund_cik, period, period_date=period_date,
+        filing_date=filing_date, accession=f"DATAROMA-{period}",
+        total_value=total_value
+    )
+    insert_holdings(filing_id, holdings)
+    logger.info(f"    ✓ {period} 已通过备用通道完成保存 (总市值: ${total_value/1000:.2f}M)")
+
+
+def scrape_fund(cik, name, name_cn, max_quarters=None, latest_only=False, dataroma_id=None):
     """
     抓取单个基金的 13F 数据
 
     Args:
-        cik: 基金 CIK 号
+        cik: 基金 CIK 号 (如 Dataroma 专属基金则为 "D-xxx")
         name: 英文名
         name_cn: 中文名
         max_quarters: 最多抓取多少个季度
         latest_only: 是否只抓取最新一期
+        dataroma_id: 备用提取标识
     """
     logger.info(f"========== 开始采集: {name_cn} ({name}) ==========")
 
     # 保存基金信息
     upsert_fund(cik, name, name_cn)
 
-    # 获取提交历史
-    try:
-        submissions = get_fund_submissions(cik)
-    except Exception as e:
-        logger.error(f"获取 {name} 的提交历史失败: {e}")
-        return
+    # Dataroma fallback check
+    is_dataroma_only = not cik or cik.startswith("D-")
+    submissions = None
+    
+    if not is_dataroma_only:
+        # 获取提交历史
+        try:
+            submissions = get_fund_submissions(cik)
+        except Exception as e:
+            logger.error(f"获取 {name} 的提交历史失败: {e}")
+            if not dataroma_id:
+                return
 
-    # 获取 13F filing 列表
-    filings = get_13f_filings(
-        submissions,
-        max_count=1 if latest_only else max_quarters
-    )
+    filings = []
+    if submissions:
+        # 获取 13F filing 列表
+        filings = get_13f_filings(
+            submissions,
+            max_count=1 if latest_only else max_quarters
+        )
 
     if not filings:
-        logger.warning(f"{name} 未找到 13F-HR 提交记录")
+        if dataroma_id:
+            logger.info(f"  -> SEC 无可用数据，触发 Dataroma 降级抓取...")
+            _fallback_dataroma(dataroma_id, cik, name_cn)
+        else:
+            logger.warning(f"{name} 未找到 13F-HR 提交记录且无备用通道")
+        logger.info(f"========== {name_cn} 采集完成 ==========\n")
         return
 
     logger.info(f"  找到 {len(filings)} 个 13F 报告")
@@ -569,13 +683,17 @@ def scrape_all(latest_only=False):
     logger.info(f"开始采集 {len(FUNDS)} 个基金的 13F 数据...")
 
     for fund in FUNDS:
+        cik = fund.get("cik", "")
+        dataroma_id = fund.get("dataroma_id", "")
+        key = cik if cik else f"D-{dataroma_id}"
         try:
             scrape_fund(
-                cik=fund["cik"],
+                cik=key,
                 name=fund["name"],
                 name_cn=fund["name_cn"],
                 max_quarters=INITIAL_QUARTERS if not latest_only else 1,
                 latest_only=latest_only,
+                dataroma_id=dataroma_id
             )
         except Exception as e:
             logger.error(f"采集 {fund['name_cn']} 失败: {e}")
@@ -605,9 +723,13 @@ if __name__ == "__main__":
                 target = f
                 break
         if target:
+            cik = target.get("cik", "")
+            dataroma_id = target.get("dataroma_id", "")
+            key = cik if cik else f"D-{dataroma_id}"
             scrape_fund(
-                target["cik"], target["name"], target["name_cn"],
-                max_quarters=args.quarters, latest_only=args.latest
+                key, target["name"], target["name_cn"],
+                max_quarters=args.quarters, latest_only=args.latest,
+                dataroma_id=dataroma_id
             )
         else:
             logger.error(f"未找到匹配的基金: {args.fund}")

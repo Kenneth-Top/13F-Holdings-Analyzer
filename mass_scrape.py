@@ -31,19 +31,22 @@ if __name__ == "__main__":
     # 选出需要采集的基金
     to_scrape = []
     for fund in FUNDS:
-        cik = fund["cik"]
-        row = status.get(cik)
+        cik = fund.get("cik", "")
+        dataroma_id = fund.get("dataroma_id", "")
+        key = cik if cik else f"D-{dataroma_id}"
+        
+        row = status.get(key)
         latest = row[3] if row else None
         if latest is None or latest < "2024-Q1":
-            to_scrape.append((cik, fund["name"], fund["name_cn"], latest or "无数据"))
+            to_scrape.append((key, fund["name"], fund["name_cn"], latest or "无数据", dataroma_id))
     
     print(f"需要采集的基金: {len(to_scrape)} 家")
-    for i, (cik, name, name_cn, status_str) in enumerate(to_scrape, 1):
+    for i, (key, name, name_cn, status_str, dataroma_id) in enumerate(to_scrape, 1):
         print(f"\n{'='*55}")
-        print(f"[{i}/{len(to_scrape)}] {name_cn} ({cik}) | 当前: {status_str}")
+        print(f"[{i}/{len(to_scrape)}] {name_cn} ({key}) | 当前: {status_str}")
         print(f"{'='*55}")
         try:
-            scrape_fund(cik, name, name_cn, max_quarters=8, latest_only=False)
+            scrape_fund(key, name, name_cn, max_quarters=8, latest_only=False, dataroma_id=dataroma_id)
         except Exception as e:
             print(f"  [错误] {e}")
     
