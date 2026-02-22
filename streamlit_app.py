@@ -118,7 +118,6 @@ st.markdown("""
 # ============================================================
 # 数据库读取函数
 # ============================================================
-@st.cache_data(ttl=600)
 def get_fund_list():
     """获取基金列表"""
     conn = sqlite3.connect(DB_PATH)
@@ -127,7 +126,6 @@ def get_fund_list():
     return df
 
 
-@st.cache_data(ttl=600)
 def get_periods(fund_cik):
     """获取某基金可用的季度"""
     conn = sqlite3.connect(DB_PATH)
