@@ -2,7 +2,7 @@ import logging
 import requests
 import re
 from bs4 import BeautifulSoup
-from config import SEC_REQUEST_DELAY
+from backend.config import SEC_REQUEST_DELAY
 import time
 
 logger = logging.getLogger(__name__)
@@ -128,5 +128,56 @@ def scrape_dataroma_fund(dataroma_id, target_quarter=None):
             "discretion": "SOLE" # Default
         }
         holdings.append(holding)
+        
+    # === 如果指定了具体历史季度且不等于最新季度，则需退而求其次地遍历每只股票的历史页回溯 ===
+    if target_quarter and target_quarter != actual_period:
+        logger.info(f"Targeting historic qt {target_quarter} for {dataroma_id}. Starting deep scraping...")
+        historic_holdings = []
+        target_yr, target_q = target_quarter.split("-Q")
+        
+        for base_hdg in holdings:
+            sym = base_hdg["ticker"]
+            hist_url = f"https://www.dataroma.com/m/hist/hist.php?f={dataroma_id}&s={sym}"
+            try:
+                # 礼貌并发
+                time.sleep(0.5)
+                h_resp = requests.get(hist_url, headers=DATAROMA_HEADERS, timeout=10)
+                h_soup = BeautifulSoup(h_resp.text, 'html.parser')
+            except Exception:
+                continue
+                
+            h_grid = h_soup.find('table', id='grid')
+            if not h_grid or not h_grid.find('tbody'):
+                continue
+                
+            for h_row in h_grid.find('tbody').find_all('tr'):
+                h_tds = h_row.find_all('td')
+                if len(h_tds) >= 5:
+                    period_text = h_tds[0].text.replace('\xa0', ' ').strip() # e.g. "2025   Q3"
+                    # 这里需规整化成 YYYY-QX
+                    p_parts = period_text.split()
+                    if len(p_parts) >= 2:
+                        p_yr, p_q = p_parts[0], p_parts[-1]
+                        if p_yr == target_yr and p_q == f"Q{target_q}":
+                            # 命中目标带返回！
+                            h_shares = _parse_dataroma_shares(h_tds[1].text)
+                            # value 在这里可能是 "Buy", "Add XX%", 所以此页并没存绝对市值估值，仅有 Pct 
+                            # 鉴于 Dataroma 个股历史并未提供精准的过往季度 Value 我们使用简单的占比替代
+                            h_pct = _parse_dataroma_pct(h_tds[4].text)
+                            
+                            historic_holdings.append({
+                                "issuer": base_hdg["issuer"],
+                                "ticker": sym,
+                                "value": 0.0, # 缺失绝对值，前端只展示占比
+                                "shares": h_shares,
+                                "portfolio_pct": h_pct,
+                                "title_of_class": "COM",
+                                "put_call": "",
+                                "share_type": "SH",
+                                "discretion": "SOLE"
+                            })
+                            break # 找到当前股票在这个季度的行就去下一个股票
+                            
+        return historic_holdings, target_quarter
         
     return holdings, actual_period

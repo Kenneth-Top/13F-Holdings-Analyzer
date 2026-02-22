@@ -14,14 +14,20 @@ from datetime import datetime, timedelta
 
 import requests
 
-from config import (
+from backend.config import (
     SEC_USER_AGENT, SEC_BASE_URL, SEC_ARCHIVES_URL,
-    SEC_REQUEST_DELAY, FUNDS, INITIAL_QUARTERS
+    INITIAL_QUARTERS,
+    FUNDS,
+    SEC_REQUEST_DELAY,
 )
-from sector_mapper_yf import get_sector_yf as get_sector, prefetch_sectors, _init_cache
-from database import (
-    init_db, upsert_fund, get_filing, upsert_filing,
-    insert_holdings, get_all_holdings
+from backend.sector_mapper_yf import get_sector_yf as get_sector, prefetch_sectors, _init_cache
+from backend.database import (
+    init_db,
+    upsert_fund,
+    get_filing,
+    upsert_filing,
+    insert_holdings,
+    get_all_holdings,
 )
 
 logging.basicConfig(
@@ -488,56 +494,66 @@ def compute_changes(current_holdings, prev_holdings):
     return current_holdings
 
 
-def _fallback_dataroma(dataroma_id, fund_cik, name_cn):
+def _fallback_dataroma(dataroma_id, fund_cik, name_cn, target_quarters=None):
     """当 SEC 数据缺失时，从 Dataroma 直接抓取持仓的补充逻辑"""
     from backend.dataroma_scraper import scrape_dataroma_fund
     from backend.database import get_filing, upsert_filing, insert_holdings
-
-    holdings, period = scrape_dataroma_fund(dataroma_id)
-    if not holdings or not period:
-        logger.warning(f"  [Dataroma] 未抓取到 {name_cn} 的数据或季报标识")
-        return
-
-    logger.info(f"  [Dataroma] 成功提取 {period} 的 {len(holdings)} 条持仓记录")
-
-    # 检查是否已存在
-    existing = get_filing(fund_cik, period)
-    if existing:
-        logger.info(f"    {period} 数据已存在于数据库，跳过")
-        return
-
-    # 通过 get_sector 添加资产类别
     from backend.sector_mapper import get_sector
-    for h in holdings:
-        h["asset_class"] = get_sector(
-            h.get("ticker", ""),
-            h["issuer"],
-            h.get("title_of_class", ""),
-            h.get("put_call")
-        )
-
-    # 获取上期对比变化
-    prev_quarter = _get_prev_quarter(period)
-    prev_holdings = get_all_holdings(fund_cik, prev_quarter)
-    if prev_holdings:
-        holdings = compute_changes(holdings, prev_holdings)
-
-    # 计算预估最新总市值
-    total_value = sum(h.get("value", 0) for h in holdings)
     
-    # 模拟 filing 日期 (估算截止日)
-    period_year, period_q = period.split('-')
-    q_month_end = {"Q1": "03-31", "Q2": "06-30", "Q3": "09-30", "Q4": "12-31"}
-    period_date = f"{period_year}-{q_month_end[period_q]}"
-    filing_date = f"{period_year}-{(int(q_month_end[period_q].split('-')[0])+2)%12 or 12:02d}-15"
+    # 默认只抓一期（最新），如果提供了多个则挨个尝试
+    if not target_quarters:
+        target_quarters = [None]
+        
+    for idx, tq in enumerate(target_quarters):
+        logger.info(f"  [Dataroma] 尝试提取 {name_cn} 的 {tq if tq else '最新'} 季度数据...")
+        
+        # 提取数据
+        holdings, period = scrape_dataroma_fund(dataroma_id, target_quarter=tq)
+        if not holdings or not period:
+            logger.warning(f"  [Dataroma] 未抓取到 {name_cn} 在 {tq if tq else '最新'} 的数据")
+            continue
 
-    filing_id = upsert_filing(
-        fund_cik, period, period_date=period_date,
-        filing_date=filing_date, accession=f"DATAROMA-{period}",
-        total_value=total_value
-    )
-    insert_holdings(filing_id, holdings)
-    logger.info(f"    ✓ {period} 已通过备用通道完成保存 (总市值: ${total_value/1000:.2f}M)")
+        # 检查是否已存在
+        existing = get_filing(fund_cik, period)
+        if existing:
+            logger.info(f"    {period} 数据已存在于数据库，跳过")
+            continue
+
+        # 通过 get_sector 添加资产类别
+        for h in holdings:
+            h["asset_class"] = get_sector(
+                h.get("ticker", ""),
+                h["issuer"],
+                h.get("title_of_class", ""),
+                h.get("put_call")
+            )
+
+        # 获取上期对比变化
+        prev_quarter = _get_prev_quarter(period)
+        prev_holdings = get_all_holdings(fund_cik, prev_quarter)
+        if prev_holdings:
+            holdings = compute_changes(holdings, prev_holdings)
+
+        # 计算预估最新总市值
+        total_value = sum(h.get("value", 0) for h in holdings)
+        
+        # 模拟 filing 日期 (估算截止日)
+        period_year, period_q = period.split('-')
+        q_month_end = {"Q1": "03-31", "Q2": "06-30", "Q3": "09-30", "Q4": "12-31"}
+        period_date = f"{period_year}-{q_month_end[period_q]}"
+        filing_date = f"{period_year}-{(int(q_month_end[period_q].split('-')[0])+2)%12 or 12:02d}-15"
+
+        filing_id = upsert_filing(
+            fund_cik, period, period_date=period_date,
+            filing_date=filing_date, accession=f"DATAROMA-{period}",
+            total_value=total_value
+        )
+        insert_holdings(filing_id, holdings)
+        logger.info(f"    ✓ {period} 已通过备用通道完成保存 (总市值: ${total_value/1000:.2f}M)")
+
+        if idx > 0:
+            import time
+            time.sleep(1.5) # 给 Dataroma 稍作喘息
 
 
 def scrape_fund(cik, name, name_cn, max_quarters=None, latest_only=False, dataroma_id=None):
@@ -581,7 +597,13 @@ def scrape_fund(cik, name, name_cn, max_quarters=None, latest_only=False, dataro
     if not filings:
         if dataroma_id:
             logger.info(f"  -> SEC 无可用数据，触发 Dataroma 降级抓取...")
-            _fallback_dataroma(dataroma_id, cik, name_cn)
+            
+            tqs = [None]
+            if max_quarters is not None and max_quarters > 1 and not latest_only:
+                # 简单硬编码补全最近几个季度以满足图表趋势 (由于 dataroma 限制，不能传太多免得风控，补3个季度即可)
+                tqs = [None, "2025-Q3", "2025-Q2", "2025-Q1"]
+                
+            _fallback_dataroma(dataroma_id, cik, name_cn, target_quarters=tqs)
         else:
             logger.warning(f"{name} 未找到 13F-HR 提交记录且无备用通道")
         logger.info(f"========== {name_cn} 采集完成 ==========\n")
