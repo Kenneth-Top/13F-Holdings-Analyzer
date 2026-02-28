@@ -31,6 +31,7 @@ jobs:
         run: python backend/scraper.py --quarters 2
         env:
           SEC_USER_AGENT: "13F-Tracker research@example.com"
+          PYTHONPATH: "."
 
       - name: 检查是否有数据更新
         id: check_changes
