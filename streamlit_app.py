@@ -179,7 +179,7 @@ def get_composition_history(fund_cik):
     """获取各季度资产分布"""
     conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql_query(
-        """SELECT f.period, h.asset_class, SUM(h.value) as class_value, f.total_value
+        """SELECT f.period, h.asset_class, SUM(h.value) as class_value, f.total_value, SUM(h.portfolio_pct) as class_pct
            FROM holdings h
            JOIN filings f ON h.filing_id = f.id
            WHERE f.fund_cik = ?
@@ -189,7 +189,11 @@ def get_composition_history(fund_cik):
     )
     conn.close()
     if not df.empty:
-        df["pct"] = df["class_value"] / df["total_value"] * 100
+        df["pct"] = df.apply(
+            lambda r: r["class_pct"] if pd.isna(r["total_value"]) or r["total_value"] == 0 
+            else (r["class_value"] / r["total_value"] * 100 if r["total_value"] > 0 else 0),
+            axis=1
+        )
     return df
 
 
