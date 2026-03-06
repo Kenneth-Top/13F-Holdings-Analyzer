@@ -1,0 +1,10 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+GOOGL,Alphabet Inc.,22.31,2543300,796053000.0,313.0,
+GOOG,Alphabet Inc. CL C,21.55,2451300,769218000.0,313.8,
+BAC,Bank of America Corp.,16.08,10431387,573726000.0,55.0,
+PDD,Pinduoduo Inc.,14.64,4608000,522501000.0,113.39,
+BRK.B,Berkshire Hathaway CL B,12.64,897749,451254000.0,502.65,
+EWBC,East West Bancorp,8.74,2776351,312034000.0,112.39,
+OXY,Occidental Petroleum,1.69,1466500,60302000.0,41.12,
+CROX,Crocs Inc.,1.51,628159,53720000.0,85.52,Buy
+AAPL,Apple Inc.,0.84,110600,30068000.0,271.86,

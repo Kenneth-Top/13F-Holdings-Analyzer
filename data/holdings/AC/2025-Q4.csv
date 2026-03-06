@@ -1,0 +1,19 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+MA,Mastercard Inc.,18.81,3005280,1715654000.0,570.88,Reduce 4.76%
+BN,Brookfield Corp.,13.51,26843633,1231854000.0,45.89,Reduce 6.87%
+KKR,KKR & Co. L.P.,11.33,8106049,1033359000.0,127.48,Reduce 6.97%
+V,Visa Inc.,10.29,2676628,938720000.0,350.71,Reduce 9.99%
+MCO,Moody's Corp.,9.72,1735231,886443000.0,510.85,Reduce 18.11%
+CSGP,CoStar Group Inc.,7.09,9617805,646701000.0,67.24,Add 3.35%
+ORLY,O'Reilly Automotive,6.72,6719819,612915000.0,91.21,Reduce 21.98%
+ROP,Roper Technologies Inc.,5.39,1105153,491937000.0,445.13,Reduce 4.45%
+ABNB,Airbnb Inc.,5.17,3473243,471389000.0,135.72,
+FICO,Fair Isaac Corp.,5.14,277445,469054000.0,1690.62,Add 6.36%
+CPRT,Copart Inc.,3.38,7867967,308031000.0,39.15,Add 85.71%
+CCC,CCC Intelligent Solutions Hldgs Inc.,2.16,24836984,197454000.0,7.95,Add 52.65%
+AMT,American Tower Corp.,0.49,255267,44817000.0,175.57,Reduce 42.36%
+GSHD,Goosehead Insurance Inc.,0.3,371096,27331000.0,73.65,Add 1.36%
+SOPH,Sophia Genetics SA,0.19,3719140,17368000.0,4.67,
+DHR,Danaher Corp.,0.17,69516,15914000.0,228.93,Reduce 92.05%
+BRK.B,Berkshire Hathaway CL B,0.07,11902,5983000.0,502.69,Reduce 14.89%
+KMX,CarMax Inc.,0.06,150600,5819000.0,38.64,

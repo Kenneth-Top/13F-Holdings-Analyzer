@@ -1,0 +1,40 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AKAM,Akamai Technologies Inc.,3.26,34500,3088000.0,89.51,Buy
+DD,DuPont de Nemours Inc.,2.89,68900,2740000.0,39.77,Add 90.33%
+NUE,Nucor Corp.,2.84,16900,2695000.0,159.47,Reduce 14.21%
+USB,U.S. Bancorp,2.82,54500,2673000.0,49.05,
+WST,West Pharmaceutical Services,2.81,9600,2662000.0,277.29,Reduce 6.50%
+GSK,GSK plc,2.8,55400,2651000.0,47.85,Reduce 20.06%
+HSY,Hershey Co.,2.76,13900,2614000.0,188.06,Reduce 5.44%
+WBD,Warner Bros. Discovery Inc.,2.75,108700,2609000.0,24.0,Reduce 18.81%
+BMY,Bristol-Myers Squibb,2.72,52400,2578000.0,49.2,Reduce 15.62%
+BIIB,Biogen Inc.,2.71,14100,2567000.0,182.06,Reduce 27.69%
+UPS,United Parcel Service,2.71,26800,2567000.0,95.78,Reduce 15.90%
+ASML,ASML Holding NV,2.68,2400,2544000.0,1060.0,Reduce 17.24%
+TSM,Taiwan Semiconductor S.A.,2.68,8700,2536000.0,291.49,Reduce 10.36%
+CVS,CVS Health Corp.,2.67,31500,2531000.0,80.35,Reduce 13.22%
+ZBH,Zimmer Biomet Holdings,2.65,25800,2516000.0,97.52,Reduce 4.56%
+IFF,International Flavors & Fragrances Inc.,2.59,35300,2453000.0,69.49,Reduce 10.86%
+KMX,CarMax Inc.,2.59,63400,2451000.0,38.66,Add 46.08%
+EL,Estee Lauder Cos.,2.58,26000,2446000.0,94.08,Reduce 19.25%
+NKE,NIKE Inc.,2.58,37800,2443000.0,64.63,
+DIS,Walt Disney Co.,2.57,23300,2434000.0,104.46,Reduce 4.12%
+KHC,Kraft Heinz Co.,2.57,95300,2431000.0,25.51,Reduce 11.43%
+UNH,United Health Group Inc.,2.57,7400,2440000.0,329.73,Reduce 6.33%
+BDX,Becton Dickinson,2.52,12300,2386000.0,193.98,Reduce 17.45%
+PFE,Pfizer Inc.,2.52,92700,2386000.0,25.74,Reduce 18.18%
+MSFT,Microsoft Corp.,2.49,4800,2362000.0,492.08,Reduce 7.69%
+BUD,Anheuser-Busch InBev,2.47,38000,2338000.0,61.53,Reduce 10.59%
+VZ,Verizon Communications,2.47,57000,2343000.0,41.11,Reduce 11.76%
+CPB,Campbell's Co.,2.44,75900,2313000.0,30.47,Reduce 10.71%
+BF.B,Brown-Forman Corp.,2.43,79400,2301000.0,28.98,Reduce 11.28%
+TROW,T. Rowe Price Group,2.4,22200,2273000.0,102.39,Reduce 15.27%
+CAG,Conagra Brands Inc.,2.39,127100,2269000.0,17.85,
+STZ,Constellation Brands,2.36,16400,2237000.0,136.4,
+CMCSA,Comcast Corp.,2.34,83077,2217000.0,26.69,
+FISV,Fiserv Inc.,2.28,35100,2158000.0,61.48,Add 72.87%
+DEO,Diageo ADR,2.25,23300,2135000.0,91.63,Reduce 11.74%
+BAX,Baxter International Inc.,2.24,113200,2121000.0,18.74,Reduce 9.58%
+ADBE,Adobe Inc.,2.23,6600,2113000.0,320.15,Reduce 12.00%
+BA,Boeing Co.,2.19,11000,2079000.0,189.0,Reduce 12.00%
+CRM,Salesforce.com,2.19,9000,2075000.0,230.56,Reduce 18.18%

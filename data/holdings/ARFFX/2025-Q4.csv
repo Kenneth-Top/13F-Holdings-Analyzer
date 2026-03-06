@@ -1,0 +1,29 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+B,Barrick Mining Corp.,5.77,98508,4290000.0,43.55,Reduce 12.23%
+PBH,Prestige Consumer Healthcare,5.59,67373,4156000.0,61.69,Add 25.16%
+AMG,Affiliated Managers Group,5.51,14218,4099000.0,288.3,Reduce 13.33%
+BOKF,BOK Financial Corp.,5.5,34542,4092000.0,118.46,Reduce 3.47%
+JNJ,Johnson & Johnson,5.48,19674,4072000.0,206.97,Reduce 17.48%
+PHIN,PHINIA Inc.,5.43,64415,4038000.0,62.69,
+BAC,Bank of America Corp.,5.29,71467,3931000.0,55.0,
+SNA,Snap-On Inc.,4.95,10682,3681000.0,344.6,
+APA,APA Corp.,4.61,140070,3426000.0,24.46,
+SLB,Schlumberger Ltd.,4.51,87294,3350000.0,38.38,
+MHK,Mohawk Industries,4.19,28524,3118000.0,109.31,
+BYD,Boyd Gaming Corp.,4.18,36441,3106000.0,85.23,
+LMT,Lockheed Martin Corp.,4.16,6399,3095000.0,483.67,Reduce 2.39%
+CVX,Chevron Corp.,3.84,18745,2857000.0,152.41,
+SJM,J.M. Smucker Co,3.78,28750,2812000.0,97.81,
+REZI,Resideo Technologies Inc.,3.52,74529,2617000.0,35.11,Reduce 22.94%
+LH,Labcorp Holdings Inc.,3.08,9120,2288000.0,250.88,
+FAF,First Amer'n Corp.,2.91,35162,2160000.0,61.43,
+FISV,Fiserv Inc.,2.6,28755,1931000.0,67.15,Add 855.32%
+AJG,Arthur J. Gallagher & Co.,2.5,7177,1857000.0,258.74,Add 13.15%
+MOS,Mosaic Co.,2.28,70266,1693000.0,24.09,
+ORCL,Oracle Corp.,2.0,7643,1490000.0,194.95,
+BWA,BorgWarner Inc.,1.93,31842,1435000.0,45.07,
+GS,Goldman Sachs Group,1.66,1406,1236000.0,879.09,
+MSGE,Madison Square Garden Entertainment Corp.,1.55,21317,1149000.0,53.9,Reduce 36.93%
+MSGS,Madison Square Garden Sports Corp.,1.5,4300,1112000.0,258.6,
+ADT,ADT Inc.,1.04,95610,772000.0,8.07,Buy
+GNRC,Generac Holdings Inc.,0.66,3588,489000.0,136.29,Reduce 21.52%

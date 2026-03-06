@@ -1,0 +1,12 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+CHTR,Charter Communications,26.77,164000,34235000.0,208.75,
+DPZ,Dominos Pizza Inc.,12.06,37000,15422000.0,416.81,
+LAMR,Lamar Advertising Co.,11.88,120000,15190000.0,126.58,Reduce 29.41%
+BBWI,Bath & Body Works Inc.,11.53,734355,14746000.0,20.08,Reduce 46.40%
+CDW,CDW Corp.,10.65,100000,13620000.0,136.2,
+BELFB,Bel Fuse Inc. CL B,7.29,55000,9330000.0,169.64,Reduce 45.00%
+FLUT,Flutter Entertainment Plc,6.96,41422,8907000.0,215.03,Reduce 49.13%
+LMB,Limbach Holdings Inc.,6.22,102239,7959000.0,77.85,Add 95.71%
+WHD,Cactus Inc.,5.05,141286,6454000.0,45.68,Reduce 46.36%
+SVV,Savers Value Village Inc,1.16,159110,1486000.0,9.34,Reduce 79.60%
+HEI.A,HEICO Corp. CL A,0.43,2171,548000.0,252.42,

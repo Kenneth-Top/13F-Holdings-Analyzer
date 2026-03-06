@@ -1,0 +1,9 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+IBKR,Interactive Brokers Group Inc.,28.42,1030740,66287000.0,64.31,
+GIL,Gildan Activewear Inc.,18.25,681689,42578000.0,62.46,
+GOOG,Alphabet Inc. CL C,15.9,118161,37079000.0,313.8,
+TDG,TransDigm Group Inc.,13.78,24170,32142000.0,1329.83,
+GWRE,Guidewire Software Inc.,7.17,83183,16721000.0,201.01,Add 26.64%
+NRP,Natural Resource Partners,5.7,127351,13295000.0,104.4,Reduce 24.67%
+SGU,Star Gas Partners LP,5.58,1099239,13015000.0,11.84,
+LEN,Lennar Corp.,5.2,118000,12130000.0,102.8,

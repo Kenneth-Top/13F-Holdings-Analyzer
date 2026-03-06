@@ -1,0 +1,11 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+GOOGL,Alphabet Inc.,0.86,4843973,0,0,8.04
+BN,Brookfield Corp.,0.07,61530346,0,0,19.21
+QSR,Restaurant Brands International,0.04,22915496,0,0,10.04
+UBER,Uber Technologies Inc.,0.02,30270518,0,0,20.25
+AMZN,Amazon.com Inc.,0.0,5823316,0,0,8.73
+GOOG,Alphabet Inc. CL C,0.0,6324031,0,0,10.52
+HHH,Howard Hughes Holdings Inc.,0.0,18852064,0,0,10.58
+HLT,Hilton Worldwide Holdings,0.0,3030578,0,0,5.37
+SEG,Seaport Entertainment Group,0.0,5023780,0,0,0.79
+HTZ,Hertz Global Hldgs Inc.,0.0,15241127,0,0,0.71

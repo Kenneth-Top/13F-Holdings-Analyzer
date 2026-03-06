@@ -2,9 +2,8 @@ name: 自动更新 13F 数据
 
 on:
   schedule:
-    # 每天 UTC 6:00 运行 (北京时间 14:00)
-    # 13F 截止日后的月份(2/5/8/11月)每天检查新数据
-    - cron: '0 6 * * *'
+    # 每周一 UTC 6:00 运行 (北京时间 周一 14:00)
+    - cron: '0 6 * * 1'
   workflow_dispatch:  # 支持手动触发
 
 jobs:
@@ -27,17 +26,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 运行采集脚本
-        run: python backend/scraper.py --quarters 2
+      - name: 运行采集脚本 (仅最新季度)
+        run: python backend/scraper.py --no-history
         env:
-          SEC_USER_AGENT: "13F-Tracker research@example.com"
           PYTHONPATH: "."
 
       - name: 检查是否有数据更新
         id: check_changes
         run: |
-          git diff --stat
-          if git diff --quiet data/holdings.db; then
+          git add data/
+          if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "📭 没有新数据"
           else
@@ -50,6 +48,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/holdings.db
           git commit -m "🔄 自动更新 13F 数据 $(date +'%Y-%m-%d')"
           git push

@@ -1,0 +1,42 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AAPL,Apple Inc.,3.98,238212764,0,0,22.69
+GOOGL,Alphabet Inc.,1.62,17846142,0,0,1.62
+BAC,Bank of America Corp.,0.72,568070012,0,0,10.96
+CB,Chubb Limited,0.45,31332895,0,0,3.31
+VRSN,Verisign Inc.,0.45,8989880,0,0,0.94
+DVA,DaVita HealthCare Partners,0.08,32160579,0,0,1.60
+DPZ,Dominos Pizza Inc.,0.06,2981945,0,0,0.48
+SIRI,SiriusXM Holdings Inc,0.04,124807117,0,0,1.09
+NUE,Nucor Corp.,0.01,6407749,0,0,0.32
+AXP,American Express,0.0,151610700,0,0,18.84
+KO,Coca Cola Co.,0.0,400000000,0,0,9.92
+CVX,Chevron Corp.,0.0,122064792,0,0,7.09
+MCO,Moody's Corp.,0.0,24669778,0,0,4.40
+OXY,Occidental Petroleum,0.0,264941431,0,0,4.68
+KHC,Kraft Heinz Co.,0.0,325634818,0,0,3.17
+KR,Kroger Co.,0.0,50000000,0,0,1.26
+V,Visa Inc.,0.0,8297460,0,0,1.06
+MA,Mastercard Inc.,0.0,3986648,0,0,0.85
+STZ,Constellation Brands,0.0,13400000,0,0,0.68
+COF,Capital One Financial,0.0,7150000,0,0,0.57
+UNH,United Health Group Inc.,0.0,5039564,0,0,0.65
+ALLY,Ally Financial Inc.,0.0,29000000,0,0,0.43
+AON,Aon Plc,0.0,4100000,0,0,0.55
+LLYVK,Liberty Media Corp. Series C Live,0.0,10917661,0,0,0.40
+LEN,Lennar Corp.,0.0,7050950,0,0,0.33
+POOL,Pool Corp.,0.0,3458885,0,0,0.40
+AMZN,Amazon.com Inc.,0.0,10000000,0,0,0.82
+LPX,Louisiana-Pacific Corp.,0.0,5664793,0,0,0.19
+LLYVA,Liberty Media Corp. Series A Live,0.0,4986588,0,0,0.18
+HEI.A,HEICO Corp. CL A,0.0,1294612,0,0,0.12
+FWONK,Liberty Media Corp Formula One Series C,0.0,3018555,0,0,0.12
+CHTR,Charter Communications,0.0,1060882,0,0,0.11
+LAMR,Lamar Advertising Co.,0.0,1202110,0,0,0.06
+ALLE,Allegion Plc,0.0,780133,0,0,0.05
+NVR,NVR Inc.,0.0,11112,0,0,0.03
+DEO,Diageo ADR,0.0,227750,0,0,0.01
+JEF,Jefferies Financial Group Inc.,0.0,433558,0,0,0.01
+LEN.B,Lennar Corp. CL B,0.0,180980,0,0,0.01
+LILA,Liberty LiLAC Group A,0.0,2630792,0,0,0.01
+BATRK,Atlanta Braves Holdings Inc. Series C,0.0,223645,0,0,0.00
+LILAK,Liberty LiLAC Group C,0.0,1284020,0,0,0.00

@@ -1,0 +1,4 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+MOH,Molina Healthcare Inc.,43.49,125000,23920000.0,191.36,Buy
+LULU,Lululemon Athletica Inc.,32.35,100000,17793000.0,177.93,Add 100.00%
+SLM,SLM Corp.,24.16,480054,13288000.0,27.68,Buy

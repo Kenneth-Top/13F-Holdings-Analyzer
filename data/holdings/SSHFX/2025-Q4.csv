@@ -1,0 +1,38 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+REGN,Regeneron Pharmaceuticals,4.32,175887,135762000.0,771.87,Add 52.91%
+TEVA,Teva Pharmaceutical Industries Ltd.,4.28,4309906,134512000.0,31.21,Reduce 23.68%
+GOOGL,Alphabet Inc.,3.48,349734,109467000.0,313.0,Add 7.87%
+PEG,Public Serv. Enterprise Inc.,3.48,1361981,109367000.0,80.3,Add 66.63%
+DIS,Walt Disney Co.,3.47,958711,109073000.0,113.77,Add 34.08%
+BRK.B,Berkshire Hathaway CL B,3.36,210204,105659000.0,502.65,Add 17.28%
+LUV,Southwest Airlines,3.32,2520697,104180000.0,41.33,Reduce 0.67%
+QCOM,QUALCOMM Inc.,3.21,588996,100748000.0,171.05,Add 3.61%
+CRM,Salesforce.com,3.19,378539,100279000.0,264.91,Buy
+AES,AES Corp.,3.15,6898342,98922000.0,14.34,Add 17.00%
+KMI,Kinder Morgan,2.97,3391203,93224000.0,27.49,Add 26.97%
+C,Citigroup Inc.,2.93,788969,92065000.0,116.69,Reduce 20.22%
+FIS,Fidelity National Information Services,2.93,1384040,91983000.0,66.46,Reduce 0.66%
+INCY,Incyte Corp.,2.92,929832,91840000.0,98.77,Add 9.41%
+COF,Capital One Financial,2.82,365756,88645000.0,242.36,Reduce 20.02%
+CSX,CSX Corp.,2.77,2401874,87068000.0,36.25,Reduce 0.61%
+BAC,Bank of America Corp.,2.76,1577921,86786000.0,55.0,Reduce 16.05%
+GM,General Motors,2.76,1066395,86719000.0,81.32,Reduce 28.31%
+CTRA,Coterra Energy Inc.,2.74,3269386,86050000.0,26.32,Reduce 22.92%
+MRVL,Marvell Technology Inc.,2.74,1014709,86230000.0,84.98,Add 17.88%
+WFC,Wells Fargo,2.73,920055,85749000.0,93.2,Reduce 0.61%
+GEHC,GE HealthCare Technologies Inc.,2.66,1017888,83487000.0,82.02,Add 3.79%
+EQT,EQT Corp.,2.59,1517587,81343000.0,53.6,Reduce 0.60%
+CHKP,Check Point Software Technologies,2.51,424584,78786000.0,185.56,Add 20.17%
+KD,Kyndryl Holdings Inc,2.51,2974223,78995000.0,26.56,Add 46.15%
+ACI,Albertsons Co Inc.,2.48,4533158,77834000.0,17.17,Reduce 7.53%
+QXO,Qxo Inc,2.46,4002028,77199000.0,19.29,Buy
+ZBH,Zimmer Biomet Holdings,2.43,850757,76500000.0,89.92,Reduce 5.08%
+WTW,Willis Towers Watson plc,2.36,226119,74303000.0,328.6,Reduce 8.66%
+AMAT,Applied Materials,2.29,280589,72109000.0,256.99,Reduce 29.72%
+MHK,Mohawk Industries,2.26,650447,71094000.0,109.3,Reduce 1.62%
+HII,Huntington Ingalls Industries,2.21,204283,69471000.0,340.07,Reduce 28.83%
+BP,BP plc,2.16,1954785,67890000.0,34.73,Buy
+FLEX,Flex Ltd.,1.96,1018314,61527000.0,60.42,Reduce 13.09%
+B,Barrick Mining Corp.,1.6,1155678,50330000.0,43.55,Reduce 0.72%
+WBD,Warner Bros. Discovery Inc.,0.91,990615,28550000.0,28.82,Reduce 77.18%
+NEM,Newmont Corp.,0.28,88665,8853000.0,99.85,

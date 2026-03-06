@@ -1,0 +1,102 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+DIS,Walt Disney Co.,2.52,107864,12272000.0,113.77,Reduce 1.04%
+LKQ,LKQ Corp.,1.97,318266,9612000.0,30.2,
+VNT,Vontier Corp.,1.95,256000,9518000.0,37.18,
+ST,Sensata Technologies Holding,1.94,284000,9454000.0,33.29,Reduce 17.92%
+AVTR,Avantor Inc.,1.92,818000,9374000.0,11.46,Add 3.02%
+ABM,ABM Industries,1.83,211361,8941000.0,42.3,Add 1.14%
+OMC,Omnicom Group,1.82,110000,8883000.0,80.75,
+IFF,International Flavors & Fragrances Inc.,1.76,127000,8559000.0,67.39,Add 1.60%
+SLB,Schlumberger Ltd.,1.73,220000,8444000.0,38.38,Reduce 13.04%
+BDX,Becton Dickinson,1.69,42500,8248000.0,194.07,Reduce 18.27%
+FIS,Fidelity National Information Services,1.66,121470,8073000.0,66.46,Add 7.50%
+TGT,Target Corp.,1.64,82000,8016000.0,97.76,
+BAX,Baxter International Inc.,1.63,417000,7969000.0,19.11,Add 14.25%
+MHK,Mohawk Industries,1.54,68750,7514000.0,109.29,Add 23.87%
+NDAQ,Nasdaq Inc.,1.54,77300,7508000.0,97.13,Reduce 4.57%
+GD,General Dynamics,1.52,22000,7407000.0,336.68,Reduce 5.54%
+DIN,Dine Brands Global Inc.,1.51,229000,7360000.0,32.14,Reduce 26.30%
+FDX,FedEx Corp.,1.51,25500,7366000.0,288.86,Reduce 20.31%
+ZBH,Zimmer Biomet Holdings,1.51,82000,7373000.0,89.91,Add 5.13%
+RAL,Ralliant Corp.,1.49,143000,7280000.0,50.91,Reduce 1.38%
+MIDD,Middleby Corp.,1.46,48000,7136000.0,148.67,Reduce 15.79%
+DAL,Delta Air Lines Inc.,1.45,102100,7086000.0,69.4,Reduce 23.81%
+MDT,Medtronic plc,1.44,73000,7012000.0,96.05,Reduce 16.09%
+TRV,Travelers Companies Inc.,1.43,24000,6961000.0,290.04,
+DGX,Quest Diagnostics,1.42,40000,6941000.0,173.53,
+HSIC,Henry Schein Inc.,1.38,89000,6727000.0,75.58,Reduce 11.00%
+NKE,NIKE Inc.,1.36,104000,6626000.0,63.71,Add 6.12%
+USB,U.S. Bancorp,1.35,123000,6563000.0,53.36,Reduce 21.83%
+APTV,Aptiv PLC,1.33,85500,6506000.0,76.09,Reduce 3.33%
+KLIC,Kulicke & Soffa Ind.,1.33,142461,6491000.0,45.56,Reduce 23.41%
+FITB,Fifth Third Bancorp,1.31,136000,6366000.0,46.81,Reduce 6.21%
+UPS,United Parcel Service,1.3,64000,6348000.0,99.19,Reduce 12.33%
+WFC,Wells Fargo,1.28,67000,6244000.0,93.19,Reduce 8.22%
+CFG,Citizens Financial Group Inc.,1.26,105000,6133000.0,58.41,Reduce 28.15%
+IVZ,Invesco Ltd,1.26,233000,6121000.0,26.27,Reduce 23.36%
+REYN,Reynolds Consumer Products Inc.,1.26,268000,6143000.0,22.92,Reduce 17.68%
+CBRE,CBRE Group,1.25,38000,6110000.0,160.79,
+JNJ,Johnson & Johnson,1.23,29000,6002000.0,206.97,Reduce 40.21%
+CB,Chubb Limited,1.22,19000,5930000.0,312.11,
+CTVA,Corteva Inc.,1.21,88000,5899000.0,67.03,
+JLL,Jones Lang Lasalle Inc.,1.21,17500,5888000.0,336.46,Reduce 10.26%
+DOV,Dover Corp.,1.19,29694,5797000.0,195.22,Reduce 2.64%
+SWK,Stanley Black & Decker Inc.,1.17,77000,5720000.0,74.29,Reduce 2.53%
+ADBE,Adobe Inc.,1.15,16000,5600000.0,350.0,Add 4.92%
+ON,ON Semiconductor Corp.,1.14,103000,5577000.0,54.15,Add 13.19%
+BRK.B,Berkshire Hathaway CL B,1.13,11000,5529000.0,502.64,
+FTV,Fortive Corp.,1.13,100000,5521000.0,55.21,Reduce 0.99%
+SYY,Sysco Corp.,1.13,75000,5527000.0,73.69,
+LUV,Southwest Airlines,1.08,127000,5249000.0,41.33,Reduce 23.49%
+HON,Honeywell Int'l Inc.,1.04,26000,5072000.0,195.08,Add 20.93%
+KFY,Korn Ferry,1.04,76950,5080000.0,66.02,Add 18.38%
+CSCO,Cisco Systems,1.03,65000,5007000.0,77.03,Reduce 24.42%
+STZ,Constellation Brands,1.02,36000,4967000.0,137.97,Add 26.32%
+UNH,United Health Group Inc.,1.02,15000,4952000.0,330.13,Reduce 9.09%
+WTW,Willis Towers Watson plc,1.02,15200,4995000.0,328.62,
+MSFT,Microsoft Corp.,0.99,10000,4836000.0,483.6,Add 9.89%
+SSNC,SS&C Technologies Holdings Inc.,0.99,55000,4808000.0,87.42,
+TXN,Texas Instruments,0.96,27000,4684000.0,173.48,Add 12.50%
+CVS,CVS Health Corp.,0.91,56000,4444000.0,79.36,Reduce 18.84%
+SPGI,S&P Global Inc.,0.84,7800,4076000.0,522.56,
+PEP,PepsiCo Inc.,0.82,28000,4019000.0,143.54,
+LMT,Lockheed Martin Corp.,0.81,8200,3966000.0,483.66,Buy
+EFX,Equifax Inc.,0.8,18000,3906000.0,217.0,
+GM,General Motors,0.8,48000,3903000.0,81.31,Reduce 43.53%
+WCC,WESCO International Inc.,0.78,15500,3792000.0,244.65,Reduce 26.89%
+META,Meta Platforms Inc.,0.77,5700,3763000.0,660.18,Add 14.00%
+UBER,Uber Technologies Inc.,0.77,46000,3759000.0,81.72,Add 64.29%
+LHX,L3Harris Technologies Inc.,0.76,12600,3699000.0,293.57,
+TMO,Thermo Fisher Scientific,0.76,6400,3708000.0,579.38,Reduce 20.00%
+AAPL,Apple Inc.,0.72,13000,3534000.0,271.85,Reduce 18.75%
+DE,Deere & Co.,0.72,7500,3492000.0,465.6,Add 7.14%
+RTX,RTX Corp.,0.6,16000,2934000.0,183.38,Reduce 13.51%
+AMZN,Amazon.com Inc.,0.59,12500,2885000.0,230.8,
+SOLS,Solstice Adv Materials Inc,0.57,57700,2803000.0,48.58,Buy
+GLW,Corning Inc.,0.54,30000,2627000.0,87.57,Reduce 34.07%
+CMI,Cummins Inc.,0.49,4700,2399000.0,510.43,Reduce 40.88%
+GOOG,Alphabet Inc. CL C,0.48,7500,2354000.0,313.87,Reduce 48.28%
+V,Visa Inc.,0.43,6000,2104000.0,350.67,
+EBAY,eBay Inc.,0.39,22000,1916000.0,87.09,
+AEBI,Aebi Schmidt Holding Ag,0.38,147122,1861000.0,12.65,Reduce 20.49%
+GTES,Gates Industrial Corp.,0.37,84000,1803000.0,21.46,Reduce 2.89%
+CENTA,Central Garden & Pet,0.31,52500,1532000.0,29.18,Add 1.94%
+IART,Integra LifeSciences Holdings,0.31,123000,1528000.0,12.42,Reduce 11.51%
+CWK,Cushman & Wakefield Plc,0.29,88500,1433000.0,16.19,Reduce 20.27%
+GS,Goldman Sachs Group,0.27,1500,1319000.0,879.33,Reduce 57.14%
+PBH,Prestige Consumer Healthcare,0.27,21000,1295000.0,61.67,
+VSH,Vishay Intertechnology,0.23,77000,1116000.0,14.49,Reduce 23.00%
+BLBD,Blue Bird Corp.,0.22,23000,1081000.0,47.0,Reduce 7.25%
+FA,First Advantage Corp,0.22,74000,1075000.0,14.53,Add 4.23%
+FHB,First Hawaiian Inc.,0.21,40000,1012000.0,25.3,Reduce 13.04%
+HOMB,Home Bancshares Inc.,0.21,37000,1028000.0,27.78,Reduce 10.84%
+PLOW,Douglas Dynamics,0.2,30000,980000.0,32.67,Reduce 7.69%
+TNC,Tennant Co.,0.2,13000,958000.0,73.69,Add 11.59%
+AGCO,AGCO Corp.,0.19,9000,939000.0,104.33,Reduce 5.26%
+PGNY,Progyny Inc.,0.19,36000,924000.0,25.67,Add 2.86%
+BRC,Brady Corp.,0.17,10500,823000.0,78.38,Reduce 8.70%
+PB,Prosperity Bancshares Inc.,0.17,12000,829000.0,69.08,Reduce 7.69%
+MLR,Miller Industries Inc.,0.16,21500,803000.0,37.35,
+NOV,Nov Inc.,0.15,47000,735000.0,15.64,Reduce 7.84%
+TKR,Timken Co.,0.14,8300,698000.0,84.1,Reduce 30.83%
+GHM,Graham Corp.,0.09,6500,417000.0,64.15,Reduce 35.00%

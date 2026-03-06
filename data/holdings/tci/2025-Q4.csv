@@ -1,0 +1,10 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+GE,GE Aerospace,27.28,47510431,14634638000.0,308.03,
+V,Visa Inc.,18.12,27724233,9723166000.0,350.71,Reduce 1.19%
+MSFT,Microsoft Corp.,15.13,16781953,8116088000.0,483.62,Add 1.14%
+MCO,Moody's Corp.,12.67,13308479,6798636000.0,510.85,
+SPGI,S&P Global Inc.,11.48,11790310,6161498000.0,522.59,Add 5.37%
+CP,Canadian Pacific Kansas City,6.54,47654423,3508630000.0,73.63,Reduce 4.43%
+GOOG,Alphabet Inc. CL C,4.44,7596819,2383882000.0,313.8,
+FER,Ferrovial Se,2.51,20740214,1348163000.0,65.0,Add 6.52%
+CNI,Canadian Natl Railway Co.,1.82,9849934,974115000.0,98.9,Reduce 47.52%

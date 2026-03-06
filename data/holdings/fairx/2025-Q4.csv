@@ -1,0 +1,16 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+JOE,St. Joe Co.,80.43,19422467,1153112000.0,59.37,Reduce 0.80%
+EPD,Enterprise Products Partners LP,12.19,5450400,174740000.0,32.06,
+OZK,Bank OZK,2.93,913652,42046000.0,46.02,Reduce 0.22%
+BRK.B,Berkshire Hathaway CL B,1.68,48012,24133000.0,502.65,Reduce 0.88%
+WRB,W.R. Berkley Corp.,1.27,260150,18242000.0,70.12,Reduce 0.50%
+PGR,Progressive Corp.,0.41,25600,5830000.0,227.73,Buy
+CF,CF Industries Holdings Inc.,0.3,54700,4230000.0,77.33,Buy
+OXY,Occidental Petroleum,0.2,69100,2841000.0,41.11,
+ET,Energy Transfer LP,0.19,166600,2747000.0,16.49,
+TGT,Target Corp.,0.16,23000,2248000.0,97.74,Buy
+NRP,Natural Resource Partners,0.09,12000,1253000.0,104.42,Buy
+AAPL,Apple Inc.,0.05,2400,652000.0,271.67,
+BRK.A,Berkshire Hathaway CL A,0.05,1,755000.0,755000.0,
+FANG,Diamondback Energy Inc.,0.04,4000,601000.0,150.25,
+EOG,EOG Resources,0.01,2000,210000.0,105.0,

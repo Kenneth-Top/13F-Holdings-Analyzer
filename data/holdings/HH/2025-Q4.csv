@@ -1,0 +1,15 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AAPL,Apple Inc.,50.3,32358507,8796984000.0,271.86,Reduce 7.09%
+BRK.B,Berkshire Hathaway CL B,20.63,7176196,3607115000.0,502.65,Add 38.24%
+NVDA,NVIDIA Corp.,7.72,7237100,1349719000.0,186.5,Add 1110.62%
+PDD,Pinduoduo Inc.,7.48,11536694,1308146000.0,113.39,Add 34.55%
+GOOG,Alphabet Inc. CL C,3.33,1855400,582225000.0,313.8,Add 2.48%
+OXY,Occidental Petroleum,3.1,13172600,541657000.0,41.12,Reduce 2.83%
+MSFT,Microsoft Corp.,2.38,859000,415430000.0,483.62,Add 207.66%
+BABA,Alibaba Group Holdings,2.15,2560500,375318000.0,146.58,Reduce 7.81%
+TSM,Taiwan Semiconductor S.A.,2.13,1224384,372078000.0,303.89,Add 370.95%
+DIS,Walt Disney Co.,0.46,712000,81004000.0,113.77,Reduce 1.52%
+CRDO,Credo Technology Group Holdi,0.12,141300,20332000.0,143.89,Buy
+CRWV,Coreweave Inc Cl A,0.12,299900,21476000.0,71.61,Buy
+ASML,ASML Holding NV,0.06,9900,10592000.0,1069.9,Reduce 87.63%
+TEM,Tempus Ai Inc,0.04,110000,6496000.0,59.05,Buy

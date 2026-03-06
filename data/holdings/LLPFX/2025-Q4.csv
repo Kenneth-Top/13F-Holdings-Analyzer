@@ -1,0 +1,22 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+IAC,IAC Inc.,7.6,1939606,75839000.0,39.1,Add 3.96%
+MAT,Mattel Inc.,6.71,3376670,66993000.0,19.84,Reduce 13.65%
+REGN,Regeneron Pharmaceuticals,6.67,86305,66616000.0,771.87,Reduce 12.55%
+CNX,CNX Resources Corp.,6.64,1803830,66327000.0,36.77,Reduce 18.03%
+EXXRF,Exor NV,6.62,776425,66086000.0,85.12,Add 19.70%
+KHC,Kraft Heinz Co.,6.12,2521389,61144000.0,24.25,
+ACI,Albertsons Co Inc.,5.97,3473855,59646000.0,17.17,
+MICC,Magnum Ice Cream Co NV,5.47,3418974,54592000.0,15.97,Buy
+FDX,FedEx Corp.,5.27,182209,52633000.0,288.86,Reduce 30.94%
+RYN,Rayonier Inc.,5.19,2395437,51861000.0,21.65,Add 6.51%
+PCH,OLD- PotlatchDeltic Corp.,5.14,1290324,51329000.0,39.78,Add 22.28%
+PVH,PVH Corp.,4.37,650590,43603000.0,67.02,
+BIO,Bio-Rad Laboratories Inc.,4.28,140913,42695000.0,302.99,Reduce 16.90%
+MGM,MGM Resorts International,4.28,1171391,42744000.0,36.49,
+AVTR,Avantor Inc.,3.54,3086436,35371000.0,11.46,Reduce 15.20%
+FIS,Fidelity National Information Services,3.52,528594,35130000.0,66.46,
+FBIN,Fortune Brands Innovations Inc.,3.45,688909,34459000.0,50.02,
+CNH,CNH Industrial NV,3.06,3308474,30504000.0,9.22,
+PYPL,PayPal Holdings Inc.,2.75,470248,27453000.0,58.38,
+DIS,Walt Disney Co.,2.21,193673,22034000.0,113.77,
+LPX,Louisiana-Pacific Corp.,1.13,139811,11291000.0,80.76,Buy

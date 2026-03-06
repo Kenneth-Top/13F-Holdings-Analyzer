@@ -1,0 +1,30 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+RYCEF,Rolls Royce Holdings plc,12.93,30376735,470883000.0,15.5,Reduce 27.49%
+GOOGL,Alphabet Inc.,8.52,991141,310227000.0,313.0,Reduce 14.23%
+FWONK,Liberty Media Corp Formula One Series C,7.41,2739436,269862000.0,98.51,Reduce 0.16%
+UMGNF,Universal Music Grp NV,6.23,8685297,226901000.0,26.12,Reduce 0.16%
+ERFSF,Eurofins Scientific SE,5.88,2921395,214233000.0,73.33,Reduce 0.16%
+COF,Capital One Financial,5.5,826743,200369000.0,242.36,Reduce 0.16%
+CNSWF,Constellation Software Inc.,5.48,82980,199592000.0,2405.3,Reduce 0.16%
+ELV,Elevance Health Inc.,5.13,532467,186656000.0,350.55,Reduce 0.16%
+SCHW,Charles Schwab Corp.,4.59,1671788,167028000.0,99.91,Reduce 27.54%
+ICE,Intercontinental Exchange Inc.,4.52,1015750,164511000.0,161.96,Reduce 0.16%
+TSM,Taiwan Semiconductor S.A.,4.15,497379,151149000.0,303.89,Reduce 26.75%
+ASHTF,Ashtead Group plc,4.1,2179199,149399000.0,68.56,Reduce 0.16%
+SAP,SAP SE,3.86,574255,140519000.0,244.7,Reduce 0.16%
+ICLR,ICON plc,3.16,631186,115015000.0,182.22,Add 0.11%
+MSA,MSA Safety Inc.,2.96,672227,107650000.0,160.14,Buy
+ACN,Accenture,2.6,352334,94531000.0,268.3,Buy
+CACC,Credit Acceptance Corp.,2.51,205750,91242000.0,443.46,Reduce 5.82%
+UNH,United Health Group Inc.,2.51,277001,91441000.0,330.11,Reduce 0.16%
+ALGN,Align Technology Inc.,1.95,454963,71042000.0,156.15,Buy
+META,Meta Platforms Inc.,1.27,70138,46297000.0,660.08,Reduce 0.16%
+BRK.B,Berkshire Hathaway CL B,1.08,78269,39342000.0,502.65,Reduce 0.16%
+AMTM,Amentum Holdings Inc.,0.81,1012960,29376000.0,29.0,Reduce 0.16%
+CHTR,Charter Communications,0.78,136469,28488000.0,208.75,Reduce 0.16%
+LBRDK,Liberty Broadband Corp. CL C,0.78,582797,28324000.0,48.6,Reduce 0.16%
+RYCEY,Rolls Royce Holdings Sp ADR,0.5,1148165,18049000.0,15.72,Buy
+LBRDA,Liberty Broadband Corp. CL A,0.45,340216,16426000.0,48.28,Reduce 0.16%
+GLIBK,GCI Liberty Inc. Series C,0.19,181122,6740000.0,37.21,Add 55.14%
+FWONA,Liberty Media Corp Formula One Series A,0.1,42201,3772000.0,89.38,Reduce 0.16%
+GLBAV,GCI Liberty Inc. Series A,0.07,68043,2509000.0,36.87,Reduce 0.16%

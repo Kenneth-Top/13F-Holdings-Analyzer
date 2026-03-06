@@ -1,0 +1,9 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AMZN,Amazon.com Inc.,21.31,316285,73005000.0,230.82,Reduce 1.74%
+BN,Brookfield Corp.,18.93,1413462,64864000.0,45.89,Reduce 1.04%
+BRK.A,Berkshire Hathaway CL A,14.76,67,50572000.0,754805.97,
+MKL,Markel Group Inc.,14.37,22905,49238000.0,2149.66,Add 2.00%
+GOOGL,Alphabet Inc.,9.24,101155,31662000.0,313.0,Reduce 3.45%
+TRUP,Trupanion Inc.,8.47,776490,29017000.0,37.37,Add 1.62%
+TSLA,Tesla Inc.,8.15,62100,27928000.0,449.73,Reduce 21.72%
+BUR,Burford Capital Ltd,4.78,1835072,16369000.0,8.92,

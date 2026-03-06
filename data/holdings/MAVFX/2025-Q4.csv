@@ -1,0 +1,108 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+MSFT,Microsoft Corp.,6.2,142717,69021000.0,483.62,Add 0.55%
+MAVF,Matrix Advisors Value ETF,4.53,414930,50453000.0,121.59,Add 0.16%
+GOOG,Alphabet Inc. CL C,4.45,157612,49459000.0,313.8,Reduce 1.86%
+MS,Morgan Stanley,4.16,260503,46247000.0,177.53,Reduce 2.95%
+JPM,JPMorgan Chase & Co.,3.94,136135,43866000.0,322.22,Reduce 1.91%
+AAPL,Apple Inc.,3.59,146802,39910000.0,271.86,Reduce 1.18%
+PNC,PNC Financial Services,3.58,191080,39884000.0,208.73,Add 0.35%
+USB,U.S. Bancorp,3.4,709254,37846000.0,53.36,Reduce 0.91%
+QCOM,QUALCOMM Inc.,3.34,217557,37213000.0,171.05,Add 0.24%
+MDT,Medtronic plc,3.19,369541,35498000.0,96.06,Reduce 0.29%
+AMGN,Amgen,3.05,103549,33892000.0,327.3,Reduce 2.52%
+BK,Bank of New York Mellon Corp.,2.73,261427,30349000.0,116.09,Reduce 2.67%
+PEP,PepsiCo Inc.,2.64,204668,29374000.0,143.52,Add 3.90%
+AMZN,Amazon.com Inc.,2.6,125319,28926000.0,230.82,Reduce 0.42%
+GS,Goldman Sachs Group,2.21,27996,24608000.0,878.98,Reduce 2.36%
+TXN,Texas Instruments,2.09,133884,23228000.0,173.49,Add 30.84%
+TSN,Tyson Foods,1.96,372014,21807000.0,58.62,Add 2.51%
+NEE,NextEra Energy Inc.,1.93,267857,21504000.0,80.28,Reduce 1.42%
+AEP,American Electric Power,1.92,185281,21365000.0,115.31,Reduce 3.05%
+META,Meta Platforms Inc.,1.91,32186,21246000.0,660.1,Add 14.40%
+WFC,Wells Fargo,1.82,216756,20202000.0,93.2,Reduce 0.91%
+SBUX,Starbucks Corp.,1.71,226198,19048000.0,84.21,Add 1.73%
+AMAT,Applied Materials,1.66,71798,18451000.0,256.98,Reduce 0.99%
+CMCSA,Comcast Corp.,1.61,600301,17943000.0,29.89,Reduce 29.10%
+VOO,Vanguard S&P 500 ETF,1.59,28186,17677000.0,627.16,Add 3.24%
+HD,Home Depot,1.56,50466,17366000.0,344.11,Add 5.02%
+MTB,M&T Bank Corp.,1.56,86333,17394000.0,201.48,Reduce 1.07%
+LMT,Lockheed Martin Corp.,1.44,33077,15998000.0,483.66,Add 43.88%
+FDX,FedEx Corp.,1.43,55079,15910000.0,288.86,Reduce 0.76%
+LOW,Lowe's Cos.,1.41,65036,15684000.0,241.16,Add 7.28%
+PYPL,PayPal Holdings Inc.,1.41,267919,15641000.0,58.38,Add 6.53%
+GNRC,Generac Holdings Inc.,1.38,112991,15409000.0,136.37,Add 68.92%
+VEA,Vanguard FTSE Developed ETF,1.32,234854,14671000.0,62.47,Add 6.60%
+VYM,Vanguard High Dvd Yield ETF,1.27,98624,14155000.0,143.52,Add 10.27%
+TGT,Target Corp.,1.26,143580,14035000.0,97.75,Reduce 19.21%
+TMO,Thermo Fisher Scientific,1.11,21341,12366000.0,579.45,Reduce 0.79%
+LHX,L3Harris Technologies Inc.,1.07,40674,11941000.0,293.58,Reduce 1.85%
+IWF,iShares Russell 1000 Growth ETF,1.03,24187,11448000.0,473.31,Add 3.55%
+TEL,TE Connectivity plc,0.95,46558,10592000.0,227.5,Reduce 2.08%
+GD,General Dynamics,0.9,29725,10007000.0,336.65,Reduce 3.87%
+ABBV,AbbVie Inc.,0.79,38285,8748000.0,228.5,Reduce 1.36%
+CSCO,Cisco Systems,0.78,112308,8651000.0,77.03,Reduce 16.41%
+IJR,Ishares Core S&P  Small Cap E,0.68,62874,7556000.0,120.18,Add 8.96%
+STZ,Constellation Brands,0.56,45412,6265000.0,137.96,Add 16.81%
+BRK.B,Berkshire Hathaway CL B,0.52,11595,5828000.0,502.63,Reduce 0.05%
+IWR,Ishares Russell Mid Cap ETF,0.51,58927,5673000.0,96.27,Add 1.57%
+ACN,Accenture,0.47,19679,5280000.0,268.31,Add 110.58%
+VTV,Vanguard Value ETF,0.45,26279,5019000.0,190.99,Add 26.06%
+MDY,SPDR S&P  Midcap 400 ETF Trst,0.33,6116,3690000.0,603.34,Add 2.33%
+TCHP,T Rowe Price Blue Chip Growth ETF,0.33,74722,3726000.0,49.86,Reduce 2.04%
+BAC,Bank of America Corp.,0.28,57421,3158000.0,55.0,Reduce 0.57%
+ZBH,Zimmer Biomet Holdings,0.24,30032,2700000.0,89.9,Reduce 75.02%
+IWM,iShares Russell 2000 ETF,0.23,10326,2542000.0,246.17,Reduce 1.35%
+VWO,Vanguard FTSE Emerging Marke,0.21,42633,2292000.0,53.76,Add 4.13%
+IVV,Ishares Core S&P  500 ETF,0.2,3278,2245000.0,684.87,Add 0.03%
+VUG,Vanguard Growth ETF,0.14,3145,1535000.0,488.08,
+EFA,iShares MSCI EAFE ETF,0.13,14854,1426000.0,96.0,Add 0.20%
+NVDA,NVIDIA Corp.,0.13,8055,1502000.0,186.47,Reduce 3.63%
+VO,Vanguard Mid Cap ETF,0.13,5062,1469000.0,290.2,Add 28.48%
+IWD,Ishares Russell 1000 Value E,0.12,6305,1326000.0,210.31,Add 0.53%
+GOOGL,Alphabet Inc.,0.11,3942,1234000.0,313.04,Reduce 0.13%
+AXP,American Express,0.1,3066,1134000.0,369.86,Reduce 0.07%
+VTI,Vanguard Total Stock Mkt ETF,0.09,3134,1051000.0,335.35,
+QQQ,Invesco Qqq Trust Series 1,0.08,1451,892000.0,614.75,Reduce 0.07%
+COF,Capital One Financial,0.07,3178,770000.0,242.29,
+SPYX,SPDR S&P  500 Fossil Fuel Res,0.07,13023,732000.0,56.21,
+VIG,Vanguard Dividend Apprec ETF,0.07,3535,777000.0,219.8,Add 0.60%
+AFL,AFLAC Inc.,0.06,6243,688000.0,110.2,Add 0.11%
+JNJ,Johnson & Johnson,0.06,3106,643000.0,207.02,Reduce 0.16%
+ESGD,Ishares Trust Ishares Esg Aw,0.05,6036,574000.0,95.1,
+SDY,SPDR S&P  Dividend ETF,0.05,3780,526000.0,139.15,Reduce 6.99%
+XOM,Exxon Mobil Corp.,0.05,4790,576000.0,120.25,Reduce 0.08%
+APH,Amphenol Corp.,0.04,3056,413000.0,135.14,
+ASTS,AST SpaceMobile Inc.,0.04,5900,429000.0,72.71,
+COST,Costco Co.,0.04,563,486000.0,863.23,Reduce 0.18%
+CVS,CVS Health Corp.,0.04,6175,490000.0,79.35,Reduce 0.03%
+DHR,Danaher Corp.,0.04,1703,390000.0,229.01,Reduce 0.06%
+GLD,SPDR Gold Trust,0.04,1075,426000.0,396.28,Add 2.58%
+NUE,Nucor Corp.,0.04,2468,403000.0,163.29,Add 0.73%
+PLTR,Palantir Technologies Inc.,0.04,2313,411000.0,177.69,Reduce 0.13%
+SKYX,Skyx Platforms Corp,0.04,201666,438000.0,2.17,
+V,Visa Inc.,0.04,1149,403000.0,350.74,Add 0.97%
+WMT,Walmart Inc.,0.04,3716,414000.0,111.41,Reduce 0.40%
+AVGO,Broadcom Inc.,0.03,1099,380000.0,345.77,Reduce 1.79%
+IJH,Ishares Core S&P  Midcap ETF,0.03,5104,337000.0,66.03,Reduce 9.13%
+INTU,Intuit Inc.,0.03,450,298000.0,662.22,Reduce 0.22%
+IWN,Ishares Russell 2000 Value E,0.03,1765,320000.0,181.3,
+LLY,Eli Lilly & Co.,0.03,325,350000.0,1076.92,Reduce 0.91%
+MCD,McDonald's Corp.,0.03,1090,333000.0,305.5,
+MRK,Merck & Co.,0.03,2862,301000.0,105.17,Reduce 0.28%
+PG,Procter & Gamble,0.03,2194,314000.0,143.12,Reduce 0.23%
+SPYG,SPDR Portfolio S&P  500 Growt,0.03,2998,320000.0,106.74,
+VB,Vanguard Small Cap ETF,0.03,1148,296000.0,257.84,Add 0.09%
+XLK,Technology Select Sect SPDR,0.03,2316,333000.0,143.78,
+AON,Aon Plc,0.02,648,229000.0,353.4,
+BMY,Bristol-Myers Squibb,0.02,3929,212000.0,53.96,Buy
+ETN,Eaton Corp.,0.02,862,275000.0,319.03,Reduce 0.12%
+IBM,International Business Machines,0.02,819,243000.0,296.7,Reduce 3.08%
+IEMG,iShares Core MSCI Emerging Markets ETF,0.02,3837,258000.0,67.24,Add 2.76%
+IWB,Ishares Russell 1000 ETF,0.02,697,260000.0,373.03,Reduce 7.19%
+QQQM,Invesco Nasdaq 100 ETF,0.02,1054,267000.0,253.32,Reduce 21.93%
+TSLA,Tesla Inc.,0.02,504,227000.0,450.4,Reduce 15.29%
+UNH,United Health Group Inc.,0.02,721,238000.0,330.1,Reduce 3.22%
+CGEN,Compugen Ltd,0.01,93833,144000.0,1.53,
+DCGO,Docgo Inc,0.01,100000,88000.0,0.88,
+MRKR,Marker Therapeutics Inc.,0.0,15000,22000.0,1.47,
+SCWO,374water Inc,0.0,10000,20000.0,2.0,Buy

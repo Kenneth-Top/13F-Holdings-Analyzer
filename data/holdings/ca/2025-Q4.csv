@@ -1,0 +1,29 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BRK.A,Berkshire Hathaway CL A,32.21,86,64913000.0,754802.33,
+GOOG,Alphabet Inc. CL C,11.27,72390,22716000.0,313.8,Reduce 12.14%
+SYF,Synchrony Financial,8.93,215702,17996000.0,83.43,
+STLA,Stellantis N.V.,7.53,1394194,15183000.0,10.89,
+OXY,Occidental Petroleum,6.39,313000,12871000.0,41.12,
+AAPL,Apple Inc.,5.93,44000,11962000.0,271.86,
+ALLY,Ally Financial Inc.,5.07,225525,10214000.0,45.29,
+SIRI,SiriusXM Holdings Inc,4.06,409589,8190000.0,20.0,Reduce 41.69%
+BABA,Alibaba Group Holdings,3.05,41900,6142000.0,146.59,
+WFC,Wells Fargo,2.75,59542,5549000.0,93.19,
+GM,General Motors,2.1,52000,4229000.0,81.33,
+C,Citigroup Inc.,1.89,32695,3815000.0,116.68,Reduce 43.33%
+BAC,Bank of America Corp.,1.36,50000,2750000.0,55.0,
+POOL,Pool Corp.,1.21,10636,2433000.0,228.75,
+PYPL,PayPal Holdings Inc.,1.19,41000,2394000.0,58.39,
+MBI,MBIA Inc.,1.14,321000,2298000.0,7.16,
+CASH,Meta Financial Group Inc.,0.97,27389,1945000.0,71.01,
+AGO,Assured Guaranty Ltd.,0.49,10990,988000.0,89.9,
+CYD,China Yuchai Intl Ltd.,0.41,23364,829000.0,35.48,
+MEOH,Methanex Corp.,0.39,20000,793000.0,39.65,
+MCO,Moody's Corp.,0.38,1500,766000.0,510.67,Reduce 74.57%
+JEF,Jefferies Financial Group Inc.,0.34,10987,681000.0,61.98,
+MGA,Magna International Inc.,0.26,10000,533000.0,53.3,
+LPX,Louisiana-Pacific Corp.,0.24,5886,475000.0,80.7,
+IMO,Imperial Oil Ltd.,0.21,5000,432000.0,86.4,
+RYAAY,Ryanair Holdings PLC,0.21,5937,429000.0,72.26,
+VTS,Vitesse Energy Inc.,0.01,1293,25000.0,19.33,
+HTZWW,Hertz Global Hldgs Inc. WTS,0.0,1000,3000.0,3.0,

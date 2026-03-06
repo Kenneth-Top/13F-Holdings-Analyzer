@@ -1,0 +1,41 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AAPL,Apple Inc.,1.59,280000000,0,0,22.31
+UNH,United Health Group Inc.,0.61,5039564,0,0,0.61
+BAC,Bank of America Corp.,0.48,605267375,0,0,11.12
+LEN,Lennar Corp.,0.22,7048993,0,0,0.30
+POOL,Pool Corp.,0.22,3458885,0,0,0.39
+CVX,Chevron Corp.,0.19,122064792,0,0,6.79
+CHTR,Charter Communications,0.15,1060882,0,0,0.17
+STZ,Constellation Brands,0.09,13400000,0,0,0.85
+DVA,DaVita HealthCare Partners,0.07,33796541,0,0,1.87
+LAMR,Lamar Advertising Co.,0.06,1169507,0,0,0.06
+NUE,Nucor Corp.,0.04,6614112,0,0,0.33
+ALLE,Allegion Plc,0.04,780133,0,0,0.04
+FWONK,Liberty Media Corp Formula One Series C,0.02,3018555,0,0,0.12
+HEI.A,HEICO Corp. CL A,0.01,1294612,0,0,0.13
+AXP,American Express,0.0,151610700,0,0,18.78
+KO,Coca Cola Co.,0.0,400000000,0,0,10.99
+MCO,Moody's Corp.,0.0,24669778,0,0,4.81
+OXY,Occidental Petroleum,0.0,264941431,0,0,4.32
+CB,Chubb Limited,0.0,27033784,0,0,3.04
+KHC,Kraft Heinz Co.,0.0,325634818,0,0,3.26
+KR,Kroger Co.,0.0,50000000,0,0,1.39
+V,Visa Inc.,0.0,8297460,0,0,1.14
+SIRI,SiriusXM Holdings Inc,0.0,119776692,0,0,1.07
+MA,Mastercard Inc.,0.0,3986648,0,0,0.87
+VRSN,Verisign Inc.,0.0,13289880,0,0,1.49
+COF,Capital One Financial,0.0,7150000,0,0,0.59
+DPZ,Dominos Pizza Inc.,0.0,2633868,0,0,0.46
+ALLY,Ally Financial Inc.,0.0,29000000,0,0,0.44
+AON,Aon Plc,0.0,4100000,0,0,0.57
+LLYVK,Liberty Media Corp. Series C Live,0.0,10917661,0,0,0.34
+AMZN,Amazon.com Inc.,0.0,10000000,0,0,0.85
+LPX,Louisiana-Pacific Corp.,0.0,5664793,0,0,0.19
+LLYVA,Liberty Media Corp. Series A Live,0.0,4986588,0,0,0.15
+NVR,NVR Inc.,0.0,11112,0,0,0.03
+DEO,Diageo ADR,0.0,227750,0,0,0.01
+JEF,Jefferies Financial Group Inc.,0.0,433558,0,0,0.01
+LEN.B,Lennar Corp. CL B,0.0,180930,0,0,0.01
+LILA,Liberty LiLAC Group A,0.0,2630792,0,0,0.01
+BATRK,Atlanta Braves Holdings Inc. Series C,0.0,223645,0,0,0.00
+LILAK,Liberty LiLAC Group C,0.0,1284020,0,0,0.00

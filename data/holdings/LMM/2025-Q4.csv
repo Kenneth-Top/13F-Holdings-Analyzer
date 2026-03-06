@@ -1,0 +1,35 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+NBR,Nabors Industries Ltd.,11.53,602737,32729000.0,54.3,Reduce 10.45%
+LNC,Lincoln National,7.92,504761,22477000.0,44.53,Reduce 3.06%
+GTN,Gray Television Inc.,6.8,3988495,19304000.0,4.84,Add 12.09%
+TDAY,Gannett Co.,6.18,3403345,17527000.0,5.15,Add 0.00%
+QUAD,Quad/Graphics Inc.,6.05,2737890,17167000.0,6.27,Add 4.36%
+BFH,Bread Financial Holdings Inc.,5.25,201415,14911000.0,74.03,Reduce 25.40%
+FOSL,Fossil Inc.,4.22,3184415,11973000.0,3.76,Reduce 4.27%
+DCH,Dauch Corp.,3.92,1734780,11120000.0,6.41,Add 1.03%
+CNDT,Conduent Inc.,3.78,5583385,10720000.0,1.92,Add 38.52%
+JELD,JELD-WEN Holding Inc.,3.58,4134210,10170000.0,2.46,Add 99.83%
+UGI,UGI Corp.,3.46,262000,9807000.0,37.43,
+ITRN,Ituran Location & Control Ltd.,3.26,215000,9247000.0,43.01,
+JXN,Jackson Financial Inc.,3.24,86150,9188000.0,106.65,Reduce 8.18%
+UPS,United Parcel Service,3.03,86600,8590000.0,99.19,
+VZ,Verizon Communications,2.84,198000,8065000.0,40.73,
+CTO,CTO Realty Growth Inc.,2.82,434145,7993000.0,18.41,Add 1.17%
+VTRS,Viatris Inc.,2.72,619000,7707000.0,12.45,
+BMY,Bristol-Myers Squibb,2.05,108000,5826000.0,53.94,
+OMF,OneMain Holdings,1.97,82941,5603000.0,67.55,Reduce 9.79%
+WAL,Western Alliance Bancorp,1.91,64455,5419000.0,84.07,Add 1.58%
+CHRD,Chord Energy,1.89,57766,5355000.0,92.7,Add 9.48%
+CALM,Cal-Maine Foods Inc.,1.74,62000,4933000.0,79.56,
+BBW,Build-A-Bear Workshop Inc.,1.68,78000,4779000.0,61.27,Reduce 20.41%
+STLA,Stellantis N.V.,1.65,429000,4672000.0,10.89,Add 10.00%
+MSTR,MicroStrategy Inc.,1.35,25250,3837000.0,151.96,Add 65.57%
+ARLP,Alliance Resource Partners LP,1.08,132000,3066000.0,23.23,Add 3.94%
+BCC,Boise Cascade Company,0.96,37000,2723000.0,73.59,
+MRP,Millrose Properties,0.87,82800,2473000.0,29.87,Buy
+CG,Carlyle Group,0.83,40000,2364000.0,59.1,
+LYB,LyondellBasell Industries,0.58,38000,1645000.0,43.29,
+UPBD,Upbound Group Inc.,0.43,70000,1229000.0,17.56,Add 250.00%
+TPC,Tutor Perini Corp.,0.16,6815,457000.0,67.06,
+UNFI,United Natural Foods,0.15,12625,425000.0,33.66,Reduce 82.81%
+FTI,TechnipFMC plc,0.12,7510,335000.0,44.61,

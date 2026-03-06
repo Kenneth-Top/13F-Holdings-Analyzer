@@ -6,8 +6,8 @@ __pycache__/
 dist/
 build/
 
-# Data (db file is large, push separately or use LFS)
-# data/holdings.db
+# 旧数据库文件 (已迁移到 CSV)
+data/*.db
 
 # IDE
 .vscode/

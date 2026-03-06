@@ -1,0 +1,22 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+TSM,Taiwan Semiconductor S.A.,10.48,184661,56117000.0,303.89,Reduce 2.44%
+GOOGL,Alphabet Inc.,9.58,163913,51305000.0,313.0,Reduce 20.90%
+META,Meta Platforms Inc.,8.52,69135,45635000.0,660.09,Reduce 2.07%
+AAPL,Apple Inc.,7.26,142920,38854000.0,271.86,Reduce 14.36%
+MSFT,Microsoft Corp.,7.0,77496,37479000.0,483.62,Reduce 2.16%
+BKNG,Booking Holdings Inc.,5.82,5817,31154000.0,5355.68,Reduce 1.41%
+V,Visa Inc.,5.71,87151,30565000.0,350.71,Reduce 2.21%
+MSI,Motorola Solutions Inc.,5.13,71724,27493000.0,383.32,Add 24.61%
+TSCO,Tractor Supply,4.49,481023,24056000.0,50.01,Reduce 1.81%
+URI,United Rentals,4.01,26514,21459000.0,809.35,Reduce 1.53%
+CDW,CDW Corp.,3.86,151871,20685000.0,136.2,Add 26.01%
+CPRT,Copart Inc.,3.55,486085,19030000.0,39.15,Reduce 2.20%
+ODFL,Old Dominion Freight Line,3.52,120051,18824000.0,156.8,Add 35.58%
+CB,Chubb Limited,3.29,56526,17643000.0,312.12,Buy
+SPGI,S&P Global Inc.,3.29,33764,17644000.0,522.57,Reduce 2.76%
+ORLY,O'Reilly Automotive,3.21,188726,17214000.0,91.21,Reduce 1.53%
+EW,Edwards Lifesciences Corp.,2.88,180882,15420000.0,85.25,Reduce 2.07%
+AMZN,Amazon.com Inc.,2.51,58266,13449000.0,230.82,Buy
+ZTS,Zoetis Inc.,2.46,104701,13173000.0,125.82,Reduce 17.90%
+PYPL,PayPal Holdings Inc.,2.35,215900,12604000.0,58.38,Reduce 55.45%
+IWF,iShares Russell 1000 Growth ETF,1.06,12019,5689000.0,473.33,Buy

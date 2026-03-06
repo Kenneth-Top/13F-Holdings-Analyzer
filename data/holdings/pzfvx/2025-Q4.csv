@@ -1,0 +1,34 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BAX,Baxter International Inc.,5.12,1451625,27741000.0,19.11,Add 19.10%
+CVS,CVS Health Corp.,5.05,345036,27382000.0,79.36,Reduce 17.18%
+HUM,Humana Inc.,5.03,106479,27272000.0,256.13,Reduce 6.25%
+C,Citigroup Inc.,4.74,220168,25691000.0,116.69,Reduce 20.77%
+WFC,Wells Fargo,4.27,248289,23141000.0,93.2,Reduce 20.72%
+COF,Capital One Financial,4.17,93250,22600000.0,242.36,Reduce 15.03%
+FMS,Fresenius Medical Care AG & Co KCaG,4.06,924306,22017000.0,23.82,Reduce 9.11%
+DG,Dollar General,3.96,161688,21467000.0,132.77,Reduce 31.28%
+MGA,Magna International Inc.,3.81,387524,20655000.0,53.3,Reduce 28.44%
+MET,MetLife Inc.,3.47,238102,18796000.0,78.94,Reduce 12.33%
+GPN,Global Payments Inc.,3.43,240222,18593000.0,77.4,Reduce 5.14%
+BAC,Bank of America Corp.,3.36,331322,18223000.0,55.0,Reduce 14.50%
+LEA,Lear Corp.,3.31,156470,17931000.0,114.6,Reduce 17.66%
+BMY,Bristol-Myers Squibb,3.29,330566,17831000.0,53.94,
+CTSH,Cognizant Technology Solutions,3.13,204637,16985000.0,83.0,Reduce 12.35%
+PPG,PPG Industries,3.1,164139,16818000.0,102.46,Add 47.08%
+TSN,Tyson Foods,3.1,287088,16829000.0,58.62,Add 22.58%
+CRBG,Corebridge Financial Inc.,3.02,542353,16363000.0,30.17,
+DOW,Dow Inc.,2.85,660016,15431000.0,23.38,
+SWKS,Skyworks Solutions Inc.,2.69,229807,14572000.0,63.41,Reduce 7.73%
+SSNC,SS&C Technologies Holdings Inc.,2.62,162764,14229000.0,87.42,Reduce 7.01%
+SHEL,Shell plc,2.6,192036,14111000.0,73.48,Reduce 10.03%
+DOX,Amdocs Ltd.,2.57,172869,13918000.0,80.51,
+PFE,Pfizer Inc.,2.48,539579,13436000.0,24.9,Reduce 12.52%
+MDT,Medtronic plc,2.39,134672,12937000.0,96.06,Reduce 18.54%
+DAL,Delta Air Lines Inc.,2.25,175704,12194000.0,69.4,Reduce 19.41%
+NOV,Nov Inc.,2.08,720780,11266000.0,15.63,Reduce 19.92%
+VOYA,Voya Financial Inc.,2.03,147407,10980000.0,74.49,Reduce 14.13%
+UBS,UBS AG,1.75,204593,9475000.0,46.31,Reduce 31.38%
+EQH,Equitable Holdings Inc.,1.47,167567,7985000.0,47.65,
+PVH,PVH Corp.,1.07,86460,5795000.0,67.03,Reduce 16.14%
+TEL,TE Connectivity plc,0.98,23452,5336000.0,227.53,Reduce 45.85%
+NWL,Newell Brands Inc.,0.77,1118778,4162000.0,3.72,Reduce 10.14%
