@@ -1,0 +1,38 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+VZ,Verizon Communications,3.59,57000,2861000.0,50.19,
+BMY,Bristol-Myers Squibb,3.53,46400,2814000.0,60.65,Reduce 11.45%
+PFE,Pfizer Inc.,3.26,92700,2603000.0,28.08,
+BIIB,Biogen Inc.,3.24,14100,2585000.0,183.33,
+IFF,International Flavors & Fragrances Inc.,3.21,35300,2561000.0,72.55,
+STZ,Constellation Brands,3.08,16400,2460000.0,150.0,
+WBD,Warner Bros. Discovery Inc.,3.02,87700,2408000.0,27.46,Reduce 19.32%
+CMCSA,Comcast Corp.,2.99,83077,2385000.0,28.71,
+USB,U.S. Bancorp,2.97,45500,2366000.0,52.0,Reduce 16.51%
+DD,DuPont de Nemours Inc.,2.95,51400,2354000.0,45.8,Reduce 25.40%
+ZBH,Zimmer Biomet Holdings,2.93,25800,2333000.0,90.43,
+TSM,Taiwan Semiconductor S.A.,2.88,6800,2298000.0,337.94,Reduce 21.84%
+AKAM,Akamai Technologies Inc.,2.84,19700,2263000.0,114.87,Reduce 42.90%
+CVS,CVS Health Corp.,2.84,31500,2262000.0,71.81,
+GSK,GSK plc,2.84,41000,2263000.0,55.2,Reduce 25.99%
+WST,West Pharmaceutical Services,2.8,8900,2231000.0,250.67,Reduce 7.29%
+HSY,Hershey Co.,2.76,10600,2204000.0,207.92,Reduce 23.74%
+UPS,United Parcel Service,2.75,22300,2194000.0,98.39,Reduce 16.79%
+KHC,Kraft Heinz Co.,2.69,95300,2143000.0,22.49,
+KMX,CarMax Inc.,2.67,51300,2133000.0,41.58,Reduce 19.09%
+BF.B,Brown-Forman Corp.,2.63,79400,2099000.0,26.44,
+DIS,Walt Disney Co.,2.59,21400,2063000.0,96.4,Reduce 8.15%
+ORCL,Oracle Corp.,2.58,14000,2060000.0,147.14,Buy
+CAG,Conagra Brands Inc.,2.51,127100,1998000.0,15.72,
+TROW,T. Rowe Price Group,2.51,22200,2001000.0,90.14,
+UNH,United Health Group Inc.,2.51,7400,2002000.0,270.54,
+NKE,NIKE Inc.,2.5,37800,1997000.0,52.83,
+FISV,Fiserv Inc.,2.46,35100,1959000.0,55.81,
+BDX,Becton Dickinson,2.43,12300,1934000.0,157.24,
+BA,Boeing Co.,2.4,9600,1911000.0,199.06,Reduce 12.73%
+BAX,Baxter International Inc.,2.39,113200,1902000.0,16.8,
+MSFT,Microsoft Corp.,2.23,4800,1777000.0,370.21,
+DEO,Diageo ADR,2.18,23300,1735000.0,74.46,
+CPB,Campbell's Co.,2.12,75900,1690000.0,22.27,
+CRM,Salesforce.com,2.11,9000,1680000.0,186.67,
+EL,Estee Lauder Cos.,2.03,22500,1615000.0,71.78,Reduce 13.46%
+ADBE,Adobe Inc.,2.01,6600,1604000.0,243.03,
