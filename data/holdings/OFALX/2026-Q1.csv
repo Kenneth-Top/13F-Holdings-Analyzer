@@ -1,0 +1,100 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+DIS,Walt Disney Co.,2.19,104000,10024000.0,96.38,Reduce 3.58%
+ST,Sensata Technologies Holding,2.14,278200,9798000.0,35.22,Reduce 2.04%
+AVTR,Avantor Inc.,2.07,1210000,9486000.0,7.84,Add 47.92%
+LKQ,LKQ Corp.,2.02,314700,9243000.0,29.37,Reduce 1.12%
+OMC,Omnicom Group,1.94,118000,8887000.0,75.31,Add 7.27%
+IFF,International Flavors & Fragrances Inc.,1.88,119000,8633000.0,72.55,Reduce 6.30%
+VNT,Vontier Corp.,1.85,238739,8468000.0,35.47,Reduce 6.74%
+ABM,ABM Industries,1.78,211361,8142000.0,38.52,
+FIS,Fidelity National Information Services,1.78,174000,8162000.0,46.91,Add 43.25%
+NDAQ,Nasdaq Inc.,1.78,96000,8149000.0,84.89,Add 24.19%
+ZBH,Zimmer Biomet Holdings,1.72,87000,7867000.0,90.43,Add 6.10%
+BAX,Baxter International Inc.,1.7,464000,7795000.0,16.8,Add 11.27%
+KFY,Korn Ferry,1.65,120000,7554000.0,62.95,Add 55.95%
+SSNC,SS&C Technologies Holdings Inc.,1.55,105000,7095000.0,67.57,Add 90.91%
+GD,General Dynamics,1.54,20500,7036000.0,343.22,Reduce 6.82%
+DGX,Quest Diagnostics,1.53,35800,7016000.0,195.98,Reduce 10.50%
+BDX,Becton Dickinson,1.51,44000,6918000.0,157.23,Add 3.53%
+SLB,Schlumberger Ltd.,1.51,135000,6938000.0,51.39,Reduce 38.64%
+WTW,Willis Towers Watson plc,1.48,23400,6802000.0,290.68,Add 53.95%
+EFX,Equifax Inc.,1.45,37000,6663000.0,180.08,Add 105.56%
+RAL,Ralliant Corp.,1.45,160000,6654000.0,41.59,Add 11.89%
+MHK,Mohawk Industries,1.41,65750,6474000.0,98.46,Reduce 4.36%
+JLL,Jones Lang Lasalle Inc.,1.4,21000,6391000.0,304.33,Add 20.00%
+CBRE,CBRE Group,1.39,47000,6367000.0,135.47,Add 23.68%
+MDT,Medtronic plc,1.38,73000,6325000.0,86.64,
+UNH,United Health Group Inc.,1.36,23000,6224000.0,270.61,Add 53.33%
+CB,Chubb Limited,1.35,19000,6193000.0,325.95,
+MSFT,Microsoft Corp.,1.35,16700,6182000.0,370.18,Add 67.00%
+TRV,Travelers Companies Inc.,1.34,21000,6125000.0,291.67,Reduce 12.50%
+ADBE,Adobe Inc.,1.33,25000,6077000.0,243.08,Add 56.25%
+JNJ,Johnson & Johnson,1.31,24500,5989000.0,244.45,Reduce 15.52%
+REYN,Reynolds Consumer Products Inc.,1.31,283000,5994000.0,21.18,Add 5.60%
+DAL,Delta Air Lines Inc.,1.28,88000,5850000.0,66.48,Reduce 13.81%
+HON,Honeywell Int'l Inc.,1.28,26000,5877000.0,226.04,
+SPGI,S&P Global Inc.,1.25,13500,5742000.0,425.33,Add 73.08%
+USB,U.S. Bancorp,1.25,110000,5721000.0,52.01,Reduce 10.57%
+DIN,Dine Brands Global Inc.,1.23,215000,5642000.0,26.24,Reduce 6.11%
+NKE,NIKE Inc.,1.23,107000,5652000.0,52.82,Add 2.88%
+TGT,Target Corp.,1.23,46452,5630000.0,121.2,Reduce 43.35%
+CTVA,Corteva Inc.,1.21,66000,5525000.0,83.71,Reduce 25.00%
+APTV,Aptiv PLC,1.2,79000,5486000.0,69.44,Reduce 7.60%
+HSIC,Henry Schein Inc.,1.19,74000,5454000.0,73.7,Reduce 16.85%
+ON,ON Semiconductor Corp.,1.16,86000,5325000.0,61.92,Reduce 16.50%
+BRK.B,Berkshire Hathaway CL B,1.15,11000,5271000.0,479.18,
+CFG,Citizens Financial Group Inc.,1.15,88200,5289000.0,59.97,Reduce 16.00%
+FITB,Fifth Third Bancorp,1.15,113000,5250000.0,46.46,Reduce 16.91%
+IVZ,Invesco Ltd,1.15,217000,5271000.0,24.29,Reduce 6.87%
+WFC,Wells Fargo,1.15,66000,5254000.0,79.61,Reduce 1.49%
+BAH,Booz Allen Hamilton Hldg Corp.,1.12,66000,5150000.0,78.03,Buy
+UPS,United Parcel Service,1.12,52000,5116000.0,98.38,Reduce 18.75%
+MIDD,Middleby Corp.,1.09,37500,4972000.0,132.59,Reduce 21.88%
+FTV,Fortive Corp.,1.06,88000,4865000.0,55.28,Reduce 12.00%
+DOV,Dover Corp.,1.05,23000,4794000.0,208.43,Reduce 22.54%
+FDX,FedEx Corp.,1.05,13500,4808000.0,356.15,Reduce 47.06%
+STZ,Constellation Brands,1.0,30500,4575000.0,150.0,Reduce 15.28%
+META,Meta Platforms Inc.,0.99,7900,4520000.0,572.15,Add 38.60%
+SYY,Sysco Corp.,0.93,60000,4280000.0,71.33,Reduce 20.00%
+TXN,Texas Instruments,0.93,22000,4271000.0,194.14,Reduce 18.52%
+LMT,Lockheed Martin Corp.,0.89,6750,4080000.0,604.44,Reduce 17.68%
+KLIC,Kulicke & Soffa Ind.,0.88,61000,4009000.0,65.72,Reduce 57.18%
+PEP,PepsiCo Inc.,0.88,26000,4038000.0,155.31,Reduce 7.14%
+SWK,Stanley Black & Decker Inc.,0.85,55000,3908000.0,71.05,Reduce 28.57%
+UBER,Uber Technologies Inc.,0.83,53000,3812000.0,71.92,Add 15.22%
+AMZN,Amazon.com Inc.,0.82,18000,3749000.0,208.28,Add 44.00%
+SOLS,Solstice Adv Materials Inc,0.81,49000,3732000.0,76.16,Reduce 15.08%
+WCC,WESCO International Inc.,0.79,13150,3598000.0,273.61,Reduce 15.16%
+CSCO,Cisco Systems,0.78,46000,3569000.0,77.59,Reduce 29.23%
+CVS,CVS Health Corp.,0.78,50000,3591000.0,71.82,Reduce 10.71%
+V,Visa Inc.,0.78,11750,3551000.0,302.21,Add 95.83%
+AAPL,Apple Inc.,0.72,13000,3299000.0,253.77,
+GM,General Motors,0.72,44000,3278000.0,74.5,Reduce 8.33%
+TMO,Thermo Fisher Scientific,0.72,6750,3318000.0,491.56,Add 5.47%
+LUV,Southwest Airlines,0.69,84000,3156000.0,37.57,Reduce 33.86%
+WAT,Waters Corp.,0.65,10000,2978000.0,297.8,Buy
+LHX,L3Harris Technologies Inc.,0.61,8100,2796000.0,345.19,Reduce 35.71%
+RTX,RTX Corp.,0.48,11500,2218000.0,192.87,Reduce 28.13%
+GOOG,Alphabet Inc. CL C,0.47,7500,2151000.0,286.8,
+GTES,Gates Industrial Corp.,0.37,74500,1684000.0,22.6,Reduce 11.31%
+CENTA,Central Garden & Pet,0.32,45000,1459000.0,32.42,Reduce 14.29%
+EBAY,eBay Inc.,0.32,16000,1456000.0,91.0,Reduce 27.27%
+AEBI,Aebi Schmidt Holding Ag,0.27,127000,1233000.0,9.71,Reduce 13.68%
+PBH,Prestige Consumer Healthcare,0.27,21000,1245000.0,59.29,
+TNC,Tennant Co.,0.25,17000,1129000.0,66.41,Add 30.77%
+BLBD,Blue Bird Corp.,0.24,19526,1109000.0,56.8,Reduce 15.10%
+FA,First Advantage Corp,0.24,95000,1117000.0,11.76,Add 28.38%
+CWK,Cushman & Wakefield Ltd,0.22,82000,1005000.0,12.26,Reduce 7.34%
+GS,Goldman Sachs Group,0.22,1200,1015000.0,845.83,Reduce 20.00%
+HOMB,Home Bancshares Inc.,0.21,35500,956000.0,26.93,Reduce 4.05%
+MLR,Miller Industries Inc.,0.21,21500,979000.0,45.53,
+PGNY,Progyny Inc.,0.21,56000,951000.0,16.98,Add 55.56%
+FHB,First Hawaiian Inc.,0.2,37000,912000.0,24.65,Reduce 7.50%
+PB,Prosperity Bancshares Inc.,0.18,12000,806000.0,67.17,
+VSH,Vishay Intertechnology,0.18,47000,846000.0,18.0,Reduce 38.96%
+NOV,Nov Inc.,0.17,42000,790000.0,18.81,Reduce 10.64%
+AGCO,AGCO Corp.,0.16,6500,753000.0,115.85,Reduce 27.78%
+PLOW,Douglas Dynamics,0.16,17543,738000.0,42.07,Reduce 41.52%
+GLW,Corning Inc.,0.15,5000,680000.0,136.0,Reduce 83.33%
+BRC,Brady Corp.,0.13,7500,609000.0,81.2,Reduce 28.57%
+TKR,Timken Co.,0.11,5000,503000.0,100.6,Reduce 39.76%
