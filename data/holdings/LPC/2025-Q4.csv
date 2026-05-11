@@ -1,7 +1,7 @@
 ticker,issuer,portfolio_pct,shares,value,reported_price,activity
 TSM,Taiwan Semiconductor S.A.,6.81,3052400,927594000.0,303.89,
 VST,Vistra Corp.,6.18,5211885,840833000.0,161.33,Add 10.91%
-CVNA,Carvana Co.,5.52,1779328,750912000.0,422.02,Add 0.80%
+CVNA,Carvana Co.,5.52,8896640,750912000.0,84.4,Add 0.80%
 LPLA,LPL Financial Holdings Inc.,5.44,2074948,741109000.0,357.17,Reduce 8.01%
 BN,Brookfield Corp.,5.37,15923360,730723000.0,45.89,Add 4.26%
 ASML,ASML Holding NV,4.76,605017,647283000.0,1069.86,Buy

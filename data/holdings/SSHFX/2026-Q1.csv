@@ -1,0 +1,41 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+TEVA,Teva Pharmaceutical Industries Ltd.,3.92,3885683,117037000.0,30.12,Reduce 9.84%
+REGN,Regeneron Pharmaceuticals,3.91,150960,116638000.0,772.64,Reduce 14.17%
+MRVL,Marvell Technology Inc.,3.81,1148590,113768000.0,99.05,Add 13.19%
+BAC,Bank of America Corp.,3.37,2065582,100697000.0,48.75,Add 30.91%
+BRK.B,Berkshire Hathaway CL B,3.2,199485,95593000.0,479.2,Reduce 5.10%
+ZBH,Zimmer Biomet Holdings,3.19,1052202,95140000.0,90.42,Add 23.68%
+DIS,Walt Disney Co.,3.13,970436,93531000.0,96.38,Add 1.22%
+C,Citigroup Inc.,2.94,773599,87734000.0,113.41,Reduce 1.95%
+GEHC,GE HealthCare Technologies Inc.,2.85,1192741,84899000.0,71.18,Add 17.18%
+CSX,CSX Corp.,2.75,2002159,82189000.0,41.05,Reduce 16.64%
+NXPI,NXP Semiconductors NV,2.71,410653,80841000.0,196.86,Buy
+PFE,Pfizer Inc.,2.7,2870421,80601000.0,28.08,Buy
+PEG,Public Serv. Enterprise Inc.,2.67,984658,79708000.0,80.95,Reduce 27.70%
+AMZN,Amazon.com Inc.,2.64,378875,78908000.0,208.27,Buy
+EQT,EQT Corp.,2.64,1235565,78631000.0,63.64,Reduce 18.58%
+BP,BP plc,2.63,1671683,78569000.0,47.0,Reduce 14.48%
+GM,General Motors,2.59,1037362,77283000.0,74.5,Reduce 2.72%
+QXO,Qxo Inc,2.56,3929810,76317000.0,19.42,Reduce 1.80%
+LUV,Southwest Airlines,2.52,2001977,75214000.0,37.57,Reduce 20.58%
+CTRA,OLD- Coterra Energy Inc.,2.51,2128868,74808000.0,35.14,Reduce 34.88%
+CHKP,Check Point Software Technologies,2.48,518529,74072000.0,142.85,Add 22.13%
+GOOGL,Alphabet Inc.,2.46,255671,73521000.0,287.56,Reduce 26.90%
+INCY,Incyte Corp.,2.42,767829,72268000.0,94.12,Reduce 17.42%
+VST,Vistra Corp.,2.42,479762,72123000.0,150.33,Buy
+WFC,Wells Fargo,2.41,902430,71842000.0,79.61,Reduce 1.92%
+MDT,Medtronic plc,2.4,825239,71507000.0,86.65,Buy
+UPS,United Parcel Service,2.4,728066,71627000.0,98.38,Buy
+BA,Boeing Co.,2.37,355009,70657000.0,199.03,Buy
+ACI,Albertsons Co Inc.,2.36,4134360,70449000.0,17.04,Reduce 8.80%
+ICLR,ICON plc,2.32,626958,69379000.0,110.66,Buy
+KMI,Kinder Morgan,2.15,1914405,64190000.0,33.53,Reduce 43.55%
+OC,Owens Corning,2.15,592330,64102000.0,108.22,Buy
+OMC,Omnicom Group,2.13,842962,63483000.0,75.31,Buy
+MHK,Mohawk Industries,2.12,642537,63264000.0,98.46,Reduce 1.22%
+FLEX,Flex Ltd.,2.03,924882,60543000.0,65.46,Reduce 9.18%
+SW,Smurfit Westrock Plc,2.02,1509136,60139000.0,39.85,Buy
+QCOM,QUALCOMM Inc.,1.83,424796,54705000.0,128.78,Reduce 27.88%
+KD,Kyndryl Holdings Inc,1.82,4147984,54422000.0,13.12,Add 39.46%
+PKG,Packaging Corp. of America,0.39,54750,11619000.0,212.22,Buy
+CVX,Chevron Corp.,0.07,9855,2039000.0,206.9,Buy
