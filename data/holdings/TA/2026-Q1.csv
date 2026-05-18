@@ -1,0 +1,54 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+TDW,Tidewater Inc.,12.49,921181,76965000.0,83.55,Add 5.51%
+VAL,Valaris plc,8.09,508186,49823000.0,98.04,Reduce 13.04%
+BCC,Boise Cascade Company,6.92,562021,42629000.0,75.85,Add 30.70%
+HCC,Warrior Met Coal Inc.,5.5,364002,33907000.0,93.15,Reduce 37.60%
+HOG,Harley-Davidson,4.8,1462670,29575000.0,20.22,Buy
+RHI,Robert Half International,3.73,903905,22959000.0,25.4,Buy
+BN,Brookfield Corp.,3.16,481495,19486000.0,40.47,Reduce 12.16%
+FPH,Five Point Holdings LLC,3.03,3861162,18688000.0,4.84,Reduce 6.14%
+CBRE,CBRE Group,3.0,136330,18467000.0,135.46,Reduce 7.15%
+PLD,Prologis Inc.,2.7,125945,16647000.0,132.18,Reduce 13.41%
+ROG,Rogers Corp.,2.63,151025,16210000.0,107.33,Reduce 24.29%
+UHAL.B,U Haul Holding Co Non Voting,2.06,284375,12703000.0,44.67,Add 9.69%
+LEN.B,Lennar Corp. CL B,1.95,142843,12016000.0,84.12,Reduce 3.49%
+SUI,Sun Communities Inc.,1.87,91455,11520000.0,125.96,Reduce 5.64%
+PHM,PulteGroup Inc.,1.82,95128,11188000.0,117.61,Reduce 5.52%
+DHI,D.R. Horton,1.64,73836,10132000.0,137.22,Reduce 5.57%
+ECPG,Encore Capital Group Inc.,1.62,142512,9993000.0,70.12,Reduce 16.67%
+JLL,Jones Lang Lasalle Inc.,1.6,32407,9862000.0,304.32,Reduce 5.66%
+FNF,Fidelity National Financial Inc.,1.46,193455,8972000.0,46.38,Reduce 5.78%
+UMBF,UMB Financial Corp.,1.43,78245,8825000.0,112.79,
+MYRG,MYR Group Inc.,1.32,28819,8136000.0,282.31,Reduce 18.94%
+SUPN,Supernus Pharmaceuticals,1.28,152724,7894000.0,51.69,Reduce 19.40%
+BATRA,Atlanta Braves Holdings Inc. Series A,1.26,164438,7753000.0,47.15,
+SKY,Skyline Champion Corp.,1.22,100757,7493000.0,74.37,Reduce 5.31%
+AMH,American Homes 4 Rent,1.19,262520,7330000.0,27.92,Reduce 5.74%
+TPH,OLD- TRI Pointe Group,1.18,155855,7283000.0,46.73,
+UNF,UniFirst Corp.,1.16,28434,7154000.0,251.6,
+FSV,Firstservice Corp,1.14,50452,7010000.0,138.94,Add 169.59%
+PB,Prosperity Bancshares Inc.,1.11,102168,6864000.0,67.18,
+PRA,ProAssurance Corp.,1.05,260608,6442000.0,24.72,Reduce 11.05%
+BKD,Brookdale Senior Living Inc.,1.03,463664,6343000.0,13.68,Buy
+OSG,Octave Specialty Group Inc.,1.01,1341211,6237000.0,4.65,Add 71.49%
+PBF,PBF Energy Inc.,1.01,131050,6241000.0,47.62,
+ALG,Alamo Group Inc.,0.92,34332,5664000.0,164.98,Add 43.00%
+LXU,LSB Industries Inc.,0.92,381096,5678000.0,14.9,Reduce 51.73%
+SD,SandRidge Energy Inc.,0.88,330818,5396000.0,16.31,
+WCC,WESCO International Inc.,0.85,19243,5265000.0,273.61,Reduce 5.18%
+CPRX,Catalyst Pharmaceuticals Inc.,0.84,210161,5204000.0,24.76,Buy
+COLL,Collegium Pharmaceutical Inc.,0.83,155143,5131000.0,33.07,Reduce 23.73%
+CET,Central Securities Corp.,0.82,101812,5056000.0,49.66,
+ITIC,Investors Title Co.,0.77,21894,4758000.0,217.32,
+FR,First Industrial Realty Trust Inc.,0.76,81016,4687000.0,57.85,Reduce 22.64%
+ICFI,ICF International Inc.,0.76,71736,4684000.0,65.29,Add 35.70%
+OCFC,OceanFirst Financial Corp.,0.72,246662,4450000.0,18.04,Add 27.93%
+FLG,Flagstar Financial Inc.,0.71,331241,4362000.0,13.17,Add 52.43%
+WY,Weyerhaeuser Co.,0.64,162377,3967000.0,24.43,Reduce 5.36%
+SBSI,Southside Bancshares Inc.,0.59,116879,3634000.0,31.09,
+KALU,Kaiser Aluminum Corp.,0.58,29881,3601000.0,120.51,Reduce 65.00%
+BXC,BlueLinx Holdings Inc.,0.57,64369,3488000.0,54.19,Add 0.05%
+QLYS,Qualys Inc.,0.56,39120,3437000.0,87.86,Buy
+FRPH,FRP Holdings Inc.,0.38,107160,2345000.0,21.88,Reduce 0.25%
+COMP,Compass Inc.,0.22,187469,1370000.0,7.31,Buy
+BATRK,Atlanta Braves Holdings Inc. Series C,0.18,26104,1115000.0,42.71,

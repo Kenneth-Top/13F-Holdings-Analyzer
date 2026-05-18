@@ -1,0 +1,56 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+NBR,Nabors Industries Ltd.,9.98,444430,38248000.0,86.06,Reduce 26.26%
+CRGY,Crescent Energy Inc A,7.06,2003132,27042000.0,13.5,Buy
+GTN,Gray Television Inc.,6.08,5370100,23306000.0,4.34,Add 34.64%
+LNC,Lincoln National,5.29,570690,20259000.0,35.5,Add 13.06%
+SPY,SPDR S&P 500 ETF Trust,5.1,30044,19539000.0,650.35,Buy
+QUAD,Quad/Graphics Inc.,4.57,2651039,17523000.0,6.61,Reduce 3.17%
+BFH,Bread Financial Holdings Inc.,3.79,193697,14506000.0,74.89,Reduce 3.83%
+TDAY,Gannett Co.,3.62,1969280,13883000.0,7.05,Reduce 42.14%
+CNDT,Conduent Inc.,3.35,10023930,12831000.0,1.28,Add 79.53%
+UPS,United Parcel Service,3.06,119108,11718000.0,98.38,Add 37.54%
+BLMN,Bloomin Brands Inc.,2.87,2036734,10998000.0,5.4,Buy
+FOSL,Fossil Inc.,2.73,2425185,10453000.0,4.31,Reduce 23.84%
+CTO,CTO Realty Growth Inc.,2.68,556053,10281000.0,18.49,Add 28.08%
+ITRN,Ituran Location & Control Ltd.,2.61,203900,9993000.0,49.01,Reduce 5.16%
+VTRS,Viatris Inc.,2.58,731676,9885000.0,13.51,Add 18.20%
+CHRD,Chord Energy,2.57,69330,9857000.0,142.18,Add 20.02%
+JXN,Jackson Financial Inc.,2.23,80680,8529000.0,105.71,Reduce 6.35%
+VZ,Verizon Communications,2.2,168000,8434000.0,50.2,Reduce 15.15%
+DCH,Dauch Corp.,2.16,1395905,8278000.0,5.93,Reduce 19.53%
+JELD,JELD-WEN Holding Inc.,2.14,6619885,8209000.0,1.24,Add 60.12%
+MSTR,MicroStrategy Inc.,1.7,52058,6497000.0,124.8,Add 106.17%
+ARLP,Alliance Resource Partners LP,1.34,185256,5122000.0,27.65,Add 40.35%
+MRP,Millrose Properties,1.32,180800,5062000.0,28.0,Add 118.36%
+CALM,Cal-Maine Foods Inc.,1.28,62000,4907000.0,79.15,
+ABR,Arbor Realty Trust Inc.,1.22,604000,4657000.0,7.71,Buy
+OMF,OneMain Holdings,1.16,82941,4437000.0,53.5,
+UGI,UGI Corp.,1.15,121000,4407000.0,36.42,Reduce 53.82%
+BMY,Bristol-Myers Squibb,1.1,69500,4215000.0,60.65,Reduce 35.65%
+WAL,Western Alliance Bancorp,1.02,55252,3915000.0,70.86,Reduce 14.28%
+BBW,Build-A-Bear Workshop Inc.,1.01,103734,3885000.0,37.45,Add 32.99%
+MELI,Mercadolibre Inc.,1.0,2215,3830000.0,1729.12,Buy
+CROX,Crocs Inc.,0.84,38548,3200000.0,83.01,Buy
+FIGR,Figure Technology Solut Cl A,0.81,91009,3090000.0,33.95,Buy
+LYB,LyondellBasell Industries,0.8,38000,3061000.0,80.55,
+ZD,Ziff Davis Inc.,0.75,68058,2856000.0,41.96,Buy
+BCC,Boise Cascade Company,0.73,37000,2806000.0,75.84,
+CTRN,Citi Trends Inc.,0.61,53763,2329000.0,43.32,Buy
+REZI,Resideo Technologies Inc.,0.61,69762,2352000.0,33.71,Buy
+UPBD,Upbound Group Inc.,0.57,120000,2166000.0,18.05,Add 71.43%
+ABNB,Airbnb Inc.,0.53,16134,2037000.0,126.26,Buy
+CG,Carlyle Group,0.51,40000,1936000.0,48.4,
+CART,Maplebear Inc,0.45,45557,1707000.0,37.47,Buy
+BLDR,Builders FirstSource Inc.,0.41,18893,1555000.0,82.31,Buy
+PRDO,Perdoceo Education Corp.,0.39,40395,1503000.0,37.21,Buy
+FOUR,Shift4 Payments Inc. CL A,0.34,30035,1313000.0,43.72,Buy
+CPNG,Coupang Inc.,0.31,62528,1181000.0,18.89,Buy
+PINS,Pinterest Inc.,0.29,59990,1100000.0,18.34,Buy
+MBC,Masterbrand Inc,0.23,104854,871000.0,8.31,Buy
+VRM,Vroom Inc,0.2,58488,778000.0,13.3,Buy
+PTLO,Portillo's Inc Cl A,0.18,129323,684000.0,5.29,Buy
+LAD,Lithia Motors Inc.,0.17,2654,663000.0,249.81,Buy
+SN,Sharkninja Inc,0.16,5775,612000.0,105.97,Buy
+FTI,TechnipFMC plc,0.06,3170,219000.0,69.09,Reduce 57.79%
+TPC,Tutor Perini Corp.,0.06,2795,216000.0,77.28,Reduce 58.99%
+UNFI,United Natural Foods,0.06,5250,237000.0,45.14,Reduce 58.42%

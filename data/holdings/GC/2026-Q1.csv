@@ -1,0 +1,52 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BRK.B,Berkshire Hathaway CL B,6.64,378625,181437000.0,479.2,Reduce 25.17%
+GOOG,Alphabet Inc. CL C,6.52,620909,178114000.0,286.86,Reduce 2.91%
+META,Meta Platforms Inc.,6.45,307821,176114000.0,572.13,Reduce 1.80%
+HEI.A,HEICO Corp. CL A,5.71,738482,155886000.0,211.09,Reduce 2.13%
+SCHW,Charles Schwab Corp.,5.29,1536206,144373000.0,93.98,Reduce 3.12%
+FIVE,Five Below Inc.,5.16,617191,141016000.0,228.48,Reduce 3.22%
+AME,Ametek Inc.,4.8,612058,131201000.0,214.36,Reduce 37.51%
+MEDP,Medpace Holdings Inc.,4.5,256081,122968000.0,480.19,Reduce 2.75%
+V,Visa Inc.,4.39,396357,119795000.0,302.24,Reduce 2.70%
+IBP,Installed Building Products,3.92,403665,107032000.0,265.15,Reduce 22.26%
+PGR,Progressive Corp.,3.83,528364,104743000.0,198.24,Reduce 1.58%
+GOOGL,Alphabet Inc.,3.67,348469,100206000.0,287.56,Reduce 3.58%
+KEYS,Keysight Technologies Inc.,3.34,323184,91257000.0,282.37,Reduce 3.25%
+NVR,NVR Inc.,3.29,13647,89931000.0,6589.8,Reduce 3.30%
+BKNG,Booking Holdings Inc.,3.26,527925,88909000.0,168.41,Reduce 1.53%
+ADP,Automatic Data Processing Inc.,3.12,419090,85151000.0,203.18,Buy
+MKL,Markel Group Inc.,3.01,42944,82198000.0,1914.07,Reduce 2.35%
+KNSL,Kinsale Capital Group Inc.,2.74,218942,74804000.0,341.66,Add 2.18%
+BFAM,Bright Horizons Family Solutions Inc.,2.23,742329,60967000.0,82.13,Add 80.97%
+OZK,Bank OZK,2.07,1231059,56493000.0,45.89,Reduce 2.61%
+ADI,Analog Devices,1.99,171052,54418000.0,318.14,Reduce 3.22%
+ANET,Arista Networks Inc.,1.9,423361,51982000.0,122.78,Add 1.00%
+DIS,Walt Disney Co.,1.89,536514,51709000.0,96.38,Reduce 1.45%
+RMD,ResMed Inc.,1.89,230005,51632000.0,224.48,Reduce 2.29%
+BRO,Brown & Brown Inc.,1.8,755269,49251000.0,65.21,Reduce 2.23%
+LFUS,Littelfuse Inc.,1.0,80719,27392000.0,339.35,Reduce 1.06%
+LULU,Lululemon Athletica Inc.,0.8,142600,21832000.0,153.1,Reduce 1.13%
+SUNB,Sunbelt Rentals Holdings Inc,0.65,270843,17629000.0,65.09,Buy
+AAON,AAON Inc.,0.61,201832,16702000.0,82.75,Buy
+JPM,JPMorgan Chase & Co.,0.56,52298,15384000.0,294.16,Add 0.89%
+MA,Mastercard Inc.,0.51,28066,14023000.0,499.64,Reduce 2.41%
+FND,Floor & Decor Holdings,0.43,231829,11777000.0,50.8,Reduce 1.72%
+TWFG,Twfg Inc,0.37,552107,10153000.0,18.39,Add 66.54%
+FERG,Ferguson Enterprises Inc.,0.31,36728,8567000.0,233.26,Add 0.97%
+BRK.A,Berkshire Hathaway CL A,0.29,11,7900000.0,718181.82,
+BLDR,Builders FirstSource Inc.,0.28,91813,7559000.0,82.33,Add 2.03%
+AAPL,Apple Inc.,0.14,15040,3817000.0,253.79,Reduce 8.95%
+TSM,Taiwan Semiconductor S.A.,0.1,8125,2746000.0,337.97,Reduce 49.44%
+GLD,SPDR Gold Trust,0.06,3876,1668000.0,430.34,
+MTB,M&T Bank Corp.,0.06,7535,1558000.0,206.77,Reduce 0.07%
+SPY,SPDR S&P 500 ETF Trust,0.06,2474,1609000.0,650.36,
+YUMC,Yum China Holdings Inc.,0.06,36036,1758000.0,48.78,
+BIRK,Birkenstock Holding Plc,0.04,27392,981000.0,35.81,
+ITB,Ishares U.S. Home Constructi,0.04,10854,983000.0,90.57,Reduce 7.21%
+ODFL,Old Dominion Freight Line,0.04,5006,978000.0,195.37,Reduce 4.74%
+QQQM,Invesco Nasdaq 100 ETF,0.04,4222,1003000.0,237.57,Buy
+RSP,Invesco S&P  500 Equal Weight,0.04,6105,1172000.0,191.97,Buy
+CPRT,Copart Inc.,0.03,27484,912000.0,33.18,
+MSFT,Microsoft Corp.,0.03,1910,707000.0,370.16,Add 12.09%
+NVO,Novo Nordisk A S,0.02,12400,456000.0,36.77,
+SITE,SiteOne Landscape Supply Inc.,0.02,3753,500000.0,133.23,

@@ -1,0 +1,12 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BN,Brookfield Corp.,17.62,59697208,2415946000.0,40.47,Reduce 2.78%
+AMZN,Amazon.com Inc.,17.39,11451981,2385104000.0,208.27,Add 19.19%
+UBER,Uber Technologies Inc.,15.71,29958771,2154934000.0,71.93,Reduce 0.82%
+MSFT,Microsoft Corp.,15.26,5654078,2092970000.0,370.17,Buy
+QSR,Restaurant Brands International,12.2,22645483,1673501000.0,73.9,Reduce 0.97%
+META,Meta Platforms Inc.,11.1,2660861,1522358000.0,572.13,Reduce 0.48%
+HHH,Howard Hughes Holdings Inc.,8.7,18852064,1192582000.0,63.26,
+SEG,Seaport Entertainment Group,0.79,5023780,107911000.0,21.48,
+GOOG,Alphabet Inc. CL C,0.65,311726,89422000.0,286.86,Reduce 94.94%
+HTZ,Hertz Global Hldgs Inc.,0.51,15241127,70262000.0,4.61,
+GOOGL,Alphabet Inc.,0.07,32376,9310000.0,287.56,Reduce 95.23%

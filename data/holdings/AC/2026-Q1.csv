@@ -1,0 +1,20 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+MA,Mastercard Inc.,18.64,2281106,1139777000.0,499.66,Reduce 24.10%
+BN,Brookfield Corp.,11.27,17027077,689086000.0,40.47,Reduce 36.57%
+KKR,KKR & Co. L.P.,10.16,6718078,621422000.0,92.5,Reduce 17.12%
+MCO,Moody's Corp.,8.89,1246114,543617000.0,436.25,Reduce 28.19%
+V,Visa Inc.,8.1,1638798,495310000.0,302.24,Reduce 38.77%
+ROP,Roper Technologies Inc.,7.27,1257232,444884000.0,353.86,Add 13.76%
+CSGP,CoStar Group Inc.,6.83,10348273,417449000.0,40.34,Add 7.59%
+FICO,Fair Isaac Corp.,6.35,363765,388334000.0,1067.54,Add 31.11%
+ORLY,O'Reilly Automotive,5.87,3885813,358699000.0,92.31,Reduce 42.17%
+CPRT,Copart Inc.,4.34,7998938,265565000.0,33.2,Add 1.66%
+ABNB,Airbnb Inc.,4.2,2034473,256913000.0,126.28,Reduce 41.42%
+CCC,CCC Intelligent Solutions Hldgs Inc.,3.09,31513070,189078000.0,6.0,Add 26.88%
+CRM,Salesforce.com,2.19,717799,133992000.0,186.67,Buy
+NOW,ServiceNow Inc.,1.87,1096099,114597000.0,104.55,Buy
+GSHD,Goosehead Insurance Inc.,0.31,443385,18915000.0,42.66,Add 19.48%
+SOPH,Sophia Genetics SA,0.3,3719140,18410000.0,4.95,
+AMT,American Tower Corp.,0.14,50772,8762000.0,172.58,Reduce 80.11%
+PRM,Perimeter Solutions SA,0.1,250000,6105000.0,24.42,Buy
+BRK.B,Berkshire Hathaway CL B,0.08,10339,4954000.0,479.16,Reduce 13.13%

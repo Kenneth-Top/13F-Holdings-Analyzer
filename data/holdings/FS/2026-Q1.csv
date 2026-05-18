@@ -1,0 +1,35 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+MAR,Marriott Int'l.,8.59,3370872,1102511000.0,327.07,Reduce 15.30%
+SYK,Stryker Corp.,7.84,3061416,1005951000.0,328.59,Reduce 16.98%
+WAT,Waters Corp.,7.46,3212075,956556000.0,297.8,Reduce 9.72%
+V,Visa Inc.,7.31,3104090,938180000.0,302.24,Reduce 12.18%
+GOOGL,Alphabet Inc.,6.63,2956198,850084000.0,287.56,Reduce 15.50%
+PM,Philip Morris Intl.,6.59,5113163,845410000.0,165.34,Reduce 16.51%
+IDXX,IDEXX Laboratories,6.42,1465786,823610000.0,561.89,Reduce 21.87%
+ADP,Automatic Data Processing Inc.,6.11,3855105,783280000.0,203.18,Reduce 7.73%
+MSFT,Microsoft Corp.,6.0,2079737,769856000.0,370.17,Reduce 0.01%
+META,Meta Platforms Inc.,5.89,1321375,755998000.0,572.13,Reduce 3.09%
+MTD,Mettler-Toledo International Inc.,5.59,568516,717012000.0,1261.2,Reduce 2.07%
+CHD,Church & Dwight,4.83,6641508,619786000.0,93.32,Reduce 1.29%
+PG,Procter & Gamble,4.73,4199914,606636000.0,144.44,Reduce 1.13%
+TXN,Texas Instruments,3.97,2623124,509253000.0,194.14,Reduce 0.02%
+FTNT,Fortinet Inc.,3.92,6156675,503123000.0,81.72,Reduce 5.51%
+ZTS,Zoetis Inc.,3.57,3877559,458366000.0,118.21,Reduce 0.60%
+OTIS,Otis Worldwide Corp.,1.64,2731635,210554000.0,77.08,Reduce 12.23%
+MSCI,MSCI Inc.,0.27,64788,34921000.0,539.0,Reduce 61.12%
+ROL,Rollins Inc.,0.26,619935,33111000.0,53.41,Reduce 58.07%
+MEDP,Medpace Holdings Inc.,0.23,62668,30093000.0,480.2,Reduce 24.10%
+VRSN,Verisign Inc.,0.22,113467,28181000.0,248.36,Reduce 58.07%
+CLX,Clorox Co.,0.21,257217,26655000.0,103.63,Reduce 58.07%
+PAYC,Paycom Software Inc.,0.21,219457,26673000.0,121.54,Reduce 58.07%
+VRT,Vertiv Holdings Co.,0.18,91254,22866000.0,250.58,Reduce 77.79%
+BMI,Badger Meter Inc.,0.17,142491,21709000.0,152.35,Buy
+NTNX,Nutanix Inc.,0.17,577392,21947000.0,38.01,Reduce 58.07%
+CPRX,Catalyst Pharmaceuticals Inc.,0.16,844887,20919000.0,24.76,Reduce 74.88%
+QLYS,Qualys Inc.,0.15,226077,19861000.0,87.85,Reduce 65.10%
+DOCS,Doximity Inc.,0.13,691786,16119000.0,23.3,Reduce 58.07%
+MANH,Manhattan Associates,0.13,120888,16093000.0,133.12,Reduce 58.07%
+ADMA,ADMA Biologics Inc.,0.12,1649493,14862000.0,9.01,Reduce 21.53%
+NSSC,Napco Security Technologies Inc.,0.12,383596,15110000.0,39.39,Reduce 78.45%
+SABR,Sabre Corp.,0.1,9013783,13070000.0,1.45,Reduce 58.07%
+HD,Home Depot,0.07,28611,9410000.0,328.89,Reduce 64.33%

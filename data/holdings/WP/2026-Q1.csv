@@ -1,0 +1,23 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+GOOGL,Alphabet Inc.,9.25,155701,44773000.0,287.56,Reduce 5.01%
+TSM,Taiwan Semiconductor S.A.,9.03,129353,43715000.0,337.95,Reduce 29.95%
+META,Meta Platforms Inc.,7.77,65805,37649000.0,572.13,Reduce 4.82%
+AAPL,Apple Inc.,7.08,135128,34294000.0,253.79,Reduce 5.45%
+MSI,Motorola Solutions Inc.,6.09,67941,29484000.0,433.96,Reduce 5.27%
+MSFT,Microsoft Corp.,5.65,73919,27363000.0,370.18,Reduce 4.62%
+V,Visa Inc.,5.18,83010,25089000.0,302.24,Reduce 4.75%
+BKNG,Booking Holdings Inc.,4.8,137925,23230000.0,168.42,Reduce 5.16%
+ODFL,Old Dominion Freight Line,4.6,113941,22264000.0,195.4,Reduce 5.09%
+AMZN,Amazon.com Inc.,4.3,99907,20808000.0,208.27,Add 71.47%
+TSCO,Tractor Supply,4.27,456094,20661000.0,45.3,Reduce 5.18%
+URI,United Rentals,3.79,25192,18354000.0,728.56,Reduce 4.99%
+CB,Chubb Limited,3.63,53886,17563000.0,325.93,Reduce 4.67%
+CDW,CDW Corp.,3.62,144870,17532000.0,121.02,Reduce 4.61%
+PGR,Progressive Corp.,3.41,83352,16524000.0,198.24,Buy
+ORLY,O'Reilly Automotive,3.4,178397,16468000.0,92.31,Reduce 5.47%
+CPRT,Copart Inc.,3.17,462749,15363000.0,33.2,Reduce 4.80%
+SPGI,S&P Global Inc.,2.84,32371,13769000.0,425.35,Reduce 4.13%
+EW,Edwards Lifesciences Corp.,2.83,170969,13691000.0,80.08,Reduce 5.48%
+ZTS,Zoetis Inc.,2.77,113541,13422000.0,118.21,Add 8.44%
+TOL,Toll Brothers,2.49,88275,12047000.0,136.47,Buy
+IWF,iShares Russell 1000 Growth ETF,0.05,2096,223000.0,106.39,Reduce 95.64%

@@ -1,0 +1,6 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BRK.A,Berkshire Hathaway CL A,38.47,145,104130000.0,718137.93,
+CROX,Crocs Inc.,18.24,594570,49361000.0,83.02,
+SGOV,Ishares 0 3 Month Treasury B,17.11,460000,46304000.0,100.66,Reduce 18.73%
+PDD,Pinduoduo Inc.,15.67,415004,42405000.0,102.18,
+PYPL,PayPal Holdings Inc.,10.51,628907,28445000.0,45.23,

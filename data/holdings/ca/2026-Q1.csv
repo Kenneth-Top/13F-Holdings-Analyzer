@@ -1,0 +1,31 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BRK.A,Berkshire Hathaway CL A,29.72,86,61760000.0,718139.53,
+GOOG,Alphabet Inc. CL C,9.99,72390,20766000.0,286.86,
+OXY,Occidental Petroleum,9.79,313000,20345000.0,65.0,
+SYF,Synchrony Financial,7.31,223202,15182000.0,68.02,Add 3.48%
+AAPL,Apple Inc.,5.37,44000,11167000.0,253.8,
+STLA,Stellantis N.V.,4.76,1394194,9885000.0,7.09,
+SIRI,SiriusXM Holdings Inc,4.55,409589,9453000.0,23.08,
+ALLY,Ally Financial Inc.,4.26,225525,8847000.0,39.23,
+PYPL,PayPal Holdings Inc.,3.64,167400,7572000.0,45.23,Add 308.29%
+JEF,Jefferies Financial Group Inc.,2.96,149237,6159000.0,41.27,Add 1258.31%
+BABA,Alibaba Group Holdings,2.53,41900,5257000.0,125.47,
+WFC,Wells Fargo,2.28,59542,4740000.0,79.61,
+GM,General Motors,1.86,52000,3874000.0,74.5,
+C,Citigroup Inc.,1.78,32695,3708000.0,113.41,
+CASH,Meta Financial Group Inc.,1.18,27389,2444000.0,89.23,
+BAC,Bank of America Corp.,1.17,50000,2438000.0,48.76,
+POOL,Pool Corp.,1.04,10636,2152000.0,202.33,
+MBI,MBIA Inc.,0.91,321000,1897000.0,5.91,
+KHC,Kraft Heinz Co.,0.75,69500,1563000.0,22.49,Buy
+BRK.B,Berkshire Hathaway CL B,0.72,3100,1486000.0,479.35,Buy
+AGO,Assured Guaranty Ltd.,0.67,16990,1384000.0,81.46,Add 54.60%
+MEOH,Methanex Corp.,0.57,20000,1192000.0,59.6,
+CYD,China Yuchai Intl Ltd.,0.43,23364,900000.0,38.52,
+IMO,Imperial Oil Ltd.,0.32,5000,655000.0,131.0,
+MCO,Moody's Corp.,0.31,1500,654000.0,436.0,
+MGA,Magna International Inc.,0.27,10000,558000.0,55.8,
+ATKR,Atkore International Group Inc.,0.24,8400,495000.0,58.93,Buy
+HPQ,HP Inc.,0.24,26500,509000.0,19.21,Buy
+LPX,Louisiana-Pacific Corp.,0.21,5886,428000.0,72.71,
+RYAAY,Ryanair Holdings PLC,0.17,5937,343000.0,57.77,

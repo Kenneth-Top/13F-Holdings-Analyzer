@@ -1,0 +1,201 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+NVDA,NVIDIA Corp.,6.44,3174918,553706000.0,174.4,Add 6.31%
+AMZN,Amazon.com Inc.,5.61,2318015,482773000.0,208.27,Reduce 2.71%
+TSM,Taiwan Semiconductor S.A.,4.86,1237358,418165000.0,337.95,Reduce 25.40%
+ASML,ASML Holding NV,3.97,258377,341272000.0,1320.83,Reduce 1.01%
+NU,Nu Holdings Ltd,3.75,22444311,322525000.0,14.37,Add 91.59%
+AMAT,Applied Materials,3.46,869943,297338000.0,341.79,Reduce 23.10%
+MSFT,Microsoft Corp.,3.12,725649,268613000.0,370.17,Reduce 36.93%
+BSX,Boston Scientific,3.06,4195089,263242000.0,62.75,Add 42.48%
+RTX,RTX Corp.,3.06,1364888,263287000.0,192.9,Reduce 0.29%
+AGX,Argan Inc.,2.94,464759,253131000.0,544.65,Add 5.90%
+GOOG,Alphabet Inc. CL C,2.91,872697,250342000.0,286.86,Reduce 23.55%
+TECH,Bio-Techne Corp.,2.88,4739721,247698000.0,52.26,Add 23.08%
+V,Visa Inc.,2.84,806951,243893000.0,302.24,Add 3.87%
+NTRA,Natera Inc.,2.72,1171633,234315000.0,199.99,Add 24.11%
+COF,Capital One Financial,2.65,1248456,227756000.0,182.43,Reduce 3.70%
+LIN,Linde plc,2.46,426111,211249000.0,495.76,Buy
+DKS,Dick's Sporting Goods Inc.,2.41,1044903,207194000.0,198.29,Add 25.25%
+INFQ,Infleqtion Inc,2.28,19941924,195630000.0,9.81,Buy
+SWX,Southwest Gas Holdings Inc.,2.15,2126927,184830000.0,86.9,Add 3.85%
+CPT,Camden Property Trust,2.12,1867866,182416000.0,97.66,Add 1.64%
+ABT,Abbott Labs,2.1,1758160,180510000.0,102.67,Buy
+MNST,Monster Beverage Corp.,2.08,2464909,178607000.0,72.46,Reduce 8.48%
+RGEN,Repligen Corp.,2.08,1518805,178946000.0,117.82,Buy
+GFL,Gfl Environmental Inc Sub Vt,1.87,3849656,160609000.0,41.72,Reduce 23.37%
+DHR,Danaher Corp.,1.81,819679,155411000.0,189.6,Buy
+AMD,Advanced Micro Devices,1.6,676572,137635000.0,203.43,Buy
+CVNA,Carvana Co.,1.54,2101380,132126000.0,62.88,Reduce 9.01%
+INTC,Intel Corp.,1.54,2995488,132191000.0,44.13,Buy
+SHW,Sherwin-Williams,1.46,391839,125604000.0,320.55,Add 37.82%
+ALAB,Astera Labs Inc,1.22,955356,104707000.0,109.6,Reduce 2.11%
+KO,Coca Cola Co.,1.14,1284612,97695000.0,76.05,Reduce 17.77%
+PM,Philip Morris Intl.,1.09,567250,93789000.0,165.34,Reduce 73.94%
+MCD,McDonald's Corp.,1.06,294100,91403000.0,310.79,Add 2261.68%
+MOH,Molina Healthcare Inc.,1.0,645768,86081000.0,133.3,Buy
+PCVX,Vaxcyte Inc.,0.93,1377738,80060000.0,58.11,Add 1.74%
+NVO,Novo Nordisk A S,0.89,2080121,76444000.0,36.75,Buy
+CNTA,Centessa Pharmaceuticals ADR,0.86,1854488,73660000.0,39.72,Add 12.82%
+WVE,Wave Life Sciences Ltd.,0.86,10161399,73670000.0,7.25,Add 9.50%
+NAMS,Newamsterdam Pharma Co Nv,0.81,2186402,69987000.0,32.01,Add 15.42%
+FLR,Fluor Corp.,0.77,1415557,66036000.0,46.65,Buy
+GLW,Corning Inc.,0.59,374507,50922000.0,135.97,Buy
+MIR,Mirion Technologies Inc,0.57,2649879,49261000.0,18.59,Buy
+MMSI,Merit Medical Systems Inc.,0.57,714081,49222000.0,68.93,Add 46.88%
+MELI,Mercadolibre Inc.,0.54,26894,46500000.0,1729.01,Add 2.85%
+ROIV,Roivant Sciences Ltd,0.52,1626940,45066000.0,27.7,Buy
+COMP,Compass Inc.,0.44,5172396,37810000.0,7.31,Reduce 59.07%
+MDLN,Medline Inc Cl A,0.41,796077,35425000.0,44.5,
+ACHC,Acadia Healthcare Co.,0.36,1314116,30737000.0,23.39,Add 45.14%
+IVVD,Invivyd Inc.,0.29,18970913,24662000.0,1.3,
+MRVL,Marvell Technology Inc.,0.22,188160,18637000.0,99.05,Buy
+RCKT,Rocket Pharmaceuticals Inc.,0.15,3567372,12771000.0,3.58,Add 41.95%
+QURE,uniQure NV,0.13,697640,11406000.0,16.35,Add 5.41%
+EVH,Evolent Health Inc.,0.07,2572763,5866000.0,2.28,Add 1.29%
+STUB,Stubhub Holdings Inc Class A,0.07,931473,5812000.0,6.24,
+HSY,Hershey Co.,0.06,23317,4847000.0,207.87,Add 122.07%
+IPAR,Inter Parfums Inc.,0.06,56734,5154000.0,90.84,Buy
+SPB,Spectrum Brands Holdings Inc.,0.06,67826,4999000.0,73.7,Add 31.48%
+HRL,Hormel Foods Corp.,0.05,171063,3875000.0,22.65,Buy
+NTSK,Netskope Inc Cl A,0.05,465736,3954000.0,8.49,
+PRMB,Primo Brands Corp,0.05,224525,4228000.0,18.83,Add 409.32%
+SEB,Seaboard Corp.,0.05,741,4190000.0,5654.52,Add 6.93%
+BG,Bunge Global SA,0.04,23975,3050000.0,127.22,Buy
+BUD,Anheuser-Busch InBev,0.04,51020,3539000.0,69.36,Add 42.12%
+CLS,Celestica Inc,0.04,11573,3265000.0,282.12,Buy
+COCO,Vita Coco Co Inc,0.04,76933,3686000.0,47.91,Add 31.37%
+ELAN,Elanco Animal Health Inc.,0.04,144457,3457000.0,23.93,Add 35.52%
+EPC,Edgewell Personal Care Co.,0.04,165242,3526000.0,21.34,Buy
+MO,Altria Group Inc.,0.04,52322,3453000.0,66.0,Add 239.25%
+TPB,Turning Point Brands Inc.,0.04,38832,3370000.0,86.78,Add 79.16%
+BNS,Bank of Nova Scotia,0.03,36701,2546000.0,69.37,Buy
+CAG,Conagra Brands Inc.,0.03,142740,2244000.0,15.72,Reduce 1.15%
+CNQ,Canadian Natural Resources,0.03,46050,2246000.0,48.77,Buy
+COTY,Coty Inc.,0.03,1261833,2536000.0,2.01,Buy
+EXPE,Expedia Group Inc.,0.03,9513,2196000.0,230.84,Reduce 46.99%
+NVS,Novartis AG,0.03,15247,2329000.0,152.75,Add 37.70%
+PICS,Pics Nv,0.03,268663,2808000.0,10.45,Buy
+SJM,J.M. Smucker Co,0.03,29851,2879000.0,96.45,Add 6.95%
+AAOI,Applied Optoelectronics Inc,0.02,16193,1370000.0,84.6,Buy
+ALGM,Allegro MicroSystems Inc.,0.02,42224,1331000.0,31.52,Buy
+BTI,British American Tobacco plc,0.02,35053,2050000.0,58.48,Add 15.46%
+CFG,Citizens Financial Group Inc.,0.02,22222,1333000.0,59.99,Buy
+CLX,Clorox Co.,0.02,16486,1708000.0,103.6,Buy
+CNI,Canadian Natl Railway Co.,0.02,18775,1933000.0,102.96,Buy
+COHR,Coherent Corp.,0.02,6869,1636000.0,238.17,Buy
+CRL,Charles River Labs,0.02,8178,1411000.0,172.54,Buy
+ENS,EnerSys,0.02,8546,1485000.0,173.77,Buy
+ENTG,Entegris Inc.,0.02,12859,1508000.0,117.27,Buy
+ESI,Element Solutions Inc.,0.02,43524,1486000.0,34.14,Buy
+EWBC,East West Bancorp,0.02,14203,1516000.0,106.74,Buy
+FRPT,Freshpet Inc.,0.02,34509,2035000.0,58.97,Add 356.41%
+GL,Globe Life Inc.,0.02,11081,1542000.0,139.16,Buy
+GMED,Globus Medical Inc.,0.02,15660,1349000.0,86.14,Buy
+GUTS,Fractyl Health Inc,0.02,3974806,1820000.0,0.46,Reduce 6.44%
+HBAN,Huntington Bancshares,0.02,83182,1302000.0,15.65,Buy
+ICLR,ICON plc,0.02,13887,1537000.0,110.68,Buy
+KDP,Keurig Dr Pepper Inc.,0.02,55823,1470000.0,26.33,Add 17.64%
+KMB,Kimberly-Clark,0.02,19028,1836000.0,96.49,Buy
+KVUE,Kenvue Inc,0.02,92009,1586000.0,17.24,Buy
+LITE,Lumentum Holdings Inc.,0.02,2172,1526000.0,702.58,Buy
+MKSI,MKS Instruments,0.02,7286,1674000.0,229.76,Buy
+NRG,NRG Energy Inc.,0.02,10537,1540000.0,146.15,Buy
+PAAS,Pan American Silver Corp.,0.02,32915,1801000.0,54.72,Buy
+PNFP,Pinnacle Financial Partners Inc.,0.02,16023,1380000.0,86.13,Buy
+RRX,Regal Rexnord Corp.,0.02,7377,1381000.0,187.2,Buy
+SAIA,Saia Inc.,0.02,4030,1416000.0,351.36,Buy
+SHG,Shinhan Financial Group Company,0.02,23804,1460000.0,61.33,Add 69.17%
+SU,Suncor Energy Inc.,0.02,22911,1516000.0,66.17,Buy
+TECK,Teck Resources,0.02,27573,1427000.0,51.75,Buy
+TFII,Tfi International Inc,0.02,13569,1477000.0,108.85,Buy
+TKR,Timken Co.,0.02,13221,1330000.0,100.6,Buy
+WAL,Western Alliance Bancorp,0.02,21081,1494000.0,70.87,Buy
+WCC,WESCO International Inc.,0.02,5555,1520000.0,273.63,Buy
+WDFC,WD-40 Co.,0.02,7212,1471000.0,203.97,Reduce 32.51%
+ABM,ABM Industries,0.01,23998,924000.0,38.5,Buy
+ACM,AECOM Technology Corp.,0.01,9847,835000.0,84.8,Buy
+AGCO,AGCO Corp.,0.01,9653,1118000.0,115.82,Buy
+ALC,Alcon Inc.,0.01,12732,959000.0,75.32,Buy
+AMTM,Amentum Holdings Inc.,0.01,46335,1208000.0,26.07,Buy
+AR,Antero Resources,0.01,20817,883000.0,42.42,Buy
+ARCB,ArcBest Corp.,0.01,11094,1091000.0,98.34,Buy
+ASO,Academy Sports and Outdoors Inc.,0.01,8205,463000.0,56.43,Reduce 90.79%
+ASTE,Astec Industries,0.01,9472,510000.0,53.84,Buy
+AVNT,Avient Corp.,0.01,25650,931000.0,36.3,Buy
+AVTR,Avantor Inc.,0.01,100814,790000.0,7.84,Buy
+B,Barrick Mining Corp.,0.01,10976,449000.0,40.91,Buy
+BC,Brunswick Corp.,0.01,11743,854000.0,72.72,Buy
+BHE,Benchmark Electronics,0.01,12535,703000.0,56.08,Buy
+BKE,Buckle Inc.,0.01,14316,721000.0,50.36,Reduce 76.56%
+BKNG,Booking Holdings Inc.,0.01,4375,737000.0,168.46,Reduce 83.01%
+CAL,Caleres Inc.,0.01,69210,729000.0,10.53,Reduce 80.40%
+CCK,Crown Holdings,0.01,11554,1158000.0,100.23,Buy
+CHH,Choice Hotels Int. Inc.,0.01,6401,663000.0,103.58,Buy
+CHTR,Charter Communications,0.01,2893,625000.0,216.04,Reduce 87.81%
+CMCO,Columbus McKinnon Corp.,0.01,36786,535000.0,14.54,Buy
+CNK,Cinemark Holdings Inc.,0.01,15289,436000.0,28.52,Buy
+CON,Concentra Group Holdings Par,0.01,27560,591000.0,21.44,Buy
+CRBU,Caribou Biosciences Inc.,0.01,652542,1240000.0,1.9,
+CRC,California Resources Corp.,0.01,11680,808000.0,69.18,Buy
+CRI,Carters Inc.,0.01,20796,744000.0,35.78,Reduce 86.02%
+CVE,Cenovus Energy Inc.,0.01,41248,1091000.0,26.45,Buy
+CVS,CVS Health Corp.,0.01,9472,680000.0,71.79,Buy
+CXT,Crane NXT Co.,0.01,22089,897000.0,40.61,Buy
+DAVE,Dave Inc,0.01,2475,431000.0,174.14,Reduce 84.89%
+DB,Deutsche Bank AG,0.01,23799,691000.0,29.03,Buy
+DGX,Quest Diagnostics,0.01,2756,540000.0,195.94,Reduce 88.47%
+DIS,Walt Disney Co.,0.01,7317,705000.0,96.35,Reduce 98.97%
+DRI,Darden Restaurants,0.01,3442,675000.0,196.11,Buy
+EQT,EQT Corp.,0.01,11489,731000.0,63.63,Buy
+EQX,Equinox Gold Corp,0.01,69510,1004000.0,14.44,Buy
+ERIE,Erie Indemnity Co. CL A,0.01,2590,651000.0,251.35,Reduce 85.04%
+ERO,Ero Copper Corp,0.01,19271,514000.0,26.67,Buy
+EXE,Expand Energy Corp.,0.01,11017,1209000.0,109.74,Buy
+FDX,FedEx Corp.,0.01,1980,705000.0,356.06,Reduce 92.09%
+FITB,Fifth Third Bancorp,0.01,22341,1038000.0,46.46,Buy
+FIVE,Five Below Inc.,0.01,3661,836000.0,228.35,Buy
+GNRC,Generac Holdings Inc.,0.01,6487,1267000.0,195.31,Buy
+GTES,Gates Industrial Corp.,0.01,37398,846000.0,22.62,Buy
+HBM,Hudbay Minerals Inc.,0.01,59037,1234000.0,20.9,Buy
+HLX,Helix Energy Solutions,0.01,75723,749000.0,9.89,Buy
+HRB,H&R Block Inc.,0.01,19943,633000.0,31.74,Reduce 82.57%
+HUN,Huntsman Corp.,0.01,65283,869000.0,13.31,Buy
+IART,Integra LifeSciences Holdings,0.01,72108,679000.0,9.42,Buy
+ICHR,Ichor Holdings Ltd,0.01,24410,1138000.0,46.62,Buy
+INTU,Intuit Inc.,0.01,1564,676000.0,432.23,Reduce 79.12%
+ITGR,Integer Holdings Corp.,0.01,14051,1236000.0,87.97,Buy
+JBI,Janus International Group In,0.01,99996,515000.0,5.15,Buy
+JHX,James Hardie Industries PLC,0.01,35531,673000.0,18.94,Buy
+KBR,KBR Inc.,0.01,32606,1202000.0,36.86,Buy
+KGC,Kinross Gold Corp.,0.01,19978,611000.0,30.58,Buy
+KNX,Knight-Swift Transportation,0.01,10609,611000.0,57.59,Buy
+KR,Kroger Co.,0.01,6359,460000.0,72.34,Buy
+LAZ,Lazard Inc.,0.01,24404,1037000.0,42.49,Buy
+LIF,Life360 Inc,0.01,17147,700000.0,40.82,Buy
+LIVN,LivaNova PLC,0.01,15044,956000.0,63.55,Buy
+LMND,Lemonade Inc.,0.01,11970,750000.0,62.66,Reduce 82.87%
+LOGI,Logitech International SA,0.01,6548,593000.0,90.56,Buy
+LZ,Lubrizol Corp.,0.01,125663,713000.0,5.67,Reduce 74.67%
+MAN,ManpowerGroup,0.01,23129,681000.0,29.44,Buy
+MFC,Manulife Financial Corp.,0.01,23875,823000.0,34.47,Buy
+MIDD,Middleby Corp.,0.01,8647,1146000.0,132.53,Buy
+MITK,Mitek Systems Inc.,0.01,43649,589000.0,13.49,Buy
+MLKN,MillerKnoll Inc.,0.01,30710,444000.0,14.46,Buy
+MOS,Mosaic Co.,0.01,30159,769000.0,25.5,Buy
+MSM,MSC Industrial Direct,0.01,11251,1038000.0,92.26,Buy
+MTCH,Match Group Inc.,0.01,34543,1061000.0,30.72,Buy
+MUSA,Murphy USA Inc.,0.01,1332,658000.0,493.99,Reduce 87.92%
+NOG,Northern Oil and Gas Inc.,0.01,20601,602000.0,29.22,Buy
+NYT,New York Times CL A,0.01,8121,680000.0,83.73,Reduce 61.78%
+OSK,Oshkosh Corp.,0.01,8497,1251000.0,147.23,Buy
+PENG,Penguin Solutions Inc.,0.01,43794,771000.0,17.61,Buy
+PENN,Penn National Gaming Inc.,0.01,63799,959000.0,15.03,Buy
+PII,Polaris Inc.,0.01,17569,958000.0,54.53,Buy
+PLAY,Dave & Buster's Ent. Inc.,0.01,59114,640000.0,10.83,Reduce 81.84%
+PTEN,Patterson-UTI Energy Inc.,0.01,71533,775000.0,10.83,Buy
+RBLX,Roblox Corp.,0.01,12507,707000.0,56.53,Reduce 97.58%
+REYN,Reynolds Consumer Products Inc.,0.01,52697,1116000.0,21.18,Reduce 61.92%
+RGLD,Royal Gold Inc.,0.01,4241,1079000.0,254.42,Buy
+RMBS,Rambus Inc.,0.01,13028,1121000.0,86.05,Buy
+RNST,Renasant Corp.,0.01,27863,1007000.0,36.14,Buy
+ROKU,Roku Inc.,0.01,8189,775000.0,94.64,Reduce 82.03%

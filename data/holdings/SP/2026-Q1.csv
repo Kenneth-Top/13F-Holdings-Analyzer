@@ -1,0 +1,13 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+OKTA,Okta Inc.,16.62,565036,44474000.0,78.71,Reduce 36.04%
+AMZN,Amazon.com Inc.,14.51,186499,38842000.0,208.27,Add 57.47%
+BABA,Alibaba Group Holdings,13.61,290261,36416000.0,125.46,Reduce 23.24%
+ZS,Zscaler Inc.,10.51,200416,28116000.0,140.29,Buy
+BRZE,Braze Inc A,9.81,1112099,26257000.0,23.61,Reduce 24.50%
+INTU,Intuit Inc.,6.61,40939,17701000.0,432.37,Reduce 19.29%
+FWONK,Liberty Media Corp Formula One Series C,6.45,202928,17253000.0,85.02,Reduce 45.42%
+CPNG,Coupang Inc.,6.39,906291,17111000.0,18.88,Buy
+CSGP,CoStar Group Inc.,5.11,339081,13679000.0,40.34,Reduce 64.59%
+PCOR,Procore Technologies Inc.,4.62,216756,12355000.0,57.0,Reduce 68.20%
+GDS,GDS Holdings Ltd,3.34,221782,8936000.0,40.29,Buy
+CEG,Constellation Energy Corp.,2.42,23167,6469000.0,279.23,Buy

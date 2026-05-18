@@ -1,0 +1,13 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+KEX,Kirby Corp.,19.89,257000,34150000.0,132.88,Add 15.25%
+DCH,Dauch Corp.,13.27,3840000,22771000.0,5.93,Add 103.93%
+APTV,Aptiv PLC,13.07,322971,22427000.0,69.44,Add 17.03%
+OSK,Oshkosh Corp.,11.69,136300,20065000.0,147.21,Reduce 11.84%
+WFRD,Weatherford International plc,11.69,212223,20072000.0,94.58,Reduce 7.72%
+NOMD,Nomad Foods Ltd,7.46,1332772,12808000.0,9.61,Add 147.37%
+DOLE,Dole Food Company,5.63,675948,9659000.0,14.29,Buy
+PVH,PVH Corp.,5.2,128000,8929000.0,69.76,Buy
+ABM,ABM Industries,4.94,220000,8474000.0,38.52,Add 10.00%
+XRAY,DENTSPLY SIRONA Inc.,4.12,610000,7076000.0,11.6,Buy
+MHK,Mohawk Industries,2.29,40000,3938000.0,98.45,Buy
+NESR,National Energy Services Reunited Corp.,0.75,60000,1288000.0,21.47,Buy

@@ -1,0 +1,19 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+V,Visa Inc.,12.26,2316250,700063000.0,302.24,Add 34.80%
+AMZN,Amazon.com Inc.,10.52,2884600,600776000.0,208.27,Reduce 15.02%
+CRM,Salesforce.com,9.79,2994509,558985000.0,186.67,
+BLK,BlackRock Inc.,9.19,546100,525190000.0,961.71,Reduce 21.42%
+META,Meta Platforms Inc.,9.17,915674,523885000.0,572.13,Reduce 12.62%
+RKT,Rocket Companies Inc.,7.04,28214724,402060000.0,14.25,Reduce 28.35%
+TOST,Toast Inc.,5.98,12895438,341858000.0,26.51,Add 60.89%
+LLYVK,Liberty Media Corp. Series C Live,5.87,3561208,335145000.0,94.11,Reduce 1.19%
+RBLX,Roblox Corp.,5.79,5848621,330798000.0,56.56,Reduce 2.13%
+KKR,KKR & Co. L.P.,5.31,3279700,303372000.0,92.5,Buy
+MDB,MongoDB Inc.,4.45,1037800,254022000.0,244.77,Reduce 26.23%
+SSD,Simpson Manufacturing,4.2,1398042,239932000.0,171.62,Reduce 5.03%
+SPOT,Spotify Technology S.A.,3.04,358500,173840000.0,484.91,Buy
+LLYVA,Liberty Media Corp. Series A Live,2.85,1777075,162851000.0,91.64,Reduce 1.24%
+LYV,Live Nation Inc.,1.67,624666,95268000.0,152.51,Reduce 24.10%
+WIX,Wix.com Ltd.,1.65,1099370,94069000.0,85.57,Buy
+DIS,Walt Disney Co.,0.68,400231,38574000.0,96.38,Reduce 87.00%
+CBRE,CBRE Group,0.56,234591,31778000.0,135.46,
