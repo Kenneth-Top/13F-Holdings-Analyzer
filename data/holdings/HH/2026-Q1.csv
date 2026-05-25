@@ -1,0 +1,20 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AAPL,Apple Inc.,36.72,28945607,7346106000.0,253.79,Reduce 10.55%
+BRK.B,Berkshire Hathaway CL B,21.91,9147796,4383624000.0,479.2,Add 27.47%
+NVDA,NVIDIA Corp.,12.07,13843775,2414354000.0,174.4,Add 91.29%
+PDD,Pinduoduo Inc.,10.09,19748294,2017881000.0,102.18,Add 71.18%
+TSLA,Tesla Inc.,6.34,3408900,1267259000.0,371.75,Buy
+GOOG,Alphabet Inc. CL C,5.31,3706000,1063103000.0,286.86,Add 99.74%
+OXY,Occidental Petroleum,3.33,10261500,666998000.0,65.0,Reduce 22.10%
+MSFT,Microsoft Corp.,1.88,1016000,376093000.0,370.17,Add 18.28%
+UNH,United Health Group Inc.,0.81,601400,162733000.0,270.59,Buy
+DIS,Walt Disney Co.,0.73,1511800,145707000.0,96.38,Add 112.33%
+CRDO,Credo Technology Group Holdi,0.35,751200,70515000.0,93.87,Add 431.63%
+TSM,Taiwan Semiconductor S.A.,0.26,151200,51098000.0,337.95,Reduce 87.65%
+CRCL,Circle Internet Group Inc,0.1,200000,19082000.0,95.41,Buy
+PLTR,Palantir Technologies Inc.,0.04,60000,8777000.0,146.28,Buy
+CRWD,CrowdStrike Holdings Inc.,0.02,10000,3904000.0,390.4,Buy
+SNPS,Synopsys Inc.,0.02,10000,3965000.0,396.5,Buy
+SNOW,Snowflake Inc.,0.01,10000,1508000.0,150.8,Buy
+INOD,Innodata Inc.,0.0,10000,386000.0,38.6,Buy
+TEM,Tempus Ai Inc,0.0,20000,904000.0,45.2,Reduce 81.82%
