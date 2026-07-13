@@ -1,0 +1,8 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BRK.B,Berkshire Hathaway CL B,33.89,97600,48838000.0,500.39,
+BRK.A,Berkshire Hathaway CL A,15.59,30,22466000.0,748866.67,
+AXP,American Express,15.26,65000,21986000.0,338.25,
+MA,Mastercard Inc.,14.26,40000,20544000.0,513.6,
+MCO,Moody's Corp.,8.49,27000,12229000.0,452.93,
+RACE,Ferrari NV,7.71,30000,11114000.0,370.47,
+DJCO,Daily Journal Corp.,4.8,11500,6914000.0,601.22,
