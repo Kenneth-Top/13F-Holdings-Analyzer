@@ -1,0 +1,89 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AVGO,Broadcom Inc.,5.69,101468,38330000.0,377.75,Add 2.01%
+RPRX,Royalty Pharma plc,5.01,602028,33756000.0,56.07,Reduce 6.72%
+CEG,Constellation Energy Corp.,3.97,107742,26760000.0,248.37,Add 17.08%
+CNA,CNA Financial Corp.,3.77,522241,25386000.0,48.61,Add 11.03%
+CVX,Chevron Corp.,3.33,135300,22427000.0,165.76,Add 0.16%
+BX,Blackstone Group,3.3,188812,22218000.0,117.67,Add 14.32%
+AMGN,Amgen,3.21,59771,21644000.0,362.12,Add 10.66%
+CMCSA,Comcast Corp.,3.15,863372,21196000.0,24.55,Add 55.54%
+ACN,Accenture,3.1,167690,20867000.0,124.44,Buy
+NEE,NextEra Energy Inc.,3.1,237562,20851000.0,87.77,Add 19.09%
+ABBV,AbbVie Inc.,3.09,82602,20786000.0,251.64,Reduce 11.74%
+OKE,ONEOK Inc.,3.08,238831,20764000.0,86.94,Add 0.06%
+PFE,Pfizer Inc.,3.07,859418,20695000.0,24.08,Add 10.68%
+PSX,Phillips 66,2.96,117795,19913000.0,169.05,Reduce 16.48%
+PEP,PepsiCo Inc.,2.94,146268,19805000.0,135.4,Add 7.58%
+TXN,Texas Instruments,2.92,65895,19641000.0,298.07,Reduce 45.61%
+PLD,Prologis Inc.,2.7,134084,18164000.0,135.47,Add 0.52%
+AMZN,Amazon.com Inc.,2.41,68062,16222000.0,238.34,Reduce 5.18%
+GOOGL,Alphabet Inc.,2.39,45093,16115000.0,357.37,Reduce 2.75%
+BE,Bloom Energy Corp.,2.36,52565,15911000.0,302.69,Reduce 12.44%
+MRSH,Marsh,2.29,92694,15449000.0,166.67,Reduce 1.73%
+AAPL,Apple Inc.,2.08,48366,13995000.0,289.36,Reduce 2.42%
+MSFT,Microsoft Corp.,2.0,36160,13488000.0,373.01,Reduce 53.48%
+CASY,Casey's Gen'l Stores,1.98,16784,13340000.0,794.8,Reduce 1.97%
+TSM,Taiwan Semiconductor S.A.,1.87,26309,12564000.0,477.56,Reduce 2.95%
+KLAC,KLA Corp.,1.65,36890,11130000.0,301.71,Reduce 16.25%
+APH,Amphenol Corp.,1.55,59235,10444000.0,176.31,Reduce 6.18%
+TW,Tradeweb Markets Inc.,1.12,75987,7573000.0,99.66,Reduce 0.08%
+V,Visa Inc.,1.12,22017,7554000.0,343.1,Add 11.20%
+VRTX,Vertex Pharmaceuticals,1.12,15215,7558000.0,496.75,Reduce 1.11%
+LZAGY,Lonza Group Ag Unspon ADR,0.92,91339,6165000.0,67.5,Reduce 1.22%
+AJG,Arthur J. Gallagher & Co.,0.9,26276,6032000.0,229.56,Reduce 9.50%
+RBC,RBC Bearings Inc.,0.87,9112,5869000.0,644.1,Add 0.35%
+ORLY,O'Reilly Automotive,0.83,60821,5601000.0,92.09,Reduce 2.49%
+MPWR,Monolithic Power Systems,0.76,3715,5135000.0,1382.23,Add 0.22%
+NOW,ServiceNow Inc.,0.76,51543,5117000.0,99.28,Reduce 6.04%
+KRYS,Krystal Biotech Inc.,0.67,12156,4518000.0,371.67,Add 1.03%
+BMRN,BioMarin Pharmaceutical Inc.,0.66,77705,4446000.0,57.22,Reduce 0.59%
+VEEV,Veeva Systems Inc.,0.65,24625,4370000.0,177.46,Add 3.65%
+VRSK,Verisk Analytics Inc.,0.65,24309,4364000.0,179.52,Reduce 0.32%
+SHW,Sherwin-Williams,0.62,12175,4192000.0,344.31,Add 4.84%
+GE,GE Aerospace,0.61,10999,4111000.0,373.76,Add 4.43%
+AXSM,Axsome Therapeutics Inc.,0.54,14928,3654000.0,244.77,Add 1.04%
+FN,Fabrinet,0.5,5994,3369000.0,562.06,Reduce 15.23%
+ENTG,Entegris Inc.,0.48,18001,3238000.0,179.88,Add 0.33%
+HALO,Halozyme Therapeutics,0.45,38703,3029000.0,78.26,Add 1.37%
+RYAN,Ryan Specialty Holdings Inc,0.44,77911,2942000.0,37.76,Add 14.50%
+DT,Dynatrace Inc.,0.43,66492,2920000.0,43.92,Reduce 4.97%
+SNDX,Syndax Pharmaceuticals Inc.,0.43,133835,2926000.0,21.86,Add 27.62%
+NTRA,Natera Inc.,0.39,9730,2641000.0,271.43,Add 1.68%
+BWXT,BWX Technologies Inc.,0.37,12633,2459000.0,194.65,Add 0.58%
+EVLV,Evolv Technologies Holdings,0.34,392714,2278000.0,5.8,Add 11.13%
+GOOG,Alphabet Inc. CL C,0.32,6019,2127000.0,353.38,
+MTD,Mettler-Toledo International Inc.,0.32,1671,2135000.0,1277.68,Reduce 0.36%
+ZM,Zoom Video Communications Inc.,0.32,24796,2140000.0,86.3,Buy
+FCN,FTI Consulting Inc.,0.3,13500,2012000.0,149.04,Add 4.38%
+NOVT,Novanta Inc.,0.27,11141,1808000.0,162.28,Buy
+VSTM,Verastem Inc.,0.27,477455,1824000.0,3.82,Add 59.71%
+JKHY,Jack Henry & Associates Inc.,0.26,12856,1771000.0,137.76,Reduce 11.93%
+COO,Cooper Cos Inc,0.25,23286,1670000.0,71.72,Reduce 8.45%
+BRK.B,Berkshire Hathaway CL B,0.21,2884,1443000.0,500.35,
+JNJ,Johnson & Johnson,0.16,4141,1052000.0,254.04,
+JPM,JPMorgan Chase & Co.,0.14,2959,969000.0,327.48,Reduce 92.39%
+HD,Home Depot,0.13,2485,876000.0,352.52,Reduce 22.39%
+URI,United Rentals,0.11,660,748000.0,1133.33,
+AXP,American Express,0.1,1965,665000.0,338.42,
+COST,Costco Co.,0.09,628,587000.0,934.71,
+NVDA,NVIDIA Corp.,0.09,2938,588000.0,200.14,Reduce 3.83%
+TSLA,Tesla Inc.,0.08,1250,526000.0,420.8,
+ENB,Enbridge Inc.,0.07,8310,450000.0,54.15,
+LLY,Eli Lilly & Co.,0.07,398,477000.0,1198.49,
+MS,Morgan Stanley,0.07,2377,497000.0,209.09,Reduce 92.29%
+NOC,Northrop Grumman Corp.,0.07,887,452000.0,509.58,
+RKLB,Rocket Lab Corp.,0.07,4500,457000.0,101.56,Reduce 50.00%
+RYCEY,Rolls Royce Holdings Sp ADR,0.07,25000,481000.0,19.24,
+VUG,Vanguard Growth ETF,0.06,4616,398000.0,86.22,Reduce 58.10%
+DHR,Danaher Corp.,0.05,1871,356000.0,190.27,
+MMM,3M Co.,0.05,2000,324000.0,162.0,
+RTX,RTX Corp.,0.05,1689,320000.0,189.46,
+EW,Edwards Lifesciences Corp.,0.04,2994,271000.0,90.51,
+IWF,iShares Russell 1000 Growth ETF,0.04,1972,245000.0,124.24,Reduce 64.43%
+SLB,Schlumberger Ltd.,0.04,5681,264000.0,46.47,
+UNH,United Health Group Inc.,0.04,683,284000.0,415.81,Buy
+VTI,Vanguard Total Stock Mkt ETF,0.04,745,276000.0,370.47,Add 0.13%
+WFC,Wells Fargo,0.04,3000,248000.0,82.67,
+BNY,Bank of New York Mellon Corp.,0.03,1584,229000.0,144.57,Buy
+MSI,Motorola Solutions Inc.,0.03,566,235000.0,415.19,
+UNP,Union Pacific,0.03,850,231000.0,271.76,

@@ -1,0 +1,28 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AVGO,Broadcom Inc.,10.61,186760,70549000.0,377.75,Reduce 95.40%
+GOOGL,Alphabet Inc.,9.19,171066,61134000.0,357.37,Reduce 95.40%
+TSM,Taiwan Semiconductor S.A.,8.24,114820,54835000.0,477.57,Reduce 95.40%
+IBKR,Interactive Brokers Group Inc.,6.78,517833,45072000.0,87.04,Reduce 95.40%
+AMAT,Applied Materials,5.45,50176,36277000.0,723.0,Reduce 96.70%
+ADI,Analog Devices,5.26,88014,34957000.0,397.18,Reduce 95.40%
+SPGI,S&P Global Inc.,4.36,71249,29017000.0,407.26,Reduce 95.40%
+V,Visa Inc.,4.31,83643,28697000.0,343.09,Reduce 95.13%
+MSFT,Microsoft Corp.,3.86,68901,25701000.0,373.01,Reduce 93.81%
+CBRE,CBRE Group,3.67,181083,24390000.0,134.69,Reduce 95.39%
+LYV,Live Nation Inc.,3.12,113503,20784000.0,183.11,Reduce 95.40%
+BLK,BlackRock Inc.,3.02,20873,20071000.0,961.58,Reduce 95.40%
+FERG,Ferguson Enterprises Inc.,2.87,80548,19116000.0,237.32,Reduce 95.40%
+FAST,Fastenal,2.72,376044,18061000.0,48.03,Reduce 95.40%
+ENTG,Entegris Inc.,2.7,99756,17942000.0,179.86,Reduce 95.40%
+CP,Canadian Pacific Kansas City,2.6,199860,17318000.0,86.65,Reduce 95.40%
+UBER,Uber Technologies Inc.,2.59,238965,17244000.0,72.16,Reduce 95.40%
+A,Agilent Technologies,2.53,126437,16795000.0,132.83,Reduce 95.40%
+ICE,Intercontinental Exchange Inc.,2.51,135468,16677000.0,123.11,Reduce 95.40%
+ORCL,Oracle Corp.,2.32,105457,15455000.0,146.55,Reduce 91.78%
+CME,CME Group,2.12,63835,14097000.0,220.83,Reduce 95.40%
+YUM,Yum! Brands Inc.,2.01,83427,13337000.0,159.86,Reduce 95.40%
+TW,Tradeweb Markets Inc.,1.63,108989,10862000.0,99.66,Reduce 95.40%
+SSNC,SS&C Technologies Holdings Inc.,1.61,172816,10723000.0,62.05,Reduce 95.40%
+SPOT,Spotify Technology S.A.,1.4,20216,9282000.0,459.14,Reduce 95.40%
+TCOM,Trip.com Group Ltd,1.28,214242,8535000.0,39.84,Reduce 95.33%
+MCO,Moody's Corp.,1.23,18075,8187000.0,452.95,Reduce 95.40%
