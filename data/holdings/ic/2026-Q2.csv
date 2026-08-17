@@ -1,0 +1,13 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+IEP,Icahn Enterprises,53.95,618393343,4458616000.0,7.21,Add 12.56%
+CVI,CVR Energy Inc.,23.73,71201875,1960900000.0,27.54,
+UAN,CVR Partners LP,5.62,4164274,464233000.0,111.48,
+CTRI,Centuri Holdings Inc,5.25,14336044,433522000.0,30.24,
+IFF,International Flavors & Fragrances Inc.,4.1,4275000,338666000.0,79.22,
+ECHO,EchoStar Corp.,1.73,1404542,142561000.0,101.5,
+JBLU,JetBlue Airways Corp.,1.43,20658179,118371000.0,5.73,Reduce 38.56%
+MNRO,Monro Inc.,1.05,5078573,86894000.0,17.11,
+CZR,Caesars Entertainment,0.89,2440109,73642000.0,30.18,
+SD,SandRidge Energy Inc.,0.84,5054907,69252000.0,13.7,Add 2.17%
+AEP,American Electric Power,0.72,434710,59473000.0,136.81,Reduce 63.93%
+BLCO,Bausch + Lomb Corp,0.7,3500000,57960000.0,16.56,

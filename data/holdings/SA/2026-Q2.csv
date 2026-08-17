@@ -1,0 +1,51 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+BRK.B,Berkshire Hathaway CL B,15.45,273145,136679000.0,500.39,Add 7.95%
+ALK,Alaska Air Group,10.58,1793627,93627000.0,52.2,Add 5.81%
+BRK.A,Berkshire Hathaway CL A,10.16,120,89862000.0,748850.0,Add 3.45%
+DG,Dollar General,8.66,665307,76583000.0,115.11,Add 2.63%
+DECK,Deckers Outdoor,7.52,670199,66544000.0,99.29,Add 1.39%
+DLTR,Dollar Tree Inc.,7.25,530113,64117000.0,120.95,Add 3.24%
+BLDR,Builders FirstSource Inc.,5.6,553722,49547000.0,89.48,Add 142.64%
+OLN,Olin Corp.,4.83,2153826,42689000.0,19.82,Add 6.14%
+NEM,Newmont Corp.,4.72,447228,41771000.0,93.4,Reduce 6.66%
+KGC,Kinross Gold Corp.,4.14,1548995,36587000.0,23.62,Add 2.65%
+PAYX,Paychex Inc.,2.35,211640,20811000.0,98.33,Buy
+FIVE,Five Below Inc.,2.15,105657,18996000.0,179.79,Reduce 45.16%
+SPGI,S&P Global Inc.,2.12,45989,18729000.0,407.25,Buy
+DINO,HF Sinclair Corp.,1.99,252187,17565000.0,69.65,Reduce 30.08%
+DIS,Walt Disney Co.,1.75,160653,15463000.0,96.25,Add 5.29%
+CTSH,Cognizant Technology Solutions,1.65,377991,14640000.0,38.73,Buy
+VLO,Valero Energy,1.12,37893,9869000.0,260.44,Reduce 13.99%
+CMI,Cummins Inc.,1.05,12972,9252000.0,713.23,Reduce 67.18%
+XOM,ExxonMobil Holdings Corp.,0.88,57176,7817000.0,136.72,Reduce 0.59%
+PSKY,Paramount Skydance Corp.,0.72,648835,6398000.0,9.86,Reduce 0.59%
+TRV,Travelers Companies Inc.,0.71,19100,6305000.0,330.1,
+MRK,Merck & Co.,0.65,44633,5735000.0,128.49,
+EQNR,Equinor ASA,0.57,161175,5061000.0,31.4,Reduce 8.40%
+SBUX,Starbucks Corp.,0.53,45761,4676000.0,102.18,Reduce 81.79%
+GE,GE Aerospace,0.4,9352,3495000.0,373.72,
+COST,Costco Co.,0.35,3354,3138000.0,935.6,Reduce 0.39%
+GEV,Ge Vernova Inc,0.26,1994,2343000.0,1175.03,
+NXPI,NXP Semiconductors NV,0.24,7662,2153000.0,281.0,Reduce 41.04%
+GLDM,SPDR Gold Minishares Trust,0.22,24063,1911000.0,79.42,Add 0.35%
+SMHI,SEACOR Marine Holdings Inc.,0.18,208175,1593000.0,7.65,
+AAPL,Apple Inc.,0.15,4640,1343000.0,289.44,Add 12.08%
+KO,Coca Cola Co.,0.14,15328,1246000.0,81.29,
+AXP,American Express,0.13,3311,1120000.0,338.27,Reduce 3.64%
+CVX,Chevron Corp.,0.11,6063,1005000.0,165.76,
+GOOG,Alphabet Inc. CL C,0.1,2432,859000.0,353.21,
+SGOV,Ishares 0 3 Month Treasury B,0.1,8570,863000.0,100.7,Reduce 13.57%
+PHYS,Sprott Physical Gold Trust,0.08,23869,720000.0,30.16,
+MA,Mastercard Inc.,0.04,658,338000.0,513.68,
+PM,Philip Morris Intl.,0.04,1762,319000.0,181.04,
+SHEL,Shell plc,0.04,4968,385000.0,77.5,
+SYF,Synchrony Financial,0.04,4437,337000.0,75.95,
+GEHC,GE HealthCare Technologies Inc.,0.03,4581,293000.0,63.96,
+GOOGL,Alphabet Inc.,0.03,700,250000.0,357.14,
+MSFT,Microsoft Corp.,0.03,641,239000.0,372.85,Buy
+PSX,Phillips 66,0.03,1472,249000.0,169.16,
+SIVR,Abrdn Physical Silver Shares,0.03,4245,239000.0,56.3,
+JNJ,Johnson & Johnson,0.02,794,202000.0,254.41,Buy
+MCHP,Microchip Technology,0.02,2418,221000.0,91.4,Buy
+NFLX,Netflix Inc.,0.02,2980,213000.0,71.48,
+SUNB,Sunbelt Rentals Holdings Inc,0.02,2774,208000.0,74.98,Buy

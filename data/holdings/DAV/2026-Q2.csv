@@ -1,0 +1,113 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+COF,Capital One Financial,7.13,8270946,1659420000.0,200.63,Reduce 3.15%
+USB,U.S. Bancorp,5.56,21453510,1295910000.0,60.41,Reduce 3.53%
+CVS,CVS Health Corp.,5.27,11865916,1227594000.0,103.46,Reduce 3.05%
+VTRS,Viatris Inc.,5.13,75232254,1194790000.0,15.88,Reduce 3.81%
+MGM,MGM Resorts International,4.91,23903317,1142791000.0,47.81,Reduce 1.61%
+GOOGL,Alphabet Inc.,4.51,2937160,1049690000.0,357.38,Reduce 5.09%
+DVN,Devon Energy Corp.,4.49,25297991,1045194000.0,41.32,Buy
+AMZN,Amazon.com Inc.,4.38,4276176,1019230000.0,238.35,Add 24.84%
+META,Meta Platforms Inc.,3.99,1648172,928730000.0,563.49,Reduce 4.13%
+MKL,Markel Group Inc.,3.41,406759,794400000.0,1953.0,Add 6.08%
+TXN,Texas Instruments,3.12,2437486,726549000.0,298.07,Reduce 14.46%
+TSN,Tyson Foods,3.11,12653717,724483000.0,57.25,Reduce 3.34%
+WFC,Wells Fargo,2.84,8008728,661901000.0,82.65,Reduce 2.22%
+BRK.A,Berkshire Hathaway CL A,2.79,868,650010000.0,748859.45,Reduce 5.96%
+CI,Cigna Group,2.67,2253424,621244000.0,275.69,Add 0.87%
+JBS,Jbs Nv A,2.54,50016236,592692000.0,11.85,Add 90.58%
+UNH,United Health Group Inc.,2.28,1274650,529839000.0,415.67,Add 2.18%
+TECK,Teck Resources,2.14,8363497,497289000.0,59.46,Reduce 20.98%
+SOLV,Solventum Corp,2.09,6307729,486686000.0,77.16,Reduce 0.36%
+LYB,LyondellBasell Industries,1.97,8698852,457994000.0,52.65,Add 55.43%
+CB,Chubb Limited,1.68,1148090,391231000.0,340.77,Reduce 3.96%
+BRK.B,Berkshire Hathaway CL B,1.59,738433,369514000.0,500.4,Reduce 1.52%
+TCOM,Trip.com Group Ltd,1.5,8761371,349053000.0,39.84,Add 33.66%
+DGX,Quest Diagnostics,1.42,1555612,329782000.0,212.0,Reduce 3.84%
+OC,Owens Corning,1.42,2081213,330714000.0,158.9,Reduce 0.94%
+PINS,Pinterest Inc.,1.14,12574721,264483000.0,21.03,Add 1.41%
+AGCO,AGCO Corp.,1.06,2058488,246362000.0,119.68,Reduce 1.35%
+YMM,Full Truck Alliance  Spn ADR,0.96,27639082,224429000.0,8.12,Reduce 3.91%
+QSR,Restaurant Brands International,0.87,2800345,203046000.0,72.51,Reduce 22.19%
+GOOG,Alphabet Inc. CL C,0.86,564274,199395000.0,353.37,Reduce 16.73%
+COP,ConocoPhillips,0.84,1877583,195190000.0,103.96,Add 0.11%
+SE,Sea Ltd,0.83,2011812,192792000.0,95.83,Add 8.76%
+DUSA,Davis Select Us Equity ETF,0.82,3400745,191054000.0,56.18,
+APP,Applovin Corp.,0.7,315539,162719000.0,515.69,Reduce 6.04%
+JPM,JPMorgan Chase & Co.,0.67,476389,155936000.0,327.33,Reduce 14.39%
+FITB,Fifth Third Bancorp,0.65,2684183,151307000.0,56.37,Reduce 4.60%
+WCC,WESCO International Inc.,0.54,363915,125503000.0,344.87,Reduce 4.49%
+PNC,PNC Financial Services,0.52,496066,122141000.0,246.22,Reduce 8.46%
+DINT,Davis Select International,0.48,3915748,111599000.0,28.5,
+PPLI,People Inc.,0.47,2394024,110507000.0,46.16,Reduce 0.80%
+DFNL,Davis Select Financial ETF,0.45,2130666,105180000.0,49.36,
+DWLD,Davis Select Worldwide ETF,0.38,1935585,89501000.0,46.24,
+NTES,NetEase.com Inc.,0.34,612955,78544000.0,128.14,Add 45.01%
+AMAT,Applied Materials,0.32,102521,74074000.0,722.53,Reduce 91.44%
+RNR,RenaissanceRe Holdings Ltd.,0.32,234528,74322000.0,316.9,Reduce 8.81%
+AXP,American Express,0.3,209821,70972000.0,338.25,Reduce 10.00%
+RKT,Rocket Companies Inc.,0.3,4463148,70295000.0,15.75,Reduce 7.47%
+L,Loews Corp.,0.27,545211,61723000.0,113.21,Reduce 11.22%
+NTB,Bank of N.T. Butterfield & Son Ltd,0.26,1012140,60222000.0,59.5,Reduce 5.68%
+BAC,Bank of America Corp.,0.24,992776,56568000.0,56.98,Reduce 14.36%
+BNY,Bank of New York Mellon Corp.,0.23,366448,52992000.0,144.61,Reduce 30.23%
+CHYM,Chime Financial Inc Cl A,0.21,2331776,47755000.0,20.48,Reduce 8.17%
+EG,Everest Group Ltd,0.19,126423,45162000.0,357.23,Reduce 10.28%
+VALE,Vale SA,0.19,2929850,44065000.0,15.04,Reduce 0.05%
+MSFT,Microsoft Corp.,0.15,92973,34705000.0,373.28,Add 18.45%
+NVDA,NVIDIA Corp.,0.13,154727,30950000.0,200.03,Add 36.26%
+BEKE,KE Holdings Inc.,0.12,1850782,26892000.0,14.53,Reduce 0.06%
+FISV,Fiserv Inc.,0.11,539839,26479000.0,49.05,Reduce 8.33%
+SCHW,Charles Schwab Corp.,0.11,289871,26746000.0,92.27,Reduce 6.79%
+STT,State Street Corp.,0.11,147966,25095000.0,169.6,Reduce 2.78%
+PLD,Prologis Inc.,0.1,178556,24189000.0,135.47,Reduce 2.21%
+EQIX,Equinix Inc.,0.09,19313,20132000.0,1042.41,Reduce 9.00%
+JCI,Johnson Controls Intl. plc,0.09,141422,20659000.0,146.08,Reduce 27.06%
+BXP,BXP Inc.,0.07,232050,15387000.0,66.31,Reduce 2.17%
+CUZ,Cousins Properties,0.07,573605,17197000.0,29.98,Reduce 2.19%
+ADBE,Adobe Inc.,0.06,67894,13929000.0,205.16,Add 50.41%
+BRX,Brixmor Property Group Inc.,0.06,477150,15045000.0,31.53,Reduce 15.27%
+DLR,Digital Realty Trust Inc.,0.06,73280,13160000.0,179.59,Reduce 7.10%
+DOC,Healthpeak Properties Inc.,0.06,631026,13504000.0,21.4,Reduce 2.20%
+MTB,M&T Bank Corp.,0.06,58072,13822000.0,238.01,Reduce 3.70%
+AMH,American Homes 4 Rent,0.05,325590,10914000.0,33.52,Add 17.47%
+AVB,AvalonBay Communities,0.05,59890,11301000.0,188.7,Reduce 25.11%
+CDP,Copt Defense Properties,0.05,292700,10651000.0,36.39,Reduce 2.17%
+ORCL,Oracle Corp.,0.05,74923,10974000.0,146.47,Reduce 6.83%
+PSA,Public Storage,0.05,37740,12013000.0,318.31,Reduce 8.53%
+SNPS,Synopsys Inc.,0.05,24962,11142000.0,446.36,Reduce 3.67%
+SPG,Simon Property Group Inc.,0.05,49318,11030000.0,223.65,Reduce 2.26%
+AMT,American Tower Corp.,0.04,63250,10346000.0,163.57,Reduce 2.12%
+CPT,Camden Property Trust,0.04,86120,9860000.0,114.49,Reduce 2.15%
+DAR,Darling Ingredients Inc.,0.04,170846,9340000.0,54.67,Reduce 9.08%
+EGP,EastGroup Properties SBI,0.04,51230,10376000.0,202.54,Reduce 2.18%
+ESS,Essex Property Trust,0.04,28501,8311000.0,291.6,Add 70.04%
+NOAH,Noah Holdings Ltd,0.04,964486,9635000.0,9.99,Reduce 5.59%
+REG,Regency Centers Corp.,0.04,116340,9277000.0,79.74,Reduce 16.08%
+SAP,SAP SE,0.04,60529,9334000.0,154.21,Reduce 80.93%
+SHO,Sunstone Hotel Investors Inc.,0.04,870120,9963000.0,11.45,Reduce 2.20%
+TFC,Truist Financial Corp.,0.04,208391,10382000.0,49.82,Reduce 7.30%
+VTR,Ventas Inc.,0.04,111420,9894000.0,88.8,Reduce 2.15%
+CHCT,Community Healthcare Trust Inc.,0.03,322890,5902000.0,18.28,Reduce 2.17%
+EQR,Equity Residential,0.03,91855,6240000.0,67.93,Reduce 13.15%
+JD,JD.com Inc.,0.03,283280,7218000.0,25.48,Reduce 0.05%
+REXR,Rexford Industrial Realty Inc.,0.03,191960,6431000.0,33.5,Reduce 8.42%
+SBAC,SBA Communications Corp.,0.03,40700,7182000.0,176.46,Buy
+TRNO,Terreno Realty Corp.,0.03,111037,7192000.0,64.77,Reduce 2.18%
+ANGI,Angi Inc.,0.02,932653,5549000.0,5.95,Reduce 1.72%
+ARE,Alexandria RE Equities Inc.,0.02,80467,4253000.0,52.85,Reduce 55.50%
+CUBE,CubeSmart,0.02,90280,3590000.0,39.77,Reduce 2.16%
+DEI,Douglas Emmett Inc.,0.02,301580,3559000.0,11.8,Reduce 2.16%
+EXR,Extra Space Storage Inc.,0.02,27535,4001000.0,145.31,Reduce 2.13%
+FRMI,Fermi Inc.,0.02,451400,4135000.0,9.16,Add 47.65%
+HPP,Hudson Pacific Properties Inc.,0.02,315236,4788000.0,15.19,Reduce 2.15%
+JLL,Jones Lang Lasalle Inc.,0.02,12295,3811000.0,309.96,Reduce 0.81%
+O,Realty Income Corp.,0.02,92720,5745000.0,61.96,Reduce 2.31%
+SUI,Sun Communities Inc.,0.02,42480,5094000.0,119.92,Reduce 2.19%
+VICI,VICI Properties Inc.,0.02,215360,5718000.0,26.55,Reduce 2.19%
+CBRE,CBRE Group,0.01,25390,3420000.0,134.7,Reduce 0.86%
+LRCX,Lam Research,0.01,2780,1205000.0,433.45,
+MAA,Mid-America Apt Communties,0.01,21900,3043000.0,138.95,Reduce 54.39%
+TSM,Taiwan Semiconductor S.A.,0.01,3980,1901000.0,477.64,Reduce 44.72%
+CCK,Crown Holdings,0.0,5470,612000.0,111.88,Reduce 36.17%
+IVE,Ishares S&P  500 Value ETF,0.0,3288,747000.0,227.19,Reduce 71.71%
+JAN,Janus Living Inc Cl A 1,0.0,35000,1006000.0,28.74,Add 250.00%

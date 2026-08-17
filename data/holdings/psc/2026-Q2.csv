@@ -1,0 +1,15 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+UBER,Uber Technologies Inc.,12.72,34326200,2476979000.0,72.16,Add 14.58%
+BN,Brookfield Corp.,12.58,57481047,2448118000.0,42.59,Reduce 3.71%
+MSFT,Microsoft Corp.,11.89,6206730,2315234000.0,373.02,Add 9.77%
+AMZN,Amazon.com Inc.,10.49,8563857,2041110000.0,238.34,Reduce 25.22%
+HHH,Howard Hughes Holdings Inc.,10.23,27852064,1991144000.0,71.49,Add 47.74%
+QSR,Restaurant Brands International,9.62,25821284,1872301000.0,72.51,Add 14.02%
+META,Meta Platforms Inc.,9.25,3196062,1800310000.0,563.29,Add 20.11%
+V,Visa Inc.,5.76,3270470,1122066000.0,343.09,Buy
+MA,Mastercard Inc.,5.61,2124646,1091218000.0,513.6,Buy
+SPGI,S&P Global Inc.,5.43,2593155,1056088000.0,407.26,Buy
+NFLX,Netflix Inc.,4.8,13081465,934017000.0,71.4,Buy
+PSUS,Pershing Square Usa Ltd,0.77,4000000,149520000.0,37.38,Buy
+SEG,Seaport Entertainment Group,0.69,5023780,133633000.0,26.6,
+HTZ,Hertz Global Hldgs Inc.,0.17,14991599,33956000.0,2.27,Reduce 1.64%

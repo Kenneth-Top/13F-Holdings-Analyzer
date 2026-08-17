@@ -1,0 +1,12 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+ASML,ASML Holding NV,16.61,130364,259351000.0,1989.44,Reduce 7.08%
+APP,Applovin Corp.,14.5,439313,226347000.0,515.23,Add 38.61%
+RPRX,Royalty Pharma plc,8.82,2456528,137738000.0,56.07,Add 7.90%
+BKNG,Booking Holdings Inc.,8.46,741500,132165000.0,178.24,Add 80.37%
+SPGI,S&P Global Inc.,8.25,316413,128862000.0,407.26,Add 42.09%
+UBER,Uber Technologies Inc.,8.14,1761941,127142000.0,72.16,Add 61.60%
+LYV,Live Nation Inc.,7.69,655658,120058000.0,183.11,Add 7.91%
+DHR,Danaher Corp.,7.64,626211,119281000.0,190.48,Add 7.92%
+META,Meta Platforms Inc.,7.21,199901,112602000.0,563.29,Add 23.64%
+AER,AerCap Holdings N.V.,7.16,766828,111788000.0,145.78,Reduce 31.75%
+SUNB,Sunbelt Rentals Holdings Inc,5.51,1150578,86075000.0,74.81,Reduce 47.82%

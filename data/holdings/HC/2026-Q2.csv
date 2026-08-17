@@ -1,0 +1,9 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+GOOGL,Alphabet Inc.,24.55,2543300,908899000.0,357.37,
+GOOG,Alphabet Inc. CL C,23.39,2451300,866118000.0,353.33,
+PDD,Pinduoduo Inc.,22.17,10761119,820858000.0,76.28,Add 133.53%
+BRK.B,Berkshire Hathaway CL B,14.98,1108318,554591000.0,500.39,Add 23.46%
+EWBC,East West Bancorp,9.68,2776351,358399000.0,129.09,
+CROX,Crocs Inc.,2.89,887093,107019000.0,120.64,
+TME,Tencent Music Entertainment Grp,1.49,6590836,55033000.0,8.35,
+AAPL,Apple Inc.,0.86,110600,32003000.0,289.36,

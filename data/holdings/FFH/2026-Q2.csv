@@ -1,0 +1,33 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+ORLA,OLD- Orla Mining Ltd,21.55,58399504,568456000.0,9.73,Add 83.55%
+EGO,Eldorado Gold Corp.,16.18,13746506,427002000.0,31.06,Buy
+KHC,Kraft Heinz Co.,12.8,14306500,337633000.0,23.6,Add 171.56%
+UAA,Under Armour Inc.,10.98,45356965,289831000.0,6.39,Add 5.48%
+CVS,CVS Health Corp.,10.63,2712000,280502000.0,103.43,
+CLF,Cleveland-Cliffs Inc.,5.3,14899273,139904000.0,9.39,
+UA,Under Armour CL C,5.18,21999128,136615000.0,6.21,
+TAP,Molson Coors Beverage Co.,2.94,1994500,77666000.0,38.94,Add 38.65%
+ATS,Ats Corp,2.67,2486400,70487000.0,28.35,
+WEN,Wendy's Co.,2.51,8005627,66287000.0,8.28,Add 144.90%
+TSM,Taiwan Semiconductor S.A.,1.69,93700,44685000.0,476.89,
+HP,Helmerich & Payne,1.46,1174105,38452000.0,32.75,
+BNS,Bank of Nova Scotia,1.18,359100,31166000.0,86.79,
+GM,General Motors,1.1,375965,28972000.0,77.06,
+PFE,Pfizer Inc.,0.95,1043900,25116000.0,24.06,Add 5.35%
+MRK,Merck & Co.,0.84,172900,22199000.0,128.39,
+JNJ,Johnson & Johnson,0.71,73400,18641000.0,253.96,
+KSPI,Jsc Kaspi.kz ADR,0.35,106000,9175000.0,86.56,Buy
+RCI,Rogers Communications Inc.,0.18,150200,4871000.0,32.43,Buy
+GTX,Garrett Motion Inc.,0.14,102783,3723000.0,36.22,Reduce 44.28%
+CNI,Canadian Natl Railway Co.,0.11,24800,2952000.0,119.03,
+CIGI,Colliers International Group Inc.,0.09,25000,2326000.0,93.04,
+DPZ,Dominos Pizza Inc.,0.08,7230,2140000.0,295.99,Buy
+WBD,Warner Bros. Discovery Inc.,0.08,81900,2179000.0,26.61,Add 41.45%
+CPRI,Capri Holdings Ltd,0.05,78100,1450000.0,18.57,
+LULU,Lululemon Athletica Inc.,0.05,12500,1427000.0,114.16,
+EA,OLD- Electronic Arts,0.04,5100,1045000.0,204.9,Buy
+PENN,Penn National Gaming Inc.,0.04,54900,1174000.0,21.38,
+BRK.A,Berkshire Hathaway CL A,0.03,1,749000.0,749000.0,
+BRSL,Brightstar Lottery,0.03,68733,738000.0,10.74,
+CPAC,Cementos Pacasmayo Saa   ADR,0.02,50000,595000.0,11.9,Buy
+MX,MagnaChip Semiconductor Corp.,0.01,62500,296000.0,4.74,Reduce 50.00%

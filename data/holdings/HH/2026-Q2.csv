@@ -1,0 +1,19 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AAPL,Apple Inc.,41.05,27098707,7841282000.0,289.36,Reduce 6.38%
+BRK.B,Berkshire Hathaway CL B,24.18,9229696,4618448000.0,500.39,Add 0.90%
+PDD,Pinduoduo Inc.,9.99,25022094,1908685000.0,76.28,Add 26.71%
+TSLA,Tesla Inc.,7.44,3380400,1421796000.0,420.6,Reduce 0.84%
+NVDA,NVIDIA Corp.,6.58,6280675,1256700000.0,200.09,Reduce 54.63%
+GOOG,Alphabet Inc. CL C,3.64,1968600,695565000.0,353.33,Reduce 46.88%
+OXY,Occidental Petroleum,2.61,10261500,498401000.0,48.57,
+MSFT,Microsoft Corp.,1.47,754100,281294000.0,373.02,Reduce 25.78%
+CRDO,Credo Technology Group Holdi,1.0,701200,190691000.0,271.95,Reduce 6.66%
+UNH,United Health Group Inc.,0.87,399600,166086000.0,415.63,Reduce 33.56%
+DIS,Walt Disney Co.,0.86,1706600,164260000.0,96.25,Add 12.89%
+BABA,Alibaba Group Holdings,0.15,301400,28928000.0,95.98,Buy
+CRCL,Circle Internet Group Inc,0.07,200000,12526000.0,62.63,
+PLTR,Palantir Technologies Inc.,0.04,60000,7000000.0,116.67,
+SNPS,Synopsys Inc.,0.02,10000,4461000.0,446.1,
+SNOW,Snowflake Inc.,0.01,10000,2545000.0,254.5,
+TEM,Tempus Ai Inc,0.01,20000,1159000.0,57.95,
+INOD,Innodata Inc.,0.0,10000,756000.0,75.6,

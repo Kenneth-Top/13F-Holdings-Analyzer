@@ -1,0 +1,14 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+JOE,St. Joe Co.,76.43,18182367,1138762000.0,62.63,Reduce 5.35%
+EPD,Enterprise Products Partners LP,13.46,5455800,200555000.0,36.76,
+OZK,Bank OZK,3.22,921252,47988000.0,52.09,
+BRK.B,Berkshire Hathaway CL B,2.95,87852,43960000.0,500.39,Add 74.13%
+WRB,W.R. Berkley Corp.,1.21,256350,18080000.0,70.53,
+PGR,Progressive Corp.,1.06,72200,15772000.0,218.45,Add 8.73%
+BRK.A,Berkshire Hathaway CL A,0.55,11,8237000.0,748818.18,Add 450.00%
+PFE,Pfizer Inc.,0.37,231000,5562000.0,24.08,Buy
+KHC,Kraft Heinz Co.,0.32,202300,4778000.0,23.62,Add 92.12%
+CPB,Campbell's Co.,0.17,116500,2594000.0,22.27,Buy
+UPS,United Parcel Service,0.17,23800,2559000.0,107.52,Buy
+AAPL,Apple Inc.,0.05,2400,694000.0,289.17,
+HOMB,Home Bancshares Inc.,0.02,12100,345000.0,28.51,

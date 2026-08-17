@@ -1,0 +1,23 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+ALC,Alcon Inc.,15.19,9683004,651941000.0,67.33,Add 3.84%
+SUNB,Sunbelt Rentals Holdings Inc,10.59,6074817,454457000.0,74.81,Add 90.72%
+V,Visa Inc.,7.87,985126,337987000.0,343.09,Reduce 17.00%
+RACE,Ferrari NV,7.66,886360,328940000.0,371.11,Reduce 4.33%
+GE,GE Aerospace,6.72,771417,288302000.0,373.73,Reduce 22.61%
+AMZN,Amazon.com Inc.,6.34,1141835,272145000.0,238.34,Reduce 34.04%
+ADI,Analog Devices,5.71,616881,245007000.0,397.17,Reduce 40.08%
+MSFT,Microsoft Corp.,5.46,628224,234340000.0,373.02,Reduce 14.55%
+CSCO,Cisco Systems,5.4,1971628,231587000.0,117.46,Reduce 35.22%
+CP,Canadian Pacific Kansas City,4.9,2426027,210215000.0,86.65,Reduce 11.71%
+MCO,Moody's Corp.,4.52,427920,193814000.0,452.92,Reduce 16.23%
+APD,Air Products & Chemicals,3.78,553359,162234000.0,293.18,Add 137.13%
+FICO,Fair Isaac Corp.,2.88,103619,123802000.0,1194.78,Reduce 18.55%
+ICE,Intercontinental Exchange Inc.,2.88,1003510,123542000.0,123.11,Reduce 46.27%
+WMB,Williams Cos.,2.57,1486116,110478000.0,74.34,Reduce 16.32%
+MA,Mastercard Inc.,2.27,189941,97554000.0,513.6,Add 22.08%
+WAT,Waters Corp.,1.78,203356,76267000.0,375.04,Reduce 75.11%
+CSL,Carlisle Companies,1.62,191414,69435000.0,362.75,Reduce 4.95%
+LIN,Linde plc,0.78,64789,33622000.0,518.95,Reduce 51.88%
+EFX,Equifax Inc.,0.5,134439,21338000.0,158.72,Reduce 66.70%
+CPRT,Copart Inc.,0.43,656567,18509000.0,28.19,Add 139.57%
+SYK,Stryker Corp.,0.15,20624,6493000.0,314.83,Reduce 91.75%

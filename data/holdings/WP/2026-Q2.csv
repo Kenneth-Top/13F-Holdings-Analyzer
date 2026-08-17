@@ -1,0 +1,19 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+TSM,Taiwan Semiconductor S.A.,10.4,105499,50383000.0,477.57,Reduce 18.44%
+GOOGL,Alphabet Inc.,9.39,127237,45471000.0,357.37,Reduce 18.28%
+META,Meta Platforms Inc.,8.89,76471,43075000.0,563.29,Add 16.21%
+AAPL,Apple Inc.,7.81,130682,37814000.0,289.36,Reduce 3.29%
+MSFT,Microsoft Corp.,6.89,89518,33392000.0,373.02,Add 21.10%
+AMZN,Amazon.com Inc.,6.66,135440,32281000.0,238.34,Add 35.57%
+V,Visa Inc.,6.32,89188,30599000.0,343.08,Add 7.44%
+MSI,Motorola Solutions Inc.,5.63,65643,27261000.0,415.29,Reduce 3.38%
+ODFL,Old Dominion Freight Line,4.93,110288,23888000.0,216.6,Reduce 3.21%
+BKNG,Booking Holdings Inc.,4.91,133351,23768000.0,178.24,Reduce 3.32%
+CB,Chubb Limited,4.79,68039,23183000.0,340.73,Add 26.26%
+PGR,Progressive Corp.,4.79,106261,23213000.0,218.45,Add 27.48%
+URI,United Rentals,3.91,16732,18955000.0,1132.86,Reduce 33.58%
+ORLY,O'Reilly Automotive,3.28,172645,15899000.0,92.09,Reduce 3.22%
+EW,Edwards Lifesciences Corp.,3.09,165208,14945000.0,90.46,Reduce 3.37%
+TOL,Toll Brothers,3.08,90562,14920000.0,164.75,Add 2.59%
+SPGI,S&P Global Inc.,2.63,31339,12763000.0,407.26,Reduce 3.19%
+CPRT,Copart Inc.,2.61,447748,12622000.0,28.19,Reduce 3.24%

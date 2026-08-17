@@ -1,0 +1,11 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AMZN,Amazon.com Inc.,18.35,280350,66819000.0,238.34,Reduce 10.30%
+BN,Brookfield Corp.,16.29,1392742,59317000.0,42.59,
+BRK.A,Berkshire Hathaway CL A,12.95,63,47178000.0,748857.14,
+MKL,Markel Group Inc.,10.89,20305,39656000.0,1953.02,Reduce 9.98%
+SGOV,Ishares 0 3 Month Treasury B,10.59,383000,38557000.0,100.67,
+GOOGL,Alphabet Inc.,9.82,100035,35750000.0,357.37,
+TSLA,Tesla Inc.,5.47,47390,19932000.0,420.6,Reduce 13.42%
+NFLX,Netflix Inc.,5.41,275835,19695000.0,71.4,Reduce 1.30%
+TRUP,Trupanion Inc.,5.28,776490,19234000.0,24.77,
+SPOT,Spotify Technology S.A.,4.96,39370,18076000.0,459.13,Buy

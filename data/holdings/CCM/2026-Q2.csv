@@ -1,0 +1,41 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+ICLR,ICON plc,11.94,3153308,547761000.0,173.71,Add 5.22%
+OMF,OneMain Holdings,10.08,7585152,462467000.0,60.97,Reduce 1.53%
+SNX,SYNNEX Corp.,8.4,1441630,385405000.0,267.34,Reduce 52.79%
+ELV,Elevance Health Inc.,8.23,976885,377791000.0,386.73,Reduce 12.96%
+SLM,SLM Corp.,7.56,13381145,347107000.0,25.94,Reduce 1.50%
+AJG,Arthur J. Gallagher & Co.,6.43,1285022,295003000.0,229.57,Buy
+AN,AutoNation Inc.,6.17,1524124,283167000.0,185.79,Reduce 1.53%
+RYAAY,Ryanair Holdings PLC,5.59,3958684,256325000.0,64.75,Add 30.25%
+PRI,Primerica Inc.,5.36,865863,246078000.0,284.2,Reduce 1.53%
+LEN,Lennar Corp.,4.68,2373177,214749000.0,90.49,Reduce 1.53%
+BLDR,Builders FirstSource Inc.,4.56,2340571,209434000.0,89.48,Reduce 1.34%
+COF,Capital One Financial,4.32,988973,198408000.0,200.62,Reduce 1.53%
+MRP,Millrose Properties,3.95,6030725,181223000.0,30.05,Reduce 29.18%
+MPLX,MPLX LP,3.9,3180534,179159000.0,56.33,Reduce 2.24%
+FNF,Fidelity National Financial Inc.,3.54,3446864,162554000.0,47.16,Reduce 1.58%
+DHI,D.R. Horton,2.43,684478,111488000.0,162.88,Reduce 1.31%
+FG,F&G Annuities & Life Inc.,1.44,2482417,66007000.0,26.59,Reduce 53.63%
+AM,Antero Midstream Corp.,0.9,1823631,41488000.0,22.75,Reduce 0.88%
+GOOGL,Alphabet Inc.,0.16,20258,7240000.0,357.39,
+HCA,HCA Healthcare Inc.,0.04,4833,1884000.0,389.82,Add 262.57%
+JPM,JPMorgan Chase & Co.,0.04,5643,1847000.0,327.31,
+SUNB,Sunbelt Rentals Holdings Inc,0.04,23762,1778000.0,74.83,
+GOOG,Alphabet Inc. CL C,0.03,3790,1339000.0,353.3,
+MSFT,Microsoft Corp.,0.03,4275,1595000.0,373.1,Add 111.11%
+AMAT,Applied Materials,0.02,961,695000.0,723.2,
+BAC,Bank of America Corp.,0.02,14532,828000.0,56.98,
+CMCSA,Comcast Corp.,0.02,31094,763000.0,24.54,
+ADI,Analog Devices,0.01,612,243000.0,397.06,Buy
+AMZN,Amazon.com Inc.,0.01,2650,632000.0,238.49,Add 89.29%
+ET,Energy Transfer LP,0.01,15000,287000.0,19.13,
+MA,Mastercard Inc.,0.01,1172,602000.0,513.65,Add 177.73%
+MAR,Marriott Int'l.,0.01,1194,442000.0,370.18,
+NU,Nu Holdings Ltd,0.01,40000,534000.0,13.35,Buy
+PGR,Progressive Corp.,0.01,1789,391000.0,218.56,
+SPGI,S&P Global Inc.,0.01,1401,571000.0,407.57,Buy
+TXN,Texas Instruments,0.01,1010,301000.0,298.02,Buy
+MCO,Moody's Corp.,0.0,471,213000.0,452.23,
+META,Meta Platforms Inc.,0.0,373,210000.0,563.0,
+UNH,United Health Group Inc.,0.0,499,207000.0,414.83,Buy
+V,Visa Inc.,0.0,618,212000.0,343.04,Buy
