@@ -1,48 +1,48 @@
 ticker,issuer,portfolio_pct,shares,value,reported_price,activity
-C,Citigroup Inc.,16.91,840897,95366000.0,113.41,
-BAYRY,Bayer Ag Sponsored ADR,13.26,6513893,74777000.0,11.48,
-FLG,Flagstar Financial Inc.,9.53,4083618,53781000.0,13.17,
-DIS,Walt Disney Co.,6.47,378909,36519000.0,96.38,
-GOOG,Alphabet Inc. CL C,6.21,122029,35005000.0,286.86,
-OGN,Organon & Co.,5.88,5536993,33167000.0,5.99,
-SEB,Seaboard Corp.,5.88,5871,33195000.0,5654.06,
-BP,BP plc,5.18,622256,29246000.0,47.0,
-MRK,Merck & Co.,4.85,227288,27341000.0,120.29,
-Z,Zillow Group Inc.,4.0,545212,22561000.0,41.38,
-SEG,Seaport Entertainment Group,3.4,893227,19187000.0,21.48,
-PTEN,Patterson-UTI Energy Inc.,3.25,1690156,18304000.0,10.83,
-IDT,IDT Corp. CL B,3.24,372566,18293000.0,49.1,
-PFE,Pfizer Inc.,2.41,484733,13611000.0,28.08,
-MBI,MBIA Inc.,2.15,2056434,12154000.0,5.91,
-BMY,Bristol-Myers Squibb,1.83,170381,10334000.0,60.65,
-GSK,GSK plc,1.58,160982,8885000.0,55.19,
-XOM,ExxonMobil Holdings Corp.,0.55,18255,3097000.0,169.65,
-GNE,Genie Energy Ltd.,0.44,175011,2475000.0,14.14,
-NVS,Novartis AG,0.36,13386,2045000.0,152.77,
-FRFHF,Fairfax Financial Holdings Ltd.,0.31,1018,1729000.0,1698.43,
-CSX,CSX Corp.,0.27,36481,1498000.0,41.06,
-FBAK,First National Bank Alaska,0.26,4920,1471000.0,298.98,
-TRMLF,Tourmaline Oil Corp,0.23,26959,1286000.0,47.7,
-JPM,JPMorgan Chase & Co.,0.15,2818,829000.0,294.18,
-AAPL,Apple Inc.,0.14,3092,785000.0,253.88,
-MSFT,Microsoft Corp.,0.14,2092,774000.0,369.98,
-PEYUF,Peyto Exploration & Development Corp.,0.11,31307,610000.0,19.48,
-HLN,Haleon Plc ADR,0.1,56431,565000.0,10.01,
-SEIC,SEI Investments,0.09,6596,518000.0,78.53,
-BAC,Bank of America Corp.,0.08,9459,461000.0,48.74,
-CVX,Chevron Corp.,0.07,1953,404000.0,206.86,
-AM,Antero Midstream Corp.,0.05,11806,269000.0,22.79,
-BX,Blackstone Group,0.05,2300,264000.0,114.78,
-DB,Deutsche Bank AG,0.05,10000,298000.0,29.8,
-IBM,International Business Machines,0.05,1228,298000.0,242.67,
-OBT,Orange County Bancorp Inc,0.05,8000,256000.0,32.0,
-PEG,Public Serv. Enterprise Inc.,0.05,3524,285000.0,80.87,
-PEP,PepsiCo Inc.,0.05,1800,280000.0,155.56,
-PG,Procter & Gamble,0.05,1852,268000.0,144.71,
-PNC,PNC Financial Services,0.05,1342,279000.0,207.9,
-VZ,Verizon Communications,0.05,5682,285000.0,50.16,
-CMCSA,Comcast Corp.,0.04,7169,206000.0,28.73,
-PIFYF,Pine Cliff Energy Ltd,0.04,520000,253000.0,0.49,
-WRLC,Windrock Ltd Co,0.04,537,252000.0,469.27,
-ZDGE,Zedge Inc.,0.04,77928,228000.0,2.93,
-RFL,Rafael Holdings Inc.,0.01,58557,73000.0,1.25,
+C,Citigroup Inc.,18.5,836337,117054000.0,139.96,Reduce 0.54%
+BAYRY,Bayer Ag Sponsored ADR,14.12,6518603,89308000.0,13.7,Add 0.07%
+FLG,Flagstar Financial Inc.,9.62,4074720,60876000.0,14.94,Reduce 0.22%
+GOOG,Alphabet Inc. CL C,6.75,120906,42720000.0,353.33,Reduce 0.92%
+Z,Zillow Group Inc.,5.89,1182261,37265000.0,31.52,Add 116.84%
+OGN,Organon & Co.,5.72,2670523,36159000.0,13.54,Reduce 51.77%
+DIS,Walt Disney Co.,5.46,359092,34563000.0,96.25,Reduce 5.23%
+MRK,Merck & Co.,4.43,218182,28036000.0,128.5,Reduce 4.01%
+MBI,MBIA Inc.,4.34,4213920,27475000.0,6.52,Add 104.91%
+SEG,Seaport Entertainment Group,3.86,917005,24392000.0,26.6,Add 2.66%
+SEB,Seaboard Corp.,3.8,5389,24058000.0,4464.28,Reduce 8.21%
+BP,BP plc,3.65,624999,23094000.0,36.95,Add 0.44%
+IDT,IDT Corp. CL B,3.23,351660,20453000.0,58.16,Reduce 5.61%
+PTEN,Patterson-UTI Energy Inc.,2.41,1663758,15273000.0,9.18,Reduce 1.56%
+PFE,Pfizer Inc.,1.77,464001,11173000.0,24.08,Reduce 4.28%
+BMY,Bristol-Myers Squibb,1.59,174152,10035000.0,57.62,Add 2.21%
+GSK,GSK plc,1.31,158438,8305000.0,52.42,Reduce 1.58%
+XOM,ExxonMobil Holdings Corp.,0.38,17655,2414000.0,136.73,Reduce 3.29%
+GNE,Genie Energy Ltd.,0.35,151941,2196000.0,14.45,Reduce 13.18%
+NVS,Novartis AG,0.33,13186,2067000.0,156.76,Reduce 1.49%
+CSX,CSX Corp.,0.26,34781,1653000.0,47.53,Reduce 4.66%
+FRFHF,Fairfax Financial Holdings Ltd.,0.26,1018,1674000.0,1644.4,
+FBAK,First National Bank Alaska,0.25,4920,1556000.0,316.26,
+TRMLF,Tourmaline Oil Corp,0.18,26959,1127000.0,41.8,
+JPM,JPMorgan Chase & Co.,0.15,2878,942000.0,327.31,Add 2.13%
+AAPL,Apple Inc.,0.14,3092,895000.0,289.46,
+MSFT,Microsoft Corp.,0.13,2168,809000.0,373.15,Add 3.63%
+BAC,Bank of America Corp.,0.09,9459,539000.0,56.98,
+HLN,Haleon Plc ADR,0.09,58341,544000.0,9.32,Add 3.38%
+SEIC,SEI Investments,0.09,6596,579000.0,87.78,
+PEYUF,Peyto Exploration & Development Corp.,0.08,31307,522000.0,16.67,
+RFL,Rafael Holdings Inc.,0.08,150493,494000.0,3.28,Add 157.00%
+WRLC,Windrock Ltd Co,0.07,807,444000.0,550.19,Add 50.28%
+CVX,Chevron Corp.,0.05,1953,324000.0,165.9,
+DB,Deutsche Bank AG,0.05,10000,338000.0,33.8,
+IBM,International Business Machines,0.05,1228,345000.0,280.94,
+OBT,Orange County Bancorp Inc,0.05,8000,294000.0,36.75,
+PEG,Public Serv. Enterprise Inc.,0.05,3524,286000.0,81.16,
+PNC,PNC Financial Services,0.05,1342,330000.0,245.9,
+WBS,OLD- Webster Financial Corp.,0.05,4349,332000.0,76.34,Buy
+AM,Antero Midstream Corp.,0.04,11806,269000.0,22.79,
+BX,Blackstone Group,0.04,2300,271000.0,117.83,
+PEP,PepsiCo Inc.,0.04,1800,244000.0,135.56,
+PG,Procter & Gamble,0.04,1752,257000.0,146.69,Reduce 5.40%
+VZ,Verizon Communications,0.04,5682,241000.0,42.41,
+ZDGE,Zedge Inc.,0.04,78126,242000.0,3.1,Add 0.25%
+PIFYF,Pine Cliff Energy Ltd,0.03,520000,209000.0,0.4,

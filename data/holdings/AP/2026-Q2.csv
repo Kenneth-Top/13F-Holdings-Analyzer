@@ -1,0 +1,9 @@
+ticker,issuer,portfolio_pct,shares,value,reported_price,activity
+AMZN,Amazon.com Inc.,32.21,5729972,1365682000.0,238.34,Reduce 24.29%
+TDG,TransDigm Group Inc.,27.51,875755,1166541000.0,1332.04,Reduce 3.68%
+MSFT,Microsoft Corp.,20.54,2334482,870808000.0,373.02,Add 25.00%
+MA,Mastercard Inc.,9.26,764507,392651000.0,513.6,Add 46.22%
+V,Visa Inc.,6.77,836470,286984000.0,343.09,Add 67.74%
+MCO,Moody's Corp.,3.23,302624,137064000.0,452.92,Reduce 64.89%
+GOOGL,Alphabet Inc.,0.35,41994,15007000.0,357.36,Reduce 3.22%
+HLT,Hilton Worldwide Holdings,0.12,15202,5024000.0,330.48,Reduce 0.91%
