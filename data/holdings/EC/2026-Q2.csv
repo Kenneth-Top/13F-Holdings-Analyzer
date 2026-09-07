@@ -1,7 +1,7 @@
 ticker,issuer,portfolio_pct,shares,value,reported_price,activity
 V,Visa Inc.,14.13,4264651,1463159000.0,343.09,Add 3.74%
 GOOG,Alphabet Inc. CL C,11.24,3291594,1163019000.0,353.33,Reduce 4.86%
-APH,Amphenol Corp.,8.29,4866688,858094000.0,176.32,Add 69.49%
+APH,Amphenol Corp.,8.29,9733376,858094000.0,88.16,Add 69.49%
 AMZN,Amazon.com Inc.,8.23,3573408,851686000.0,238.34,Add 51.20%
 MCO,Moody's Corp.,7.46,1704229,771879000.0,452.92,Add 10.26%
 NVDA,NVIDIA Corp.,6.61,3417950,683898000.0,200.09,Add 27.77%
