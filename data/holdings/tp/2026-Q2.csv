@@ -1,5 +1,5 @@
 ticker,issuer,portfolio_pct,shares,value,reported_price,activity
-WBD,Warner Bros. Discovery Inc.,11.68,20000000,533200000.0,26.66,Buy
+WBD,OLD- Warner Bros. Discovery Inc.,11.68,20000000,533200000.0,26.66,Buy
 AMZN,Amazon.com Inc.,9.13,1750000,417095000.0,238.34,Reduce 9.79%
 GOOGL,Alphabet Inc.,8.02,1025000,366304000.0,357.37,Add 485.71%
 CRH,CRH plc,5.14,2195000,234865000.0,107.0,Add 15.53%
